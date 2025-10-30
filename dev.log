@@ -1,0 +1,2 @@
+      0 [main] env (12420) child_copy: cygheap read copy failed, 0x800000000..0x800024298, done 0, windows pid 12420, Win32 error 299
+  11105 [main] env 1281 C:\Program Files\Git\usr\bin\env.exe: *** fatal error - couldn't create signal pipe, Win32 error 5

@@ -1,0 +1,74 @@
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Navigation } from "@/components/navigation";
+import { Suspense } from "react";
+import { Footer } from "@/components/footer";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+// Emilio font configuration (you'll need to add the font files to /public/fonts/)
+// For now, this is commented out. To enable:
+// 1. Download Emilio font files (Regular and Bold)
+// 2. Place them in /public/fonts/ directory
+// 3. Uncomment the code below
+/*
+const emilio = localFont({
+  src: [
+    {
+      path: "../public/fonts/Emilio-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Emilio-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-emilio",
+  display: "swap",
+})
+*/
+
+export const metadata: Metadata = {
+  title: "Imesha Dilshani - Portfolio",
+  description:
+    "Graphic Designer, Software Engineer, Data Scientist, and Self-Learner",
+  generator: "v0.app",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className}`} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Suspense fallback={null}>
+            <Navigation />
+            <div className="min-h-screen">{children}</div>
+            <Footer />
+            <Analytics />
+          </Suspense>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
