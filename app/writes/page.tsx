@@ -16,7 +16,7 @@ import { ArrowRight, BookOpen, Calendar, Tag } from "lucide-react";
 const articles = [
   {
     slug: "2024-annual-review",
-    date: "January 23, 2024",
+    date: "January 23, 2025",
     title: "2024 Annual Review - The Year of Adventure",
     category: "Personal Reflection",
     excerpt:
@@ -24,28 +24,6 @@ const articles = [
     tags: ["Reflection", "Growth", "2024"],
     readTime: "8 min read",
   },
-  // {
-  //   slug: "datacast-episode-133",
-  //   date: "January 14, 2024",
-  //   title:
-  //     "Datacast Episode 133: Full Data Stack Observability with Gantry Raakesh",
-  //   category: "Podcast",
-  //   excerpt:
-  //     "James Raakesh is the CEO and Co-Founder of Gantry. Before Gantry, Raakesh was the Director of Machine Learning at Uber, where he led teams building ML infrastructure and production ML systems.",
-  //   tags: ["Machine Learning", "MLOps", "Podcast"],
-  //   readTime: "12 min read",
-  // },
-  // {
-  //   slug: "datacast-episode-132",
-  //   date: "January 12, 2024",
-  //   title:
-  //     "Datacast Episode 132: Big Data Engineering, Data Infrastructure from Uber to Priceonomics",
-  //   category: "Podcast",
-  //   excerpt:
-  //     "Suresh Srinivas is a Staff Engineer at Uber. He has been working on big data infrastructure and distributed systems for over a decade.",
-  //   tags: ["Data Engineering", "Infrastructure", "Podcast"],
-  //   readTime: "15 min read",
-  // },
 ];
 
 export default function WritesPage() {
@@ -79,8 +57,7 @@ export default function WritesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage:
-                "url('/data-journalism-writing-laptop-notebook.jpg')",
+              backgroundImage: "url('/J1.jpg')",
             }}
           />
         </div>

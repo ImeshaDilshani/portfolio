@@ -35,7 +35,7 @@ export default function CapturesPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "url('/serene-harbor-dock-with-boats-at-sunset.jpg')",
+                "url('/garding/senior-couple-harvesting-tomatoes.jpg')",
             }}
           />
         </div>
@@ -88,7 +88,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/serene-harbor-dock-with-boats-at-sunset.jpg"
+                    src="/garding/senior-couple-harvesting-tomatoes.jpg"
                     alt="Gardening"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

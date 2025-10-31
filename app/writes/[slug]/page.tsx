@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -7,23 +8,32 @@ import { ArrowLeft } from "lucide-react";
 const articles = [
   {
     slug: "2024-annual-review",
-    date: "January 23, 2024",
+    date: "January 23, 2025",
     title: "2024 Annual Review - The Year of Adventure",
     category: "Personal Reflection",
     excerpt:
-      "After a journey I taking stock at my twenty days within, I have begun. Challenges, growth, and lessons learned throughout an incredible year of exploration and self-discovery.",
+      "After a journey of growth and self-discovery, I reflect on the challenges, lessons, and adventures that made 2024 an unforgettable year.",
     tags: ["Reflection", "Growth"],
     content: `
-      <p>As I reflect on 2024, I'm filled with gratitude for the incredible journey this year has been. It was a year of adventure, growth, and self-discovery that pushed me beyond my comfort zone in ways I never imagined.</p>
+      <p>As 2024 comes to a close, I find myself reflecting on what has truly been a "Year of Adventure." From academic milestones to personal and professional growth, this year has been nothing short of transformative. This is a draft. I will update the detailed annual review soon.</p>
 
-      <h2>The Journey Begins</h2>
-      <p>At the start of the year, I set out with ambitious goals and a desire to challenge myself. Little did I know that the path ahead would be filled with unexpected twists and turns that would shape me in profound ways.</p>
+      <h2><b>Starting the Year: Final Year Internship and Research</b></h2>
+      <p>The year began with the culmination of my university journey. I embarked on my final-year internship, which was both challenging and rewarding. This experience allowed me to apply the theoretical knowledge I had gained over the years to real-world problems. Working alongside industry professionals, I gained invaluable insights into Data Science, honed my technical skills, and learned the importance of collaboration and adaptability.</p>
 
-      <h2>Key Lessons Learned</h2>
-      <p>Throughout this year, I've learned that growth happens outside our comfort zones. Every challenge I faced became an opportunity to learn something new about myself and the world around me.</p>
+      <p>Simultaneously, I delved into research as part of my academic requirements. My research focused on Natural Language Processing (NLP), which not only deepened my understanding of the subject but also taught me the discipline of critical thinking and perseverance. The process of formulating hypotheses, conducting experiments, and analyzing results was a journey of intellectual growth.</p>
 
-      <h2>Looking Forward</h2>
-      <p>As I close this chapter and look toward the future, I'm excited about the possibilities that lie ahead. The experiences of 2024 have prepared me for whatever comes next.</p>
+      <h2><b>Personal Growth: Stepping Out of My Comfort Zone</b></h2>
+      <p>2024 was also a year of significant personal growth. I made a conscious effort to step out of my comfort zone and embrace new experiences. Whether it was traveling to new places, meeting people from diverse backgrounds, or taking up hobbies like [mention hobbies], each experience enriched my perspective on life.</p>
+
+      <p>I also prioritized mental and physical well-being this year. Regular exercise, mindfulness practices, and maintaining a healthy work-life balance became integral parts of my routine. These habits not only improved my overall health but also enhanced my productivity and focus.</p>
+
+      <h2><b>Professional Growth: Building a Strong Foundation</b></h2>
+      <p>On the professional front, 2024 was a year of laying a strong foundation for my career. The internship experience, coupled with the skills I developed during my research, positioned me well for the next phase of my professional journey. I also took the initiative to upskill myself by learning development of mobile applications, which I believe will be instrumental in achieving my Personal and Professional goals.</p>
+
+      <p>Networking played a crucial role in my professional growth this year. Attending conferences, participating in workshops, and connecting with mentors helped me gain valuable insights and broaden my horizons.</p>
+
+      <h2><b>Looking Ahead</b></h2>
+      <p>As I look ahead to 2025, I am filled with excitement and optimism. The lessons learned and the experiences gained in 2024 have prepared me to take on new challenges and opportunities. I am eager to continue this journey of growth and adventure, both personally and professionally.</p>
     `,
   },
   {
@@ -82,7 +92,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </section>
 
       <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-3xl mx-auto">
+        <div className="container px-6 max-w-4xl mx-auto">
           <Button variant="ghost" asChild className="mb-8">
             <Link href="/writes">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -90,11 +100,25 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </Link>
           </Button>
 
-          <article className="prose prose-lg dark:prose-invert max-w-none text-center">
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          <article className="prose prose-lg dark:prose-invert max-w-none text-left leading-relaxed">
+            <div
+              className="space-y-6"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+            <style jsx>{`
+              h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #6b46c1; /* Purple highlight */
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+                border-bottom: 2px solid #6b46c1;
+                padding-bottom: 0.5rem;
+              }
+            `}</style>
           </article>
 
-          <div className="mt-8 pt-8 border-t flex justify-center">
+          <div className="mt-12 pt-8 border-t flex justify-start">
             <div className="flex flex-wrap gap-2 justify-center">
               {article.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">

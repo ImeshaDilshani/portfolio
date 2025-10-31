@@ -12,32 +12,32 @@ const books = [
   {
     title: "Atomic Habits",
     author: "James Clear",
-    image: "/modern-task-management-app-interface.jpg",
+    image: "/books/atomic habit.jpg",
   },
   {
     title: "The monk who sold his ferrari",
     author: "Robin Sharma",
-    image: "/academic-research-presentation-university.jpg",
+    image: "/books/the monk who sold his ferari.jpg",
   },
   {
     title: "Mindsets",
     author: "Dr. Carol S. Dweck",
-    image: "/data-analytics-dashboard.png",
+    image: "/books/mindset.jpg",
   },
   {
     title: "Psychology of Money",
     author: "Morgan Housel",
-    image: "/modern-ecommerce-dashboard.png",
+    image: "/books/psychology of money.webp",
   },
   {
     title: "Deep Work",
     author: "Cal Newport",
-    image: "/data-science-code-on-multiple-monitors.jpg",
+    image: "/books/deep work.jfif",
   },
   {
     title: "Don't Believe Everything You Think",
     author: "Joseph Nguyen",
-    image: "/modern-tech-workspace-with-laptop-and-code.jpg",
+    image: "/books/dont belive everything you think.webp",
   },
 ];
 
