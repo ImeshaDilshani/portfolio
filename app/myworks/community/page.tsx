@@ -9,7 +9,7 @@ export default function CommunityPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/data-science-code-on-multiple-monitors.jpg')",
+              backgroundImage: "url('/CW1.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -44,7 +44,7 @@ export default function CommunityPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW3.jpg"
                     alt="Community memory 1"
                     fill
                     className="object-cover"
@@ -52,7 +52,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW4.jpg"
                     alt="Community memory 2"
                     fill
                     className="object-cover"
@@ -60,7 +60,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW5.png"
                     alt="Community memory 3"
                     fill
                     className="object-cover"
@@ -68,7 +68,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW6.jpg"
                     alt="Community memory 4"
                     fill
                     className="object-cover"
@@ -76,7 +76,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW7.jpg"
                     alt="Community memory 5"
                     fill
                     className="object-cover"
@@ -84,7 +84,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW8.jpg"
                     alt="Community memory 6"
                     fill
                     className="object-cover"
@@ -92,7 +92,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW9.jpg"
                     alt="Community memory 7"
                     fill
                     className="object-cover"
@@ -100,12 +100,68 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/placeholder.jpg"
+                    src="/CW10.jpg"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
                   />
                 </div>
+                <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW11.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW12.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW13.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW14.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW15.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div> */}
+                {/* <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW16.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
+                  <Image
+                    src="/CW17.jpg"
+                    alt="Community memory 8"
+                    fill
+                    className="object-cover"
+                  />
+                </div> */}
               </div>
             </div>
           </div>

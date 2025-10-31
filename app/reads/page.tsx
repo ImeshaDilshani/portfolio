@@ -10,7 +10,7 @@ import {
 
 const books = [
   {
-    title: "Atomic Habit",
+    title: "Atomic Habits",
     author: "James Clear",
     image: "/modern-task-management-app-interface.jpg",
   },
@@ -20,7 +20,7 @@ const books = [
     image: "/academic-research-presentation-university.jpg",
   },
   {
-    title: "Mindset",
+    title: "Mindsets",
     author: "Dr. Carol S. Dweck",
     image: "/data-analytics-dashboard.png",
   },

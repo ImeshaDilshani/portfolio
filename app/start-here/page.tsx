@@ -79,12 +79,12 @@ export default function StartHerePage() {
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                     Hey, I'm{" "}
                     <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-                      Imesha Dilshani
+                      Imesha
                     </span>
                   </h1>
 
                   <p className="text-xl md:text-2xl text-purple-200/70 font-light leading-relaxed">
-                    Life Long Learner | Data • Design • Development
+                    Solo Developer | Data • Design • Development
                   </p>
                 </div>
 

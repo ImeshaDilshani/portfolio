@@ -44,13 +44,13 @@ export default function HomePage() {
                   </h1>
                   
                   <p className="text-xl md:text-2xl text-purple-200/70 font-light leading-relaxed">
-                    Life Long Learner | Data • Design • Development
+                    Solo Developer | Data • Design • Development
                   </p>
                 </div>
 
                 <div className="space-y-3 animate-fadeInUp animation-delay-200">
                   <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto md:mx-0">
-                    A creative problem-solver specializing in{" "}
+                    A creative problem-solver in{" "}
                     <span className="text-purple-300 font-medium">Software Development</span>,{" "}
                     <span className="text-purple-300 font-medium">Data Science</span>, and{" "}
                     <span className="text-purple-300 font-medium">Design</span>
@@ -83,7 +83,7 @@ export default function HomePage() {
                         asChild
                       >
                         <a
-                          href="https://github.com/imeshadilshani"
+                          href="https://github.com/ImeshaDilshani"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="GitHub"
@@ -98,7 +98,7 @@ export default function HomePage() {
                         asChild
                       >
                         <a
-                          href="https://linkedin.com/in/imeshadilshani"
+                          href="www.linkedin.com/in/imesha-dilshani-61862422b"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="LinkedIn"
@@ -113,7 +113,7 @@ export default function HomePage() {
                         asChild
                       >
                         <a
-                          href="https://twitter.com/imeshadilshani"
+                          href="https://x.com/ImeshaDilshani3"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Twitter"
@@ -126,65 +126,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Animated Tech Stack Banner */}
-      <section className="py-8 border-y border-purple-900/30 bg-purple-950/10 overflow-hidden">
-        <div className="flex gap-8 animate-scroll whitespace-nowrap">
-          <div className="flex gap-8 items-center text-purple-300/80 font-mono text-sm md:text-base">
-            <span>WEB</span>
-            <span>/</span>
-            <span>PROGRAMMING</span>
-            <span>/</span>
-            <span>DEVELOPMENT</span>
-            <span>/</span>
-            <span>JAVASCRIPT</span>
-            <span>/</span>
-            <span>CSS</span>
-            <span>/</span>
-            <span>FIGMA</span>
-            <span>/</span>
-            <span>GIT</span>
-            <span>/</span>
-            <span>HTML</span>
-            <span>/</span>
-            <span>PYTHON</span>
-            <span>/</span>
-            <span>REACT</span>
-            <span>/</span>
-            <span>NODE.JS</span>
-            <span>/</span>
-            <span>TYPESCRIPT</span>
-            <span>/</span>
-          </div>
-          {/* Duplicate for seamless loop */}
-          <div className="flex gap-8 items-center text-purple-300/80 font-mono text-sm md:text-base">
-            <span>WEB</span>
-            <span>/</span>
-            <span>PROGRAMMING</span>
-            <span>/</span>
-            <span>DEVELOPMENT</span>
-            <span>/</span>
-            <span>JAVASCRIPT</span>
-            <span>/</span>
-            <span>CSS</span>
-            <span>/</span>
-            <span>FIGMA</span>
-            <span>/</span>
-            <span>GIT</span>
-            <span>/</span>
-            <span>HTML</span>
-            <span>/</span>
-            <span>PYTHON</span>
-            <span>/</span>
-            <span>REACT</span>
-            <span>/</span>
-            <span>NODE.JS</span>
-            <span>/</span>
-            <span>TYPESCRIPT</span>
-            <span>/</span>
           </div>
         </div>
       </section>
@@ -202,7 +143,16 @@ export default function HomePage() {
             <div className="space-y-4 text-muted-foreground text-left">
               <p>
                 Previously, I have worked at{" "}
-                <span className="text-purple-300">Atlas Axillia Co. (Pvt) Ltd.</span> as a Production Data
+                <span className="text-purple-300">
+                  <a
+                  href="https://www.atlas.lk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:underline"
+                >
+                Atlas Axillia Co. (Pvt) Ltd.
+                </a>
+                </span> as a Production Data
                 Intern:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -217,7 +167,7 @@ export default function HomePage() {
               <p>
                 In my past lives, I also used to freelance as a designer and currently as a developer at{" "}
                 <a
-                  href="https://www.freelancer.com"
+                  href="https://www.freelancer.com/u/imeshadilshani03"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-300 hover:underline"
@@ -294,7 +244,7 @@ export default function HomePage() {
                 </Link>{" "}
                 and keep track of my reading. I always look to connect on{" "}
                 <a
-                  href="https://linkedin.com/in/imeshadilshani"
+                  href="www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-300 hover:underline"
@@ -315,7 +265,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-1">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/data-science-code-on-multiple-monitors.jpg"
+                  src="/CW1.jpg"
                   alt="Community Work"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 />
@@ -323,7 +273,8 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Community Work</CardTitle>
                 <CardDescription>
-                  Giving back to the community through volunteer work and leadership. I believe in sharing knowledge and helping others grow in their tech journey.
+                  I’m passionate about continuous learning and collaboration. By sharing ideas and supporting others, 
+  I aim to build meaningful connections and create a positive impact within the tech community.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -338,7 +289,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-2">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/academic-research-presentation-university.jpg"
+                  src="/PL1.jpg"
                   alt="Tech Stack"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 />
@@ -361,7 +312,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-3">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/data-journalism-writing-laptop-notebook.jpg"
+                  src="/J1.jpg"
                   alt="Journalism"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 />
