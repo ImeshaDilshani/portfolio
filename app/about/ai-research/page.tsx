@@ -36,8 +36,7 @@ export default function AIResearchPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage:
-                "url('/data-science-code-on-multiple-monitors.jpg')",
+              backgroundImage: "url('/research/Research Timeline.png')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -121,7 +120,7 @@ export default function AIResearchPage() {
                   {/* Research Image */}
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-8 group">
                     <img
-                      src="/ai-writing-assistant-interface.png"
+                      src="/research/Research Timeline.png"
                       alt="NLP Research Project"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

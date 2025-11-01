@@ -72,7 +72,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen pt-32 pb-20 px-4">
+    <main className="min-h-screen pt-24 pb-20 px-4">
       <div className="container max-w-6xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16 animate-fadeInUp">

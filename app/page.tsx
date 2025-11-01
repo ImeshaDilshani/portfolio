@@ -1,13 +1,19 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Github, Linkedin, Twitter, Download } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ArrowRight, Github, Linkedin, Twitter, Download } from "lucide-react";
 
 export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center overflow-hidden py-20 md:py-32">
+      <section className="relative flex items-center justify-center overflow-hidden pt-24 pb-20 md:pt-32 md:pb-32">
         <div className="relative z-10 container px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
@@ -16,7 +22,7 @@ export default function HomePage() {
                 <div className="relative">
                   {/* Decorative elements */}
                   <div className="absolute -inset-3 bg-gradient-to-r from-purple-600/20 to-purple-800/20 rounded-full blur-xl"></div>
-                  
+
                   {/* Profile Image */}
                   <img
                     src="/profile.jpeg"
@@ -35,14 +41,19 @@ export default function HomePage() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                       </span>
-                      <span className="text-green-400 text-sm font-medium">Available for Work</span>
+                      <span className="text-green-400 text-sm font-medium">
+                        Available for Work
+                      </span>
                     </div>
                   </div>
 
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-                    Hey, I'm <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Imesha Dilshani</span>
+                    Hey, I'm{" "}
+                    <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                      Imesha Dilshani
+                    </span>
                   </h1>
-                  
+
                   <p className="text-xl md:text-2xl text-purple-200/70 font-light leading-relaxed">
                     Solo Developer | Data • Design • Development
                   </p>
@@ -51,11 +62,17 @@ export default function HomePage() {
                 <div className="space-y-3 animate-fadeInUp animation-delay-200">
                   <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto md:mx-0">
                     A creative problem-solver in{" "}
-                    <span className="text-purple-300 font-medium">Software Development</span>,{" "}
-                    <span className="text-purple-300 font-medium">Data Science</span>, and{" "}
+                    <span className="text-purple-300 font-medium">
+                      Software Development
+                    </span>
+                    ,{" "}
+                    <span className="text-purple-300 font-medium">
+                      Data Science
+                    </span>
+                    , and{" "}
                     <span className="text-purple-300 font-medium">Design</span>
                   </p>
-                  
+
                   <div className="flex items-center justify-center md:justify-start gap-3 text-purple-300/80 font-mono text-sm">
                     <span className="w-2 h-2 bg-purple-300 rounded-full animate-pulse"></span>
                     <span>Quality • Product • Community</span>
@@ -145,27 +162,40 @@ export default function HomePage() {
                 Previously, I have worked at{" "}
                 <span className="text-purple-300">
                   <a
-                  href="https://www.atlas.lk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-300 hover:underline"
-                >
-                Atlas Axillia Co. (Pvt) Ltd.
-                </a>
-                </span> as a Production Data
-                Intern:
+                    href="https://www.atlas.lk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:underline"
+                  >
+                    Atlas Axillia Co. (Pvt) Ltd.
+                  </a>
+                </span>{" "}
+                as a Production Data Intern:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  Contributed to Production Data Updater software (Node.js, Express.js), improving reporting accuracy
+                  Contributed to Production Data Updater software (Node.js,
+                  Express.js), improving reporting accuracy
                 </li>
-                <li>Conducted API testing with Postman and integrated database functionality with Excel export</li>
-                <li>Developed interactive Power BI reports for department heads</li>
-                <li>Integrated 30-day production data loss into SAP supporting OEE processes</li>
-                <li>Built Loss Tree analysis with SAP BEx Analyzer to prioritize inefficiencies</li>
+                <li>
+                  Conducted API testing with Postman and integrated database
+                  functionality with Excel export
+                </li>
+                <li>
+                  Developed interactive Power BI reports for department heads
+                </li>
+                <li>
+                  Integrated 30-day production data loss into SAP supporting OEE
+                  processes
+                </li>
+                <li>
+                  Built Loss Tree analysis with SAP BEx Analyzer to prioritize
+                  inefficiencies
+                </li>
               </ul>
               <p>
-                In my past lives, I also used to freelance as a designer and currently as a developer at{" "}
+                In my past lives, I also used to freelance as a designer and
+                currently as a developer at{" "}
                 <a
                   href="https://www.freelancer.com/u/imeshadilshani03"
                   target="_blank"
@@ -184,25 +214,36 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold text-left">Education</h3>
             <div className="space-y-4 text-muted-foreground text-left">
               <p>
-                Before this, I completed my graduation with a Bachelor's Degree in Computer Science specializing in{" "}
+                Before this, I completed my graduation with a Bachelor's Degree
+                in Computer Science specializing in{" "}
                 <span className="text-purple-300">Data Science</span> from the{" "}
-                <span className="text-purple-300">University of Kelaniya, Sri Lanka</span>, in 2025, where my
-                research lies in{" "}
+                <span className="text-purple-300">
+                  University of Kelaniya, Sri Lanka
+                </span>
+                , in 2025, where my research lies in{" "}
                 <span className="text-purple-300">
                   AI Solutions for Sinhala and Tamil Communication in Sri Lanka
                 </span>
                 , aiming to bridge local language barriers with technology.
               </p>
               <p>
-                I finished school at <span className="text-purple-300">President College, Minuwangoda</span>,
-                in 2019, achieving an A for Mathematics, a B for Chemistry, and a C for Physics in the Advanced Level.
-                Before this, I spent grades 6 to 11 at{" "}
-                <span className="text-purple-300">Seelewimala Maha Vidyalaya, Minuwangoda</span>. After getting
-                the best result in the school, I moved to President College for higher studies.
+                I finished school at{" "}
+                <span className="text-purple-300">
+                  President College, Minuwangoda
+                </span>
+                , in 2019, achieving an A for Mathematics, a B for Chemistry,
+                and a C for Physics in the Advanced Level. Before this, I spent
+                grades 6 to 11 at{" "}
+                <span className="text-purple-300">
+                  Seelewimala Maha Vidyalaya, Minuwangoda
+                </span>
+                . After getting the best result in the school, I moved to
+                President College for higher studies.
               </p>
               <p>
                 Before grade 6, I spent 5 years in my village school,{" "}
-                <span className="text-purple-300">Arangawa Primary School</span>.
+                <span className="text-purple-300">Arangawa Primary School</span>
+                .
               </p>
             </div>
           </div>
@@ -213,22 +254,31 @@ export default function HomePage() {
             <div className="space-y-4 text-muted-foreground text-left">
               <p>
                 I'm currently developing a stock photography portfolio on{" "}
-                <span className="text-purple-300">Adobe Stock, Shutterstock, and Dreamstime</span>, capturing
-                moments and scenes that tell stories.
+                <span className="text-purple-300">
+                  Adobe Stock, Shutterstock, and Dreamstime
+                </span>
+                , capturing moments and scenes that tell stories.
               </p>
               <p>
-                Recently, I started to complete my little hope that came with me from my childhood:{" "}
-                <span className="text-purple-300">book writing</span>, including kids' books and self-help
-                books. I hope to publish those in the future.
+                Recently, I started to complete my little hope that came with me
+                from my childhood:{" "}
+                <span className="text-purple-300">book writing</span>, including
+                kids' books and self-help books. I hope to publish those in the
+                future.
               </p>
               <p>
-                I write on <span className="text-purple-300">Medium</span> and my{" "}
-                <Link href="/writes" className="text-purple-300 hover:underline">
+                I write on <span className="text-purple-300">Medium</span> and
+                my{" "}
+                <Link
+                  href="/writes"
+                  className="text-purple-300 hover:underline"
+                >
                   blog section
                 </Link>
-                , covering what I learn from my studies and from my life. I also conduct{" "}
-                <span className="text-purple-300">mathematics classes</span> for students both online and
-                physically.
+                , covering what I learn from my studies and from my life. I also
+                conduct{" "}
+                <span className="text-purple-300">mathematics classes</span> for
+                students both online and physically.
               </p>
             </div>
           </div>
@@ -273,12 +323,18 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Community Work</CardTitle>
                 <CardDescription>
-                  I’m passionate about continuous learning and collaboration. By sharing ideas and supporting others, 
-  I aim to build meaningful connections and create a positive impact within the tech community.
+                  I’m passionate about continuous learning and collaboration. By
+                  sharing ideas and supporting others, I aim to build meaningful
+                  connections and create a positive impact within the tech
+                  community.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="link" className="p-0 h-auto font-semibold" asChild>
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-semibold"
+                  asChild
+                >
                   <Link href="/myworks/community">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -297,11 +353,17 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Tech Stack I Use</CardTitle>
                 <CardDescription>
-                  A comprehensive overview of the technologies, frameworks, and tools I work with. From programming languages to deployment platforms, here's what powers my projects.
+                  A comprehensive overview of the technologies, frameworks, and
+                  tools I work with. From programming languages to deployment
+                  platforms, here's what powers my projects.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="link" className="p-0 h-auto font-semibold" asChild>
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-semibold"
+                  asChild
+                >
                   <Link href="/myworks/techstack">
                     Read Them <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -320,11 +382,18 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Journalism</CardTitle>
                 <CardDescription>
-                  My writings on data science, machine learning, technology and also lessons learned from my life. I share insights and stories focused on making complex things accessible to everyone.
+                  My writings on data science, machine learning, technology and
+                  also lessons learned from my life. I share insights and
+                  stories focused on making complex things accessible to
+                  everyone.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="link" className="p-0 h-auto font-semibold" asChild>
+                <Button
+                  variant="link"
+                  className="p-0 h-auto font-semibold"
+                  asChild
+                >
                   <Link href="/writes">
                     Check Them Out <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -335,5 +404,5 @@ export default function HomePage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

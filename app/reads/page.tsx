@@ -66,7 +66,7 @@ export default function ReadsPage() {
 
   return (
     <main>
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"

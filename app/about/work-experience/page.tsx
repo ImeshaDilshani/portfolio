@@ -33,8 +33,7 @@ export default function WorkExperiencePage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage:
-                "url('/modern-tech-workspace-with-laptop-and-code.jpg')",
+              backgroundImage: "url('/about/experince.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -176,7 +175,7 @@ export default function WorkExperiencePage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/team-photo.jpg"
+                        src="/about/Atlas1.jpeg"
                         alt="Atlas Axillia Team"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -184,7 +183,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/modern-tech-workspace-with-laptop-and-code.jpg"
+                        src="/about/Atlas2.jpeg"
                         alt="Working on production data"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -192,7 +191,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/data-analytics-dashboard.png"
+                        src="/about/atlas (2).jpg"
                         alt="Power BI Dashboard"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -200,7 +199,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/modern-ecommerce-dashboard.png"
+                        src="/about/atlas.jpeg"
                         alt="Data Analysis Work"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -233,7 +232,7 @@ export default function WorkExperiencePage() {
                     <p>
                       Currently, I work as a freelance developer on{" "}
                       <a
-                        href="https://www.freelancer.com"
+                        href="https://www.freelancer.com/u/imeshadilshani03"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
@@ -253,7 +252,7 @@ export default function WorkExperiencePage() {
                   <div className="lg:col-span-1 flex justify-center lg:justify-end">
                     <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center border-2 border-border hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
                       <img
-                        src="/placeholder-logo.png"
+                        src="/about/freelancer.png"
                         alt="Freelancer.com Logo"
                         className="max-w-full max-h-full object-contain p-4 hover:scale-110 transition-transform duration-300"
                       />

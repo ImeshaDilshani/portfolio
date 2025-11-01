@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -204,7 +204,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
                       <img
-                        src="/arangawa school.jpeg"
+                        src="/about/arangawa.jpg"
                         alt="Minu/Arangawa Sri Dhammarama Primary College"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -234,7 +234,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
                       <img
-                        src="/seelavimala.jpeg"
+                        src="/about/seelavimala-2.jpg"
                         alt="Minu/Seelavimala Maha Vidyalaya"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -277,7 +277,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
                       <img
-                        src="/president college.webp"
+                        src="/about/president.jpg"
                         alt="President's College, Minuwangoda"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -318,7 +318,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
                       <img
-                        src="/intech.jfif"
+                        src="/about/intech.jpg"
                         alt="InTech College, Gampaha"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -358,7 +358,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
                       <img
-                        src="/data-science-code-on-multiple-monitors.jpg"
+                        src="/about/kelaniya.jpg"
                         alt="University of Kelaniya"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
