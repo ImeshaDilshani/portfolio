@@ -54,6 +54,28 @@ export default function GardeningPage() {
                 garden flourish.
               </p>
 
+              <h3 className="text-2xl font-semibold mb-4">How I Got Hooked</h3>
+              <p className="text-muted-foreground mb-6">
+                I'll admit it - I'm completely addicted to gardening now, and I
+                have my amma (mother) to thank for that. Growing up, I watched
+                her tend to her vegetable garden in her free time, transforming
+                small patches of soil into sources of fresh produce. At the
+                time, I didn't fully appreciate what she was doing, but
+                something about her dedication and joy left a lasting impression
+                on me.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Now I understand that feeling completely. There's an
+                indescribable happiness that comes from working with nature -
+                getting your hands dirty, planting seeds, and then waiting with
+                anticipation for the results. The process of watching something
+                grow from a tiny seed into a thriving plant is magical. It's
+                taught me patience, hope, and the value of nurturing something
+                with care. Each sprout that breaks through the soil feels like a
+                small victory, and I find myself checking on my plants every
+                day, excited to see their progress.
+              </p>
+
               <h3 className="text-2xl font-semibold mb-4">What I Grow</h3>
               <p className="text-muted-foreground mb-8">
                 I'm currently exploring different types of plants and learning

@@ -36,8 +36,7 @@ export default function MOOCsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage:
-                "url('/serene-harbor-dock-with-boats-at-sunset.jpg')",
+              backgroundImage: "url('/free-knowledge.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -119,14 +118,15 @@ export default function MOOCsPage() {
                     Free Knowledge
                   </h2>
                   <p className="text-lg leading-relaxed text-center hover-lift transition-all duration-300">
-                    The world is moving from one-time education to lifelong
-                    learning. Today, people often switch careers and take on new
-                    challenges, which means learning can't stop after earning a
-                    single degree. Education must now blend with our daily and
-                    professional lives. The MOOCs listed below have helped me
-                    stay up to date with the fast-changing world of technology
-                    and continuously build the skills needed for my technical
-                    and professional growth.
+                    The world is rapidly shifting from one-time education to
+                    lifelong learning. As careers evolve and new challenges
+                    emerge, continuous learning has become essential beyond
+                    traditional degrees. For me, education is an ongoing journey
+                    that integrates seamlessly with my daily and professional
+                    life. The MOOCs and online programs I’ve completed have
+                    played a key role in helping me stay current with the
+                    ever-changing world of technology and in continuously
+                    strengthening my technical and professional skills.
                   </p>
                 </section>
 
@@ -138,7 +138,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/data-analytics-dashboard.png"
+                        src="/cisco-ds.png"
                         alt="Introduction to Data Science"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -180,7 +180,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/academic-research-presentation-university.jpg"
+                        src="/stanford-online.png"
                         alt="Stanford Lagunita Courses"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -223,7 +223,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/modern-ecommerce-dashboard.png"
+                        src="/linkdin-learn.png"
                         alt="Power BI ETL Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -266,7 +266,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/modern-tech-workspace-with-laptop-and-code.jpg"
+                        src="/coursera.png"
                         alt="Java Programming Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -308,7 +308,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/data-science-code-on-multiple-monitors.jpg"
+                        src="/forge.png"
                         alt="Forage Virtual Experience"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />

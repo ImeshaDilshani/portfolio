@@ -36,7 +36,7 @@ export default function AIResearchPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/research/Research Timeline.png')",
+              backgroundImage: "url('/J1-2.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -120,7 +120,7 @@ export default function AIResearchPage() {
                   {/* Research Image */}
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-8 group">
                     <img
-                      src="/research/Research Timeline.png"
+                      src="/research/up1.jpeg"
                       alt="NLP Research Project"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -237,38 +237,38 @@ export default function AIResearchPage() {
                               GitHub Repository:
                             </span>
                             <a
-                              href="#"
+                              href="https://github.com/SpeechChain-LK"
                               className="text-primary hover:underline"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              [Add GitHub Link]
+                              [GitHub Link]
                             </a>
                           </div>
                           <div className="flex items-center gap-3">
                             <span className="font-medium min-w-[140px]">
-                              Research Paper:
+                              Research Review Paper:
                             </span>
                             <a
-                              href="#"
+                              href="https://ieeexplore.ieee.org/document/11030975"
                               className="text-primary hover:underline"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              [Add Research Paper Link]
+                              [Review Paper Link]
                             </a>
                           </div>
                           <div className="flex items-center gap-3">
                             <span className="font-medium min-w-[140px]">
-                              Documentation:
+                              Thesis:
                             </span>
                             <a
-                              href="#"
+                              href="https://drive.google.com/file/d/1iqoZjSOsXGJWYhiGUSSAmXLGzmNA6XTC/view?usp=sharing"
                               className="text-primary hover:underline"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              [Add Documentation Link]
+                              [Thesis Link]
                             </a>
                           </div>
                         </div>

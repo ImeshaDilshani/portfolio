@@ -66,8 +66,7 @@ export default function LearningPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage:
-                "url('/serene-harbor-dock-with-boats-at-sunset.jpg')",
+              backgroundImage: "url('/listning.jpg')",
             }}
           />
         </div>
@@ -123,20 +122,15 @@ export default function LearningPage() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-purple-600/20 via-purple-800/10 to-purple-950/20 flex items-center justify-center">
+                  <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-purple-600/20 via-purple-800/10 to-purple-950/20">
                     <img
                       src={podcast.image}
                       alt={podcast.title}
-                      className="w-full h-full object-cover opacity-50"
+                      className="w-full h-full object-cover"
                       onError={(e) => {
                         e.currentTarget.style.display = "none";
                       }}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-                      <p className="font-bold text-xl text-white">
-                        {podcast.title}
-                      </p>
-                    </div>
                   </div>
                   <CardHeader>
                     <CardTitle className="text-lg uppercase">

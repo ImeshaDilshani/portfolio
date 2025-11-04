@@ -131,7 +131,7 @@ export default function UndergraduatePapersPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/ai-writing-assistant-interface.png"
+                        src="/research/up1.jpeg"
                         alt="Bridging Linguistic Gaps Paper"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -162,7 +162,7 @@ export default function UndergraduatePapersPage() {
                 <hr className="border-border" />
 
                 {/* Paper 2: Placeholder */}
-                <article
+                {/*<article
                   className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
                   data-animate="fade-up"
                 >
@@ -192,7 +192,7 @@ export default function UndergraduatePapersPage() {
                       READ IT HERE
                     </a>
                   </div>
-                </article>
+                </article>*/}
               </div>
             </div>
           </div>

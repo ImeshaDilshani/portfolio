@@ -126,13 +126,15 @@ export default function PresentationsPage() {
                 <section className="space-y-6" data-animate="fade-up">
                   <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
                     <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      MASTER'S THESIS DEFENSE
+                      TEXT CLASSIFICATION
                     </h2>
-                    <p className="text-muted-foreground mt-2">Slides</p>
+                    <p className="text-muted-foreground mt-2">
+                      Academic Presentation
+                    </p>
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                     <img
-                      src="/academic-research-presentation-university.jpg"
+                      src="/presentation-1.png"
                       alt="Master's Thesis Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -140,7 +142,7 @@ export default function PresentationsPage() {
                   </div>
                   <div className="flex justify-center">
                     <a
-                      href="#"
+                      href="https://drive.google.com/file/d/1QUDfTq7X8h0tbaBz9FUOrDf0vcXEGbHs/view?usp=sharing"
                       className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -154,13 +156,15 @@ export default function PresentationsPage() {
                 <section className="space-y-6" data-animate="fade-up">
                   <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
                     <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      PHD RESEARCH DEFENSE
+                      NOSQL SOLUTIONS TO HANDLE BIG DATA
                     </h2>
-                    <p className="text-muted-foreground mt-2">Slides</p>
+                    <p className="text-muted-foreground mt-2">
+                      Academic Presentation
+                    </p>
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                     <img
-                      src="/data-analytics-dashboard.png"
+                      src="/presentation-2.png"
                       alt="PhD Research Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -168,7 +172,66 @@ export default function PresentationsPage() {
                   </div>
                   <div className="flex justify-center">
                     <a
-                      href="#"
+                      href="https://drive.google.com/file/d/1ADBl8-gjo85Gp7MGZ7Xowr17mO57_hFn/view?usp=sharing"
+                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      [View Slides]
+                    </a>
+                  </div>
+                </section>
+
+                <section className="space-y-6" data-animate="fade-up">
+                  <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
+                      The SAP S/4HANA TRANSFORMATION
+                    </h2>
+                    <p className="text-muted-foreground mt-2">
+                      Academic Presentation
+                    </p>
+                  </div>
+                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <img
+                      src="/PRESENTATION-3.png"
+                      alt="PhD Research Defense Slides"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="flex justify-center">
+                    <a
+                      href="https://drive.google.com/file/d/1l8tZvlJgmL3dYumRy87n9jyEDsjHB3he/view?usp=sharing"
+                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      [View Slides]
+                    </a>
+                  </div>
+                </section>
+
+                <section className="space-y-6" data-animate="fade-up">
+                  <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
+                      NEXT-GENERATION REAL-TIME SPEECH TRANSLATION (RESEARCH
+                      FINAL VIVA)
+                    </h2>
+                    <p className="text-muted-foreground mt-2">
+                      Academic Presentation
+                    </p>
+                  </div>
+                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <img
+                      src="/presentation-5.png"
+                      alt="PhD Research Defense Slides"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="flex justify-center">
+                    <a
+                      href="https://drive.google.com/file/d/1ItWURTqZKqqlg8ZIeyzMTphR_iBKZIHo/view?usp=sharing"
                       className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"

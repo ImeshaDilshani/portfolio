@@ -1,27 +1,34 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Facebook, Instagram, Twitter, Linkedin, Github, Heart } from "lucide-react"
+import type React from "react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Github,
+  Heart,
+} from "lucide-react";
 
 export function Footer() {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Newsletter subscription:", email)
-    alert("Thank you for subscribing to my newsletter!")
-    setEmail("")
-  }
+    e.preventDefault();
+    console.log("Newsletter subscription:", email);
+    alert("Thank you for subscribing to my newsletter!");
+    setEmail("");
+  };
 
   return (
     <footer className="mt-auto">
       {/* Top decorative line */}
       <div className="border-t-2 border-purple-900/50" />
-      
+
       <div className="border-b border-border/30 py-12 md:py-16 bg-gradient-to-b from-purple-950/5 to-transparent">
         <div className="container px-4 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -32,12 +39,13 @@ export function Footer() {
                   root@D4 IMESHA
                 </h3>
                 <p className="text-muted-foreground flex items-center gap-2">
-                  Data • Design • Development <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+                  Data • Design • Development{" "}
+                  <Heart className="h-4 w-4 text-red-500 fill-red-500" />
                 </p>
               </div>
-              
+
               <div className="flex gap-4 items-center">
-                <a
+                {/*<a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -45,8 +53,8 @@ export function Footer() {
                   aria-label="Facebook"
                 >
                   <Facebook className="h-5 w-5" />
-                </a>
-                <a
+                </a>*/}
+                {/*<a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,9 +62,9 @@ export function Footer() {
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
-                </a>
+                </a>*/}
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/ImeshaDilshani3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-purple-400 transition-colors"
@@ -65,7 +73,7 @@ export function Footer() {
                   <Twitter className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-purple-400 transition-colors"
@@ -82,9 +90,6 @@ export function Footer() {
                 >
                   <Github className="h-5 w-5" />
                 </a>
-                <div className="ml-2">
-                  <ThemeToggle />
-                </div>
               </div>
             </div>
 
@@ -105,7 +110,10 @@ export function Footer() {
                   required
                   className="flex-1"
                 />
-                <Button type="submit" className="bg-purple-600 hover:bg-purple-700">
+                <Button
+                  type="submit"
+                  className="bg-purple-600 hover:bg-purple-700"
+                >
                   Subscribe
                 </Button>
               </form>
@@ -122,9 +130,9 @@ export function Footer() {
           </p>
         </div>
       </div>
-      
+
       {/* Bottom decorative line */}
       <div className="border-b-2 border-purple-900/50" />
     </footer>
-  )
+  );
 }

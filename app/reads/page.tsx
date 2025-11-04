@@ -71,8 +71,7 @@ export default function ReadsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage:
-                "url('/data-journalism-writing-laptop-notebook.jpg')",
+              backgroundImage: "url('/garding/idea-hero.jpg')",
             }}
           />
         </div>

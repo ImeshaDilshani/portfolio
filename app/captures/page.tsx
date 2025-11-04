@@ -34,8 +34,7 @@ export default function CapturesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage:
-                "url('/garding/senior-couple-harvesting-tomatoes.jpg')",
+              backgroundImage: "url('/garding/idea-hero.jpg')",
             }}
           />
         </div>
@@ -96,7 +95,6 @@ export default function CapturesPage() {
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <span>🌱</span>
                     Gardening for Mindful Living
                   </CardTitle>
                 </CardHeader>
@@ -122,7 +120,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/modern-tech-workspace-with-laptop-and-code.jpg"
+                    src="/portrait-person-ai-robot.jpg"
                     alt="Stock Photography"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -130,7 +128,6 @@ export default function CapturesPage() {
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <span>📸</span>
                     Visual Storytelling Through Photos
                   </CardTitle>
                 </CardHeader>
@@ -156,7 +153,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/data-science-code-on-multiple-monitors.jpg"
+                    src="/about-bg.jpg"
                     alt="Digital Product Design"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -164,7 +161,6 @@ export default function CapturesPage() {
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <span>💡</span>
                     Digital Product Design
                   </CardTitle>
                 </CardHeader>
