@@ -120,7 +120,7 @@ export function Navigation() {
               </Link>
 
               {/* Theme Toggle - Hide on mobile when menu is open */}
-              <div
+              {/*<div
                 className={cn(
                   "transition-opacity duration-200",
                   isMobileMenuOpen
@@ -129,7 +129,7 @@ export function Navigation() {
                 )}
               >
                 <ThemeToggle />
-              </div>
+              </div>*/}
 
               {/* Mobile Menu Toggle */}
               <button
