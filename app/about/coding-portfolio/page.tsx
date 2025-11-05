@@ -36,7 +36,7 @@ export default function CodingPortfolioPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/modern-ecommerce-dashboard.png')",
+              backgroundImage: "url('/about-bg.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -124,7 +124,7 @@ export default function CodingPortfolioPage() {
                   <article className="group cursor-pointer">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-colors">
                       <img
-                        src="/modern-ecommerce-dashboard.png"
+                        src="/c-1.png"
                         alt="Web Development Project"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -132,24 +132,26 @@ export default function CodingPortfolioPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
                         <div className="text-white">
                           <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            [WEB PROJECT TITLE]
+                            Airline Reservation Management System
                           </h3>
                           <p className="text-sm md:text-base opacity-90">
-                            [Project description - technologies and features]
+                            The Airline Reservation Management System is a
+                            web-based application that streamlines the process
+                            of flight booking and reservation management.
                           </p>
                         </div>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-center gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/Airline-Reservation-Management-System"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        [View Project]
+                        [GitHub]
                       </a>
-                      <span className="text-muted-foreground">|</span>
+                      {/*<span className="text-muted-foreground">|</span>
                       <a
                         href="#"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
@@ -157,7 +159,7 @@ export default function CodingPortfolioPage() {
                         rel="noopener noreferrer"
                       >
                         [GitHub]
-                      </a>
+                      </a>*/}
                     </div>
                   </article>
 
@@ -165,7 +167,7 @@ export default function CodingPortfolioPage() {
                   <article className="group cursor-pointer">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-colors">
                       <img
-                        src="/modern-task-management-app-interface.jpg"
+                        src="/c-2.png"
                         alt="Mobile Development Project"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -173,24 +175,28 @@ export default function CodingPortfolioPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
                         <div className="text-white">
                           <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            [MOBILE PROJECT TITLE]
+                            Fishsnap Mobile application (Identify Fish Species)
                           </h3>
                           <p className="text-sm md:text-base opacity-90">
-                            [Project description - platform and features]
+                            Fishsnap Frontend is a mobile application developed
+                            using the Flutter framework with Dart. It is
+                            designed to work seamlessly with the Fishsnap
+                            Backend, providing a user-friendly interface for
+                            users to classify fish species in images.
                           </p>
                         </div>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-center gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/FishSnap-2023/Fishsnap-mobile-app"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        [View Project]
+                        [GitHub]
                       </a>
-                      <span className="text-muted-foreground">|</span>
+                      {/*<span className="text-muted-foreground">|</span>
                       <a
                         href="#"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
@@ -198,12 +204,12 @@ export default function CodingPortfolioPage() {
                         rel="noopener noreferrer"
                       >
                         [GitHub]
-                      </a>
+                      </a>*/}
                     </div>
                   </article>
 
                   {/* Project 3: Full Stack Application */}
-                  <article className="group cursor-pointer">
+                  {/*<article className="group cursor-pointer">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-colors">
                       <img
                         src="/modern-tech-workspace-with-laptop-and-code.jpg"
@@ -241,7 +247,7 @@ export default function CodingPortfolioPage() {
                         [GitHub]
                       </a>
                     </div>
-                  </article>
+                  </article>*/}
                 </div>
               </div>
             </div>

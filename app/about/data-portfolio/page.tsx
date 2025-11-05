@@ -36,7 +36,7 @@ export default function DataPortfolioPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/data-analytics-dashboard.png')",
+              backgroundImage: "url('/about-bg.jpg')",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
@@ -130,7 +130,7 @@ export default function DataPortfolioPage() {
                   >
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
                       <img
-                        src="/data-science-code-on-multiple-monitors.jpg"
+                        src="/r-1.png"
                         alt="Classifying Tweets with Weights & Biases"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -138,26 +138,28 @@ export default function DataPortfolioPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
                         <div className="text-white">
                           <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            CLASSIFYING TWEETS WITH WEIGHTS & BIASES
+                            Sri Lanka District-wise Weather Forecasting using
+                            SARIMA
                           </h3>
                           <p className="text-sm md:text-base opacity-90">
-                            3 Different Neural Network Models to Classify Tweets
+                            Time series analysis and forecasting system for
+                            weather data across different districts in Sri Lanka
                           </p>
                         </div>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-center gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/SL-districtwise-weather-forecast-sarima/blob/main/1.R"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        [View Notebook]
+                        [View R Code]
                       </a>
                       <span className="text-muted-foreground">|</span>
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/SL-districtwise-weather-forecast-sarima"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -174,7 +176,7 @@ export default function DataPortfolioPage() {
                   >
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
                       <img
-                        src="/data-analytics-dashboard.png"
+                        src="/j-1.png"
                         alt="Instacart Market Basket Analysis"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -182,18 +184,19 @@ export default function DataPortfolioPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
                         <div className="text-white">
                           <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            INSTACART MARKET BASKET ANALYSIS
+                            Customer-Segmentation
                           </h3>
                           <p className="text-sm md:text-base opacity-90">
-                            Data Exploration, Customer Segmentation, Association
-                            Rules Mining on the Instacart dataset
+                            Project focuses on developing a data-driven solution
+                            for KJ Marketing, a retail company seeking to
+                            enhance its understanding of customer segments.
                           </p>
                         </div>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-center gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/Data-Storm-5.0-Customer-Segmentation-Team-RiverBorn/blob/main/Semi%20Final%20Solution%20-%20Team%20%20RiverBorn.ipynb"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -202,7 +205,7 @@ export default function DataPortfolioPage() {
                       </a>
                       <span className="text-muted-foreground">|</span>
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/Data-Storm-5.0-Customer-Segmentation-Team-RiverBorn"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -219,7 +222,7 @@ export default function DataPortfolioPage() {
                   >
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
                       <img
-                        src="/modern-ecommerce-dashboard.png"
+                        src="/j-2.png"
                         alt="Data Analysis Project"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -227,17 +230,19 @@ export default function DataPortfolioPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
                         <div className="text-white">
                           <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            [PROJECT TITLE]
+                            Sign Language Detection Computer Vision YOLO-v5
                           </h3>
                           <p className="text-sm md:text-base opacity-90">
-                            [Project description]
+                            The project focuses on leveraging computer vision
+                            techniques to detect sign language gestures using
+                            the YOLO v5 model.
                           </p>
                         </div>
                       </div>
                     </div>
                     <div className="mt-4 flex justify-center gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/Sign-Language-Detection-Computer-Vision-YOLO-v5/blob/main/Sign_Language_Detection_YOLO_v5_Computer_Vision_.ipynb"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -246,7 +251,144 @@ export default function DataPortfolioPage() {
                       </a>
                       <span className="text-muted-foreground">|</span>
                       <a
-                        href="#"
+                        href="https://github.com/ImeshaDilshani/Sign-Language-Detection-Computer-Vision-YOLO-v5"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [GitHub]
+                      </a>
+                    </div>
+                  </article>
+
+                  <article
+                    className="group cursor-pointer"
+                    data-animate="fade-up"
+                  >
+                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
+                      <img
+                        src="/j-3.png"
+                        alt="Data Analysis Project"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
+                        <div className="text-white">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                            Customer Churn Analysis-ChurnPrediction
+                          </h3>
+                          <p className="text-sm md:text-base opacity-90">
+                            Customer churn, also known as customer attrition,
+                            refers to the phenomenon where customers cease their
+                            relationship with a company.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-center gap-4">
+                      <a
+                        href="https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction/blob/main/Churn%20Prediction%20Model.ipynb"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [View Notebook]
+                      </a>
+                      <span className="text-muted-foreground">|</span>
+                      <a
+                        href="https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [GitHub]
+                      </a>
+                    </div>
+                  </article>
+
+                  <article
+                    className="group cursor-pointer"
+                    data-animate="fade-up"
+                  >
+                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
+                      <img
+                        src="/j-4.png"
+                        alt="Data Analysis Project"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
+                        <div className="text-white">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                            Content Base Movie Recommender System
+                          </h3>
+                          <p className="text-sm md:text-base opacity-90">
+                            This type of recommender system is particularly
+                            useful for recommending items with similar
+                            attributes and providing personalized suggestions to
+                            users.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-center gap-4">
+                      <a
+                        href="https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System/blob/main/Movie_Recommender_System_Content_Base.ipynb"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [View Notebook]
+                      </a>
+                      <span className="text-muted-foreground">|</span>
+                      <a
+                        href="https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [GitHub]
+                      </a>
+                    </div>
+                  </article>
+
+                  <article
+                    className="group cursor-pointer"
+                    data-animate="fade-up"
+                  >
+                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300">
+                      <img
+                        src="/j-5.png"
+                        alt="Data Analysis Project"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
+                        <div className="text-white">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                            Diabetes Prediction System
+                          </h3>
+                          <p className="text-sm md:text-base opacity-90">
+                            The Diabetes Prediction System is a web-based
+                            application that predicts the likelihood of an
+                            individual having diabetes based on various
+                            health-related features.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex justify-center gap-4">
+                      <a
+                        href="https://github.com/ImeshaDilshani/Diabetes-Prediction-System/blob/main/Diabetes-Prediction-System.ipynb"
+                        className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [View Notebook]
+                      </a>
+                      <span className="text-muted-foreground">|</span>
+                      <a
+                        href="https://github.com/ImeshaDilshani/Diabetes-Prediction-System"
                         className="text-purple-600 dark:text-purple-400 hover:underline font-medium hover-highlight"
                         target="_blank"
                         rel="noopener noreferrer"
