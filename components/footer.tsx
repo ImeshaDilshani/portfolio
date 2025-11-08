@@ -4,7 +4,6 @@ import type React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Facebook,
   Instagram,
@@ -27,47 +26,29 @@ export function Footer() {
   return (
     <footer className="mt-auto">
       {/* Top decorative line */}
-      <div className="border-t-2 border-purple-900/50" />
+      <div className="border-t-2 border-gray-200" />
 
-      <div className="border-b border-border/30 py-12 md:py-16 bg-gradient-to-b from-purple-950/5 to-transparent">
+      <div className="border-b border-gray-200 py-12 md:py-16 bg-gray-50">
         <div className="container px-4 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Logo and Social Media */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-black">
                   root@D4 IMESHA
                 </h3>
-                <p className="text-muted-foreground flex items-center gap-2">
+                <p className="text-gray-600 flex items-center gap-2">
                   Data • Design • Development{" "}
-                  <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+                  <Heart className="h-4 w-4 text-black fill-black" />
                 </p>
               </div>
 
               <div className="flex gap-4 items-center">
-                {/*<a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>*/}
-                {/*<a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>*/}
                 <a
                   href="https://x.com/ImeshaDilshani3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
+                  className="text-gray-600 hover:text-black transition-colors"
                   aria-label="Twitter"
                 >
                   <Twitter className="h-5 w-5" />
@@ -76,7 +57,7 @@ export function Footer() {
                   href="www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
+                  className="text-gray-600 hover:text-black transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -85,7 +66,7 @@ export function Footer() {
                   href="https://github.com/ImeshaDilshani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
+                  className="text-gray-600 hover:text-black transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
@@ -95,10 +76,10 @@ export function Footer() {
 
             {/* Right Side - Newsletter Subscription */}
             <div className="space-y-4">
-              <h3 className="text-xl md:text-2xl font-semibold">
+              <h3 className="text-xl md:text-2xl font-semibold text-black">
                 Subscribe to my newsletter
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Stay updated with latest articles from my blog.
               </p>
               <form onSubmit={handleSubmit} className="flex gap-2">
@@ -112,7 +93,7 @@ export function Footer() {
                 />
                 <Button
                   type="submit"
-                  className="bg-purple-600 hover:bg-purple-700"
+                  className="bg-black hover:bg-gray-800 text-white"
                 >
                   Subscribe
                 </Button>
@@ -123,16 +104,16 @@ export function Footer() {
       </div>
 
       {/* Copyright Section */}
-      <div className="py-6 bg-black/20">
+      <div className="py-6 bg-white">
         <div className="container px-4 max-w-7xl mx-auto">
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-sm text-gray-600">
             © 2025 Imesha Dilshani. All rights reserved.
           </p>
         </div>
       </div>
 
       {/* Bottom decorative line */}
-      <div className="border-b-2 border-purple-900/50" />
+      <div className="border-b-2 border-gray-200" />
     </footer>
   );
 }

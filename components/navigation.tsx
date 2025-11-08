@@ -2,19 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-
-const navItems = [
-  { href: "/", label: "Start Here" },
-  { href: "/about", label: "About" },
-  { href: "/writes", label: "Writes" },
-  { href: "/reads", label: "Reads" },
-  { href: "/listening", label: "Listening" },
-  { href: "/captures", label: "Captures" },
-];
+import { NAVIGATION_CONFIG } from "@/lib/config";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -56,8 +47,8 @@ export function Navigation() {
           className={cn(
             "max-w-5xl mx-auto rounded-2xl transition-all duration-300",
             isScrolled
-              ? "bg-black/90 dark:bg-black/90 backdrop-blur-xl border border-purple-500/30 shadow-xl shadow-purple-900/20"
-              : "bg-black/70 dark:bg-black/70 backdrop-blur-lg border border-purple-500/20 shadow-lg shadow-purple-900/10",
+              ? "bg-white/95 backdrop-blur-xl border border-gray-300 shadow-xl"
+              : "bg-white/90 backdrop-blur-lg border border-gray-200 shadow-lg",
           )}
         >
           <div className="flex h-14 items-center justify-between px-4 md:px-6">
@@ -65,15 +56,15 @@ export function Navigation() {
             <div className="flex items-center gap-6">
               {/* Logo */}
               <Link
-                href="/"
-                className="text-base md:text-lg font-bold tracking-tight text-white hover:text-purple-400 transition-colors duration-300"
+                href={NAVIGATION_CONFIG.logo.href}
+                className="text-base md:text-lg font-bold tracking-tight text-black hover:text-gray-600 transition-colors duration-300"
               >
-                IMESHA • D⁴
+                {NAVIGATION_CONFIG.logo.text}
               </Link>
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center gap-1">
-                {navItems.map((item) => {
+                {NAVIGATION_CONFIG.mainNav.map((item) => {
                   const isActive = pathname === item.href;
                   return (
                     <Link
@@ -82,13 +73,13 @@ export function Navigation() {
                       className={cn(
                         "relative px-3 py-1.5 text-[13px] font-medium transition-all duration-200 rounded-lg",
                         isActive
-                          ? "text-white"
-                          : "text-white/60 hover:text-white hover:bg-white/5",
+                          ? "text-black bg-gray-100"
+                          : "text-gray-600 hover:text-black hover:bg-gray-50",
                       )}
                     >
                       {item.label}
                       {isActive && (
-                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-purple-400"></span>
+                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-black"></span>
                       )}
                     </Link>
                   );
@@ -96,14 +87,14 @@ export function Navigation() {
               </nav>
             </div>
 
-            {/* Right side: CTA + Theme Toggle */}
+            {/* Right side: CTA + Mobile Menu */}
             <div className="flex items-center gap-2">
               {/* Let's Talk Button - Desktop */}
               <Link
-                href="/contact"
-                className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md hover:scale-105"
+                href={NAVIGATION_CONFIG.cta.href}
+                className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-black hover:bg-gray-800 text-white transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md hover:scale-105"
               >
-                Let's Talk
+                {NAVIGATION_CONFIG.cta.label}
                 <svg
                   className="w-3.5 h-3.5"
                   fill="none"
@@ -119,22 +110,10 @@ export function Navigation() {
                 </svg>
               </Link>
 
-              {/* Theme Toggle - Hide on mobile when menu is open */}
-              {/*<div
-                className={cn(
-                  "transition-opacity duration-200",
-                  isMobileMenuOpen
-                    ? "lg:opacity-100 opacity-0 pointer-events-none lg:pointer-events-auto"
-                    : "opacity-100",
-                )}
-              >
-                <ThemeToggle />
-              </div>*/}
-
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg hover:bg-white/10 active:scale-95 transition-all duration-200 text-white"
+                className="lg:hidden p-2 rounded-lg hover:bg-gray-100 active:scale-95 transition-all duration-200 text-black"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -174,7 +153,7 @@ export function Navigation() {
         {/* Backdrop with blur */}
         <div
           className={cn(
-            "absolute inset-0 bg-black/80 backdrop-blur-md transition-all duration-300",
+            "absolute inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300",
             isMobileMenuOpen ? "opacity-100" : "opacity-0",
           )}
           onClick={() => setIsMobileMenuOpen(false)}
@@ -184,7 +163,7 @@ export function Navigation() {
         {/* Menu Content - Floating Box */}
         <div
           className={cn(
-            "absolute top-20 left-4 right-4 mx-auto max-w-md bg-gradient-to-b from-black/95 to-black/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/30 overflow-hidden transition-all duration-500 ease-out",
+            "absolute top-20 left-4 right-4 mx-auto max-w-md bg-white backdrop-blur-xl rounded-2xl border border-gray-200 shadow-2xl overflow-hidden transition-all duration-500 ease-out",
             isMobileMenuOpen
               ? "translate-y-0 opacity-100 scale-100"
               : "-translate-y-8 opacity-0 scale-95",
@@ -193,11 +172,8 @@ export function Navigation() {
           aria-modal="true"
           aria-label="Mobile navigation menu"
         >
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-purple-500/10 pointer-events-none" />
-
           <nav className="relative px-4 py-6 flex flex-col gap-1">
-            {navItems.map((item, index) => {
+            {NAVIGATION_CONFIG.mainNav.map((item, index) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -207,8 +183,8 @@ export function Navigation() {
                   className={cn(
                     "group relative px-4 py-3.5 text-base font-medium rounded-xl transition-all duration-300 active:scale-98 touch-manipulation",
                     isActive
-                      ? "text-white bg-purple-600/30 border border-purple-500/40 shadow-lg shadow-purple-900/20"
-                      : "text-white/70 hover:text-white hover:bg-white/5 border border-transparent",
+                      ? "text-black bg-gray-100 border border-gray-200 shadow-sm"
+                      : "text-gray-600 hover:text-black hover:bg-gray-50 border border-transparent",
                   )}
                   style={{
                     transitionDelay: isMobileMenuOpen
@@ -222,35 +198,32 @@ export function Navigation() {
                   <div className="flex items-center justify-between">
                     <span className="relative z-10">{item.label}</span>
                     {isActive && (
-                      <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+                      <span className="w-2 h-2 rounded-full bg-black" />
                     )}
                   </div>
-                  {!isActive && (
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-purple-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
                 </Link>
               );
             })}
 
             {/* Divider */}
-            <div className="my-2 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+            <div className="my-2 h-px bg-gray-200" />
 
             {/* Mobile CTA Button */}
             <Link
-              href="/contact"
+              href={NAVIGATION_CONFIG.cta.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="group relative flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white transition-all duration-300 font-medium shadow-lg shadow-purple-900/30 hover:shadow-purple-900/50 active:scale-98 overflow-hidden touch-manipulation"
+              className="group relative flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-black hover:bg-gray-800 text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl active:scale-98 overflow-hidden touch-manipulation"
               style={{
                 transitionDelay: isMobileMenuOpen
-                  ? `${navItems.length * 40}ms`
+                  ? `${NAVIGATION_CONFIG.mainNav.length * 40}ms`
                   : "0ms",
                 animation: isMobileMenuOpen
-                  ? `slideInFromLeft 0.5s ease-out ${navItems.length * 40}ms both`
+                  ? `slideInFromLeft 0.5s ease-out ${NAVIGATION_CONFIG.mainNav.length * 40}ms both`
                   : "none",
               }}
             >
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              <span className="relative z-10">Let's Talk</span>
+              <span className="relative z-10">{NAVIGATION_CONFIG.cta.label}</span>
               <svg
                 className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
@@ -265,24 +238,6 @@ export function Navigation() {
                 />
               </svg>
             </Link>
-
-            {/* Theme Toggle for Mobile */}
-            <div
-              className="mt-3 pt-4 border-t border-purple-500/20 flex items-center justify-between px-4"
-              style={{
-                transitionDelay: isMobileMenuOpen
-                  ? `${(navItems.length + 1) * 40}ms`
-                  : "0ms",
-                animation: isMobileMenuOpen
-                  ? `slideInFromLeft 0.5s ease-out ${(navItems.length + 1) * 40}ms both`
-                  : "none",
-              }}
-            >
-              <span className="text-white/70 text-sm font-medium">
-                Appearance
-              </span>
-              <ThemeToggle />
-            </div>
           </nav>
         </div>
       </div>

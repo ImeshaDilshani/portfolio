@@ -21,13 +21,13 @@ export default function HomePage() {
               <div className="flex-shrink-0 animate-scaleIn">
                 <div className="relative">
                   {/* Decorative elements */}
-                  <div className="absolute -inset-3 bg-gradient-to-r from-purple-600/20 to-purple-800/20 rounded-full blur-xl"></div>
+                  <div className="absolute -inset-3 bg-gray-200 rounded-full blur-xl"></div>
 
                   {/* Profile Image */}
                   <img
                     src="/profile.jpeg"
                     alt="Imesha Dilshani"
-                    className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-purple-500/40 shadow-2xl shadow-purple-900/50 ring-4 ring-purple-900/20"
+                    className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-black shadow-2xl ring-4 ring-gray-200"
                   />
                 </div>
               </div>
@@ -36,45 +36,45 @@ export default function HomePage() {
                 <div className="space-y-3 animate-fadeInUp">
                   {/* Available for Work Badge */}
                   <div className="flex justify-center md:justify-start mb-4">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-black">
                       <span className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
                       </span>
-                      <span className="text-green-400 text-sm font-medium">
+                      <span className="text-black text-sm font-medium">
                         Available for Work
                       </span>
                     </div>
                   </div>
 
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight leading-tight">
                     Hey, I'm{" "}
-                    <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                    <span className="underline decoration-2">
                       Imesha Dilshani
                     </span>
                   </h1>
 
-                  <p className="text-xl md:text-2xl text-purple-200/70 font-light leading-relaxed">
+                  <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed">
                     Solo Developer | Data • Design • Development
                   </p>
                 </div>
 
                 <div className="space-y-3 animate-fadeInUp animation-delay-200">
-                  <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                  <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto md:mx-0">
                     A creative problem-solver in{" "}
-                    <span className="text-purple-300 font-medium">
+                    <span className="font-medium text-black">
                       Software Development
                     </span>
                     ,{" "}
-                    <span className="text-purple-300 font-medium">
+                    <span className="font-medium text-black">
                       Data Science
                     </span>
                     , and{" "}
-                    <span className="text-purple-300 font-medium">Design</span>
+                    <span className="font-medium text-black">Design</span>
                   </p>
 
-                  <div className="flex items-center justify-center md:justify-start gap-3 text-purple-300/80 font-mono text-sm">
-                    <span className="w-2 h-2 bg-purple-300 rounded-full animate-pulse"></span>
+                  <div className="flex items-center justify-center md:justify-start gap-3 text-gray-700 font-mono text-sm">
+                    <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
                     <span>Quality • Product • Community</span>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default function HomePage() {
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                     <Button
                       size="lg"
-                      className="rounded-full bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white border-0 shadow-lg shadow-purple-900/50 transition-all hover:scale-105 gap-2"
+                      className="rounded-full bg-black hover:bg-gray-800 text-white border-0 shadow-lg transition-all hover:scale-105 gap-2"
                       asChild
                     >
                       <a href="/cv.pdf" download>
@@ -96,7 +96,7 @@ export default function HomePage() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="rounded-full bg-purple-950/30 border-purple-800/40 hover:bg-purple-900/40 hover:border-purple-700/60 backdrop-blur-sm transition-all hover:scale-110"
+                        className="rounded-full bg-white border-black hover:bg-gray-100 transition-all hover:scale-110"
                         asChild
                       >
                         <a
@@ -105,13 +105,13 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           aria-label="GitHub"
                         >
-                          <Github className="h-5 w-5 text-white" />
+                          <Github className="h-5 w-5 text-black" />
                         </a>
                       </Button>
                       <Button
                         variant="outline"
                         size="icon"
-                        className="rounded-full bg-purple-950/30 border-purple-800/40 hover:bg-purple-900/40 hover:border-purple-700/60 backdrop-blur-sm transition-all hover:scale-110"
+                        className="rounded-full bg-white border-black hover:bg-gray-100 transition-all hover:scale-110"
                         asChild
                       >
                         <a
@@ -120,13 +120,13 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           aria-label="LinkedIn"
                         >
-                          <Linkedin className="h-5 w-5 text-white" />
+                          <Linkedin className="h-5 w-5 text-black" />
                         </a>
                       </Button>
                       <Button
                         variant="outline"
                         size="icon"
-                        className="rounded-full bg-purple-950/30 border-purple-800/40 hover:bg-purple-900/40 hover:border-purple-700/60 backdrop-blur-sm transition-all hover:scale-110"
+                        className="rounded-full bg-white border-black hover:bg-gray-100 transition-all hover:scale-110"
                         asChild
                       >
                         <a
@@ -135,7 +135,7 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           aria-label="Twitter"
                         >
-                          <Twitter className="h-5 w-5 text-white" />
+                          <Twitter className="h-5 w-5 text-black" />
                         </a>
                       </Button>
                     </div>
@@ -148,24 +148,24 @@ export default function HomePage() {
       </section>
 
       {/* Life Motto Section */}
-      <section className="py-16 md:py-20 mt-16">
+      <section className="py-16 md:py-20 mt-16 bg-gray-50">
         <div className="container px-4 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-black">
             My Life Motto: "Small Steps, Big Systems."
           </h2>
 
           {/* Work Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left">Work</h3>
-            <div className="space-y-4 text-muted-foreground text-left">
+            <h3 className="text-2xl font-bold text-left text-black">Work</h3>
+            <div className="space-y-4 text-gray-700 text-left">
               <p>
                 Previously, I have worked at{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">
                   <a
                     href="https://www.atlas.lk/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-300 hover:underline"
+                    className="underline hover:no-underline"
                   >
                     Atlas Axillia Co. (Pvt) Ltd.
                   </a>
@@ -200,7 +200,7 @@ export default function HomePage() {
                   href="https://www.freelancer.com/u/imeshadilshani03"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-300 hover:underline"
+                  className="font-medium text-black underline hover:no-underline"
                 >
                   Freelancer.com
                 </a>
@@ -211,30 +211,30 @@ export default function HomePage() {
 
           {/* Education Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left">Education</h3>
-            <div className="space-y-4 text-muted-foreground text-left">
+            <h3 className="text-2xl font-bold text-left text-black">Education</h3>
+            <div className="space-y-4 text-gray-700 text-left">
               <p>
                 Before this, I completed my graduation with a Bachelor's Degree
                 in Computer Science specializing in{" "}
-                <span className="text-purple-300">Data Science</span> from the{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">Data Science</span> from the{" "}
+                <span className="font-medium text-black">
                   University of Kelaniya, Sri Lanka
                 </span>
                 , in 2025, where my research lies in{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">
                   AI Solutions for Sinhala and Tamil Communication in Sri Lanka
                 </span>
                 , aiming to bridge local language barriers with technology.
               </p>
               <p>
                 I finished school at{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">
                   President College, Minuwangoda
                 </span>
                 , in 2019, achieving an A for Mathematics, a B for Chemistry,
                 and a C for Physics in the Advanced Level. Before this, I spent
                 grades 6 to 11 at{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">
                   Seelewimala Maha Vidyalaya, Minuwangoda
                 </span>
                 . After getting the best result in the school, I moved to
@@ -242,7 +242,7 @@ export default function HomePage() {
               </p>
               <p>
                 Before grade 6, I spent 5 years in my village school,{" "}
-                <span className="text-purple-300">Arangawa Primary School</span>
+                <span className="font-medium text-black">Arangawa Primary School</span>
                 .
               </p>
             </div>
@@ -250,11 +250,11 @@ export default function HomePage() {
 
           {/* Side Hustles Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left">Side Hustles</h3>
-            <div className="space-y-4 text-muted-foreground text-left">
+            <h3 className="text-2xl font-bold text-left text-black">Side Hustles</h3>
+            <div className="space-y-4 text-gray-700 text-left">
               <p>
                 I'm currently developing a stock photography portfolio on{" "}
-                <span className="text-purple-300">
+                <span className="font-medium text-black">
                   Adobe Stock, Shutterstock, and Dreamstime
                 </span>
                 , capturing moments and scenes that tell stories.
@@ -262,22 +262,22 @@ export default function HomePage() {
               <p>
                 Recently, I started to complete my little hope that came with me
                 from my childhood:{" "}
-                <span className="text-purple-300">book writing</span>, including
+                <span className="font-medium text-black">book writing</span>, including
                 kids' books and self-help books. I hope to publish those in the
                 future.
               </p>
               <p>
-                I write on <span className="text-purple-300">Medium</span> and
+                I write on <span className="font-medium text-black">Medium</span> and
                 my{" "}
                 <Link
                   href="/writes"
-                  className="text-purple-300 hover:underline"
+                  className="font-medium text-black underline hover:no-underline"
                 >
                   blog section
                 </Link>
                 , covering what I learn from my studies and from my life. I also
                 conduct{" "}
-                <span className="text-purple-300">mathematics classes</span> for
+                <span className="font-medium text-black">mathematics classes</span> for
                 students both online and physically.
               </p>
             </div>
@@ -285,11 +285,11 @@ export default function HomePage() {
 
           {/* Social Section */}
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-left">Social</h3>
-            <div className="space-y-4 text-muted-foreground text-left">
+            <h3 className="text-2xl font-bold text-left text-black">Social</h3>
+            <div className="space-y-4 text-gray-700 text-left">
               <p>
                 I maintain a list of the books I read on{" "}
-                <Link href="/reads" className="text-purple-300 hover:underline">
+                <Link href="/reads" className="font-medium text-black underline hover:no-underline">
                   Reads
                 </Link>{" "}
                 and keep track of my reading. I always look to connect on{" "}
@@ -297,7 +297,7 @@ export default function HomePage() {
                   href="www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-300 hover:underline"
+                  className="font-medium text-black underline hover:no-underline"
                 >
                   LinkedIn
                 </a>
