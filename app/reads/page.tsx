@@ -66,8 +66,8 @@ export default function ReadsPage() {
 
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -75,35 +75,34 @@ export default function ReadsPage() {
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
         <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/20 rounded-full mb-6">
-            <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
               📚 Reading List
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 dark:from-violet-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
             Reads
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
             Books that shaped my thinking
           </p>
 
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             I believe in continuous learning through reading. This collection
             features an eclectic set of books on{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               personal development
             </span>
             ,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               productivity
             </span>
             ,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               psychology
             </span>
             , and more. This list is a constant work in progress.
@@ -120,7 +119,7 @@ export default function ReadsPage() {
             {books.map((book, index) => (
               <Card
                 key={index}
-                className="overflow-hidden group hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-500 hover:scale-105 cursor-pointer card-hover-effect"
+                className="overflow-hidden group hover:shadow-lg transition-all duration-500 hover:scale-105 cursor-pointer"
               >
                 <div className="aspect-[4/5] relative overflow-hidden">
                   <img
@@ -128,10 +127,10 @@ export default function ReadsPage() {
                     alt={book.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <CardHeader className="p-2 space-y-0">
-                  <CardTitle className="text-xs font-semibold line-clamp-1 leading-tight">
+                  <CardTitle className="text-xs font-semibold line-clamp-1 leading-tight text-black">
                     {book.title}
                   </CardTitle>
                   <CardDescription className="text-[10px] line-clamp-1 leading-tight">

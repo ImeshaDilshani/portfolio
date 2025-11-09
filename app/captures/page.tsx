@@ -29,8 +29,8 @@ export default function CapturesPage() {
   }, []);
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -38,38 +38,37 @@ export default function CapturesPage() {
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
         <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/20 rounded-full mb-6">
-            <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
               ✨ Side Projects & Passions
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 dark:from-violet-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
             Captures
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
             Blooming Ideas
           </p>
 
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             A space where passion meets purpose. Where I explore,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               experiment
             </span>
             , and{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               create
             </span>{" "}
             beyond the boundaries of my professional work through{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               gardening
             </span>
             ,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               photography
             </span>
             , and digital innovation.
@@ -82,7 +81,7 @@ export default function CapturesPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/captures/gardening">
               <Card
-                className="h-full hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-500 cursor-pointer overflow-hidden group card-hover-effect hover:-translate-y-1"
+                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
               >
                 <div className="relative w-full h-48 overflow-hidden">
@@ -94,19 +93,19 @@ export default function CapturesPage() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 text-black">
                     Gardening for Mindful Living
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-gray-600 mb-4">
                     Gardening has become my calm space a reminder that growth
                     takes time, care, and patience. Tending to plants helps me
                     reconnect with nature and slow down in a digital world that
                     never stops. Each seed I plant is a small act of creativity
                     and mindfulness.
                   </p>
-                  <span className="text-purple-300 hover:underline font-semibold">
+                  <span className="text-black hover:underline font-semibold">
                     Explore My Garden →
                   </span>
                 </CardContent>
@@ -115,7 +114,7 @@ export default function CapturesPage() {
 
             <Link href="/captures/photography">
               <Card
-                className="h-full hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-500 cursor-pointer overflow-hidden group card-hover-effect hover:-translate-y-1"
+                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
               >
                 <div className="relative w-full h-48 overflow-hidden">
@@ -127,19 +126,19 @@ export default function CapturesPage() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 text-black">
                     Visual Storytelling Through Photos
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-gray-600 mb-4">
                     Stock photography and Illustration allows me to blend
                     creativity with entrepreneurship building a portfolio across
                     platforms like Adobe Stock, Shutterstock, and Dreamstime.
                     Each photo I create or generate is a small step toward
                     artistic expression.
                   </p>
-                  <span className="text-purple-300 hover:underline font-semibold">
+                  <span className="text-black hover:underline font-semibold">
                     View My Portfolio →
                   </span>
                 </CardContent>
@@ -148,7 +147,7 @@ export default function CapturesPage() {
 
             <Link href="/captures/digital-products">
               <Card
-                className="h-full hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-500 cursor-pointer overflow-hidden group card-hover-effect hover:-translate-y-1"
+                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
               >
                 <div className="relative w-full h-48 overflow-hidden">
@@ -160,18 +159,18 @@ export default function CapturesPage() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 text-black">
                     Digital Product Design
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-gray-600 mb-4">
                     This is not yet started - still doing research. I'm
                     exploring opportunities in creating digital products that
                     combine my technical skills with creative design. Stay tuned
                     for updates as I venture into this exciting space!
                   </p>
-                  <span className="text-muted-foreground font-semibold">
+                  <span className="text-gray-600 font-semibold">
                     Coming Soon →
                   </span>
                 </CardContent>

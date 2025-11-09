@@ -84,19 +84,19 @@ export default function ContactPage() {
       <div className="container max-w-6xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16 animate-fadeInUp">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Let's{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="underline decoration-4">
               Connect
             </span>
           </h1>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             I'm always excited to discuss new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-500/30 backdrop-blur-sm">
+          <div className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 border border-gray-300">
             <span className="text-2xl">✨</span>
-            <span className="text-purple-300 font-medium">
+            <span className="text-black font-medium">
               Currently available for freelance projects and full-time
               opportunities
             </span>
@@ -107,19 +107,19 @@ export default function ContactPage() {
           {/* Contact Information Cards */}
           <div className="space-y-6 animate-fadeInUp animation-delay-200">
             {/* Email Card */}
-            <Card className="bg-purple-950/30 border-purple-800/40 hover:border-purple-600/60 hover:bg-purple-950/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-900/30">
+            <Card className="transition-all duration-300 hover:scale-105">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl border border-purple-500/30">
-                    <Mail className="h-6 w-6 text-purple-400" />
+                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
+                    <Mail className="h-6 w-6 text-black" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2 text-white">
+                    <h3 className="font-semibold text-lg mb-2">
                       Email
                     </h3>
                     <a
                       href="mailto:imesha.contact@gmail.com"
-                      className="text-white/60 hover:text-purple-400 transition-colors break-all"
+                      className="text-gray-600 hover:text-black transition-colors break-all"
                     >
                       imesha.contact@gmail.com
                     </a>
@@ -129,19 +129,19 @@ export default function ContactPage() {
             </Card>
 
             {/* Phone Card */}
-            <Card className="bg-purple-950/30 border-purple-800/40 hover:border-purple-600/60 hover:bg-purple-950/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-900/30">
+            <Card className="transition-all duration-300 hover:scale-105">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl border border-purple-500/30">
-                    <Phone className="h-6 w-6 text-purple-400" />
+                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
+                    <Phone className="h-6 w-6 text-black" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2 text-white">
+                    <h3 className="font-semibold text-lg mb-2">
                       Phone
                     </h3>
                     <a
                       href="tel:+1234567890"
-                      className="text-white/60 hover:text-purple-400 transition-colors"
+                      className="text-gray-600 hover:text-black transition-colors"
                     >
                       +94775933501
                     </a>
@@ -151,20 +151,20 @@ export default function ContactPage() {
             </Card>
 
             {/* Location Card */}
-            <Card className="bg-purple-950/30 border-purple-800/40 hover:border-purple-600/60 hover:bg-purple-950/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-900/30">
+            <Card className="transition-all duration-300 hover:scale-105">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl border border-purple-500/30">
-                    <MapPin className="h-6 w-6 text-purple-400" />
+                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
+                    <MapPin className="h-6 w-6 text-black" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2 text-white">
+                    <h3 className="font-semibold text-lg mb-2">
                       Location
                     </h3>
-                    <p className="text-white/60">
+                    <p className="text-gray-600">
                       Sri Lanka
                       <br />
-                      <span className="text-purple-300">
+                      <span className="text-black">
                         Available for remote work
                       </span>
                     </p>
@@ -176,12 +176,12 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="md:col-span-2 animate-fadeInUp animation-delay-400">
-            <Card className="bg-purple-950/30 border-purple-800/40 backdrop-blur-sm hover:shadow-2xl hover:shadow-purple-900/30 transition-all duration-500">
+            <Card className="transition-all duration-500">
               <CardHeader>
-                <CardTitle className="text-3xl text-white">
+                <CardTitle className="text-3xl">
                   Send Me a Message
                 </CardTitle>
-                <CardDescription className="text-base text-white/60">
+                <CardDescription className="text-base text-gray-600">
                   Fill out the form below and I'll get back to you as soon as
                   possible.
                 </CardDescription>
@@ -192,9 +192,9 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label
                         htmlFor="firstName"
-                        className="text-base text-white/90"
+                        className="text-base"
                       >
-                        First Name <span className="text-purple-400">*</span>
+                        First Name <span className="text-black">*</span>
                       </Label>
                       <Input
                         id="firstName"
@@ -203,15 +203,15 @@ export default function ContactPage() {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="h-12 text-base bg-purple-950/50 border-purple-800/50 text-white placeholder:text-white/40 focus:border-purple-500 focus:ring-purple-500/20"
+                        className="h-12 text-base"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label
                         htmlFor="lastName"
-                        className="text-base text-white/90"
+                        className="text-base"
                       >
-                        Last Name <span className="text-purple-400">*</span>
+                        Last Name <span className="text-black">*</span>
                       </Label>
                       <Input
                         id="lastName"
@@ -220,14 +220,14 @@ export default function ContactPage() {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="h-12 text-base bg-purple-950/50 border-purple-800/50 text-white placeholder:text-white/40 focus:border-purple-500 focus:ring-purple-500/20"
+                        className="h-12 text-base"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-base text-white/90">
-                      Email Address <span className="text-purple-400">*</span>
+                    <Label htmlFor="email" className="text-base">
+                      Email Address <span className="text-black">*</span>
                     </Label>
                     <Input
                       id="email"
@@ -237,16 +237,16 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="h-12 text-base bg-purple-950/50 border-purple-800/50 text-white placeholder:text-white/40 focus:border-purple-500 focus:ring-purple-500/20"
+                      className="h-12 text-base"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <Label
                       htmlFor="message"
-                      className="text-base text-white/90"
+                      className="text-base"
                     >
-                      Message <span className="text-purple-400">*</span>
+                      Message <span className="text-black">*</span>
                     </Label>
                     <Textarea
                       id="message"
@@ -256,14 +256,14 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="text-base resize-none bg-purple-950/50 border-purple-800/50 text-white placeholder:text-white/40 focus:border-purple-500 focus:ring-purple-500/20"
+                      className="text-base resize-none"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full rounded-full bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white border-0 shadow-lg shadow-purple-900/50 text-base font-semibold h-14 transition-all duration-300 hover:scale-105"
+                    className="w-full rounded-full bg-black hover:bg-gray-800 text-white border-0 shadow-lg text-base font-semibold h-14 transition-all duration-300 hover:scale-105"
                   >
                     <Send className="mr-2 h-5 w-5" />
                     Send Message
@@ -277,13 +277,13 @@ export default function ContactPage() {
         {/* Social Links Section */}
         <div className="mt-20 text-center space-y-8 animate-fadeInUp animation-delay-600">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-3xl font-bold">
               Other Ways to{" "}
-              <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+              <span className="underline decoration-4">
                 Connect
               </span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               You can also find me on various social platforms. Feel free to
               connect and follow my work!
             </p>
@@ -294,28 +294,28 @@ export default function ContactPage() {
               href="https://github.com/ImeshaDilshani"
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-5 bg-purple-950/30 border-2 border-purple-800/40 rounded-xl hover:border-purple-500 hover:bg-purple-950/50 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-900/30"
+              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
               aria-label="GitHub"
             >
-              <Github className="h-7 w-7 text-white/70 group-hover:text-purple-400 transition-colors" />
+              <Github className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
             </a>
             <a
               href="www.linkedin.com/in/imesha-dilshani-61862422b"
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-5 bg-purple-950/30 border-2 border-purple-800/40 rounded-xl hover:border-purple-500 hover:bg-purple-950/50 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-900/30"
+              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-7 w-7 text-white/70 group-hover:text-purple-400 transition-colors" />
+              <Linkedin className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
             </a>
             <a
               href="https://x.com/ImeshaDilshani3"
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-5 bg-purple-950/30 border-2 border-purple-800/40 rounded-xl hover:border-purple-500 hover:bg-purple-950/50 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-900/30"
+              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
               aria-label="Twitter"
             >
-              <Twitter className="h-7 w-7 text-white/70 group-hover:text-purple-400 transition-colors" />
+              <Twitter className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
             </a>
           </div>
         </div>

@@ -61,8 +61,8 @@ export default function LearningPage() {
 
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -70,36 +70,35 @@ export default function LearningPage() {
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
         <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/20 rounded-full mb-6">
-            <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
               🎧 Podcasts & Audio
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 dark:from-violet-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
             Listening
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
             Voices that inspire and educate
           </p>
 
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Below is my personal listening list of podcasts that have shaped my
             thinking. Modern day podcasts are the successors of{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               radio shows
             </span>{" "}
             that informed and educated entire generations. Podcasts allow you to
             hear diverse{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               voices
             </span>{" "}
             and{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               perspectives
             </span>{" "}
             that continue to inspire me.
@@ -113,7 +112,7 @@ export default function LearningPage() {
             {podcasts.map((podcast, index) => (
               <Card
                 key={index}
-                className="overflow-hidden group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-500 hover:scale-105 card-hover-effect"
+                className="overflow-hidden group hover:shadow-xl transition-all duration-500 hover:scale-105"
                 data-animate="fade-up"
               >
                 <a
@@ -122,7 +121,7 @@ export default function LearningPage() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-purple-600/20 via-purple-800/10 to-purple-950/20">
+                  <div className="relative aspect-square overflow-hidden bg-gray-100">
                     <img
                       src={podcast.image}
                       alt={podcast.title}
@@ -133,12 +132,12 @@ export default function LearningPage() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-lg uppercase">
+                    <CardTitle className="text-lg uppercase text-black">
                       {podcast.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-sm leading-relaxed">
+                    <CardDescription className="text-sm leading-relaxed text-gray-600">
                       {podcast.description}
                     </CardDescription>
                   </CardContent>

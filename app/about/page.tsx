@@ -28,8 +28,8 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
+        <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -37,34 +37,33 @@ export default function AboutPage() {
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
         <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/20 rounded-full mb-6">
-            <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
               👋 About Me
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 dark:from-violet-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
             Here's How I Grow
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
             Continuous learning and growth through experiences
           </p>
 
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             My journey through{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               professional experience
             </span>
             ,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               research
             </span>
             ,{" "}
-            <span className="text-purple-600 dark:text-purple-400 font-medium">
+            <span className="text-black font-medium">
               continuous education
             </span>
             , and passion for innovation.
@@ -82,49 +81,49 @@ export default function AboutPage() {
               data-animate="fade-right"
             >
               <div className="sticky top-24 space-y-2">
-                <h2 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400 hover-text-glow">
+                <h2 className="text-xl font-bold mb-6 text-black">
                   About
                 </h2>
                 <nav className="space-y-1">
                   <a
                     href="/about/work-experience"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     WORK EXPERIENCE
                   </a>
                   <a
                     href="/about/ai-research"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     MY RESEARCH
                   </a>
                   <a
                     href="/about/presentations"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     PRESENTATIONS
                   </a>
                   <a
                     href="/about/data-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     DATA PORTFOLIO
                   </a>
                   <a
                     href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     CODING PORTFOLIO
                   </a>
                   <a
                     href="/about/moocs"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     MOOCS
                   </a>
                   <a
                     href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
                   >
                     UNDERGRADUATE PAPERS
                   </a>
@@ -142,11 +141,11 @@ export default function AboutPage() {
                 <div className="space-y-4 text-lg leading-relaxed">
                   <p className="hover-lift transition-all duration-300">
                     1. I am passionate about{" "}
-                    <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                    <span className="text-black font-medium hover-highlight cursor-pointer">
                       data science
                     </span>{" "}
                     and{" "}
-                    <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                    <span className="text-black font-medium hover-highlight cursor-pointer">
                       AI-based software development
                     </span>
                     .
@@ -164,7 +163,7 @@ export default function AboutPage() {
                   <p className="mt-6 hover-lift transition-all duration-300">
                     Over the past few years, I have built strong skills to
                     prepare for a career in the{" "}
-                    <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                    <span className="text-black font-medium hover-highlight cursor-pointer">
                       tech industry
                     </span>
                     . I have gained practical experience in software
@@ -182,7 +181,7 @@ export default function AboutPage() {
                 <div className="space-y-12">
                   {/* Primary School */}
                   <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
                       <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
                         Arangawa Sri Dhammarama Primary College
                       </h3>
@@ -193,7 +192,7 @@ export default function AboutPage() {
                     <div className="text-lg leading-relaxed">
                       <p className="hover-lift transition-all duration-300">
                         I grew up in a{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           small village
                         </span>{" "}
                         and attended Minu/Arangawa Sri Dhammarama Primary
@@ -208,13 +207,13 @@ export default function AboutPage() {
                         alt="Minu/Arangawa Sri Dhammarama Primary College"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
 
                   {/* Secondary School - O/L */}
                   <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
                       <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
                         Seelavimala Maha Vidyalaya, Minuwangoda
                       </h3>
@@ -225,7 +224,7 @@ export default function AboutPage() {
                     <div className="text-lg leading-relaxed">
                       <p className="hover-lift transition-all duration-300">
                         I worked hard and achieved{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           excellent results
                         </span>{" "}
                         in my O/L (Ordinary Level) exams. That school was a
@@ -238,13 +237,13 @@ export default function AboutPage() {
                         alt="Minu/Seelavimala Maha Vidyalaya"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
 
                   {/* Advanced Level */}
                   <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
                       <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
                         President's College, Minuwangoda
                       </h3>
@@ -255,15 +254,15 @@ export default function AboutPage() {
                     <div className="text-lg leading-relaxed">
                       <p className="hover-lift transition-all duration-300">
                         During this time, I focused on{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           Mathematics
                         </span>
                         ,{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           Physics
                         </span>
                         , and{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           Chemistry
                         </span>
                         , which helped me develop strong analytical and
@@ -281,13 +280,13 @@ export default function AboutPage() {
                         alt="President's College, Minuwangoda"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
 
                   {/* Graphic Design Course */}
                   <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
                       <h3 className="text-2xl font-medium hover-text-glow transition-all duration-300">
                         InTech College, Gampaha
                       </h3>
@@ -299,11 +298,11 @@ export default function AboutPage() {
                       <p className="hover-lift transition-all duration-300">
                         While waiting for my Advanced Level results, I enrolled
                         in this course which gave me a solid foundation in{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           design principles
                         </span>
                         ,{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           visual communication
                         </span>
                         , and creative thinking. I learned how to create
@@ -322,13 +321,13 @@ export default function AboutPage() {
                         alt="InTech College, Gampaha"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
 
                   {/* University - Computer Science */}
                   <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
                       <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
                         University of Kelaniya
                       </h3>
@@ -341,7 +340,7 @@ export default function AboutPage() {
                       <p className="hover-lift transition-all duration-300">
                         After completing my Advanced Level studies and design
                         course, I pursued my degree in{" "}
-                        <span className="text-purple-600 dark:text-purple-400 font-medium hover-highlight cursor-pointer">
+                        <span className="text-black font-medium hover-highlight cursor-pointer">
                           Computer Science
                         </span>
                         . During this time, I gained strong theoretical
@@ -362,7 +361,7 @@ export default function AboutPage() {
                         alt="University of Kelaniya"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                 </div>
