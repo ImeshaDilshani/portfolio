@@ -39,9 +39,9 @@ export default function MOOCsPage() {
               backgroundImage: "url('/free-knowledge.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(80,0,180,0.08),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(50,0,120,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-950/30 via-black to-gray-950/20" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.08),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(0,0,0,0.06),transparent_60%)]" />
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4 animate-fadeInUp">
@@ -59,50 +59,50 @@ export default function MOOCsPage() {
             <aside className="lg:col-span-1" data-animate="fade-right">
               <div className="sticky top-24 space-y-2">
                 <a href="/about" className="block">
-                  <h2 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400 hover-text-glow">
+                  <h2 className="text-xl font-bold mb-6 text-black dark:text-white hover-text-glow">
                     About
                   </h2>
                 </a>
                 <nav className="space-y-1">
                   <a
                     href="/about/work-experience"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     WORK EXPERIENCE
                   </a>
                   <a
                     href="/about/ai-research"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     MY RESEARCH
                   </a>
                   <a
                     href="/about/presentations"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     PRESENTATIONS
                   </a>
                   <a
                     href="/about/data-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     DATA PORTFOLIO
                   </a>
                   <a
                     href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     CODING PORTFOLIO
                   </a>
                   <a
                     href="/about/moocs"
-                    className="block py-2 text-sm text-foreground font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-foreground font-medium hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     MOOCS
                   </a>
                   <a
                     href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     UNDERGRADUATE PAPERS
                   </a>
@@ -136,13 +136,13 @@ export default function MOOCsPage() {
                   data-animate="fade-up"
                 >
                   <div className="md:col-span-1">
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
                         src="/cisco-ds.png"
                         alt="Introduction to Data Science"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                   <div className="md:col-span-2 space-y-3 hover-lift transition-all duration-300">
@@ -161,7 +161,7 @@ export default function MOOCsPage() {
                     </p>
                     <a
                       href="https://www.netacad.com/courses/introduction-data-science?courseLang=en-US"
-                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium inline-block hover-highlight"
+                      className="text-black dark:text-white hover:underline font-medium inline-block hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -178,13 +178,13 @@ export default function MOOCsPage() {
                   data-animate="fade-up"
                 >
                   <div className="md:col-span-1">
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
                         src="/stanford-online.png"
                         alt="Stanford Lagunita Courses"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                   <div className="md:col-span-2 space-y-3 hover-lift transition-all duration-300">
@@ -204,7 +204,7 @@ export default function MOOCsPage() {
                     </p>
                     <a
                       href="https://online.stanford.edu/lagunita-learning-platform"
-                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium inline-block hover-highlight"
+                      className="text-black dark:text-white hover:underline font-medium inline-block hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -221,13 +221,13 @@ export default function MOOCsPage() {
                   data-animate="fade-up"
                 >
                   <div className="md:col-span-1">
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
                         src="/linkdin-learn.png"
                         alt="Power BI ETL Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                   <div className="md:col-span-2 space-y-3 hover-lift transition-all duration-300">
@@ -247,7 +247,7 @@ export default function MOOCsPage() {
                     </p>
                     <a
                       href="https://www.linkedin.com/learning/"
-                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium inline-block hover-highlight"
+                      className="text-black dark:text-white hover:underline font-medium inline-block hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -264,13 +264,13 @@ export default function MOOCsPage() {
                   data-animate="fade-up"
                 >
                   <div className="md:col-span-1">
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
                         src="/coursera.png"
                         alt="Java Programming Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                   <div className="md:col-span-2 space-y-3 hover-lift transition-all duration-300">
@@ -289,7 +289,7 @@ export default function MOOCsPage() {
                     </p>
                     <a
                       href="https://www.coursera.org/"
-                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium inline-block hover-highlight"
+                      className="text-black dark:text-white hover:underline font-medium inline-block hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -306,13 +306,13 @@ export default function MOOCsPage() {
                   data-animate="fade-up"
                 >
                   <div className="md:col-span-1">
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
                         src="/forge.png"
                         alt="Forage Virtual Experience"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </div>
                   <div className="md:col-span-2 space-y-3 hover-lift transition-all duration-300">
@@ -331,7 +331,7 @@ export default function MOOCsPage() {
                     </p>
                     <a
                       href="https://www.theforage.com/"
-                      className="text-purple-600 dark:text-purple-400 hover:underline font-medium inline-block hover-highlight"
+                      className="text-black dark:text-white hover:underline font-medium inline-block hover-highlight"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

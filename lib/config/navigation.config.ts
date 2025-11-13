@@ -27,7 +27,7 @@ export const NAVIGATION_CONFIG = {
   } as const satisfies NavItem,
   
   logo: {
-    text: "IMESHA • D⁴",
+    text: "Imesha",
     href: "/",
   } as const,
 } as const;

@@ -39,9 +39,9 @@ export default function AIResearchPage() {
               backgroundImage: "url('/J1-2.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(80,0,180,0.08),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(50,0,120,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-950/30 via-black to-gray-950/20" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,0,0,0.08),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(0,0,0,0.06),transparent_60%)]" />
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4 animate-fadeInUp">
@@ -58,50 +58,50 @@ export default function AIResearchPage() {
             <aside className="lg:col-span-1" data-animate="fade-right">
               <div className="sticky top-24 space-y-2">
                 <a href="/about" className="block">
-                  <h2 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400 hover-text-glow">
+                  <h2 className="text-xl font-bold mb-6 text-black dark:text-white hover-text-glow">
                     About
                   </h2>
                 </a>
                 <nav className="space-y-1">
                   <a
                     href="/about/work-experience"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     WORK EXPERIENCE
                   </a>
                   <a
                     href="/about/ai-research"
-                    className="block py-2 text-sm text-foreground font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-foreground font-medium hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     MY RESEARCH
                   </a>
                   <a
                     href="/about/presentations"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     PRESENTATIONS
                   </a>
                   <a
                     href="/about/data-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     DATA PORTFOLIO
                   </a>
                   <a
                     href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     CODING PORTFOLIO
                   </a>
                   <a
                     href="/about/moocs"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     MOOCS
                   </a>
                   <a
                     href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
                   >
                     UNDERGRADUATE PAPERS
                   </a>
@@ -124,7 +124,7 @@ export default function AIResearchPage() {
                       alt="NLP Research Project"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
 
                   {/* Introduction */}

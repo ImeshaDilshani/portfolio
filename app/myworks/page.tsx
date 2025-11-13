@@ -61,7 +61,7 @@ export default function MyWorksPage() {
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance">Here's What I've Done</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance font-[family-name:var(--font-adamina)]">Here's What I've Done</h1>
         </div>
       </section>
 

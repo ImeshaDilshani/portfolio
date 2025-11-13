@@ -23,7 +23,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Headline - Responsive */}
-            <h1 className="font-[family-name:var(--font-adamina)] font-medium text-2xl sm:text-3xl md:text-4xl  leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100 font-[family-name:var(--font-adamina)] font-bold">
               I'm Building Intelligent Software and Data Systems that make an Impact.
             </h1>
 
@@ -110,7 +110,7 @@ export default function HomePage() {
       {/* Life Motto Section */}
       <section className="py-16 md:py-20 mt-16 bg-gray-50">
         <div className="container px-4 max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-adamina)] font-medium text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-black">
+          <h2 className="font-[family-name:var(--font-adamina)] font-bold text-3xl md:text-4xl text-center mb-12 text-balance text-black">
             My Life Motto: "Small Steps, Big Systems with Continuous improvements."
           </h2>
 

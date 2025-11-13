@@ -49,7 +49,7 @@ export default function AboutPage() {
             Here's How I Grow
           </h1>
 
-          <p className="font-[family-name:var(--font-adamina)] font-medium text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
             Continuous learning and growth through experiences
           </p>
 

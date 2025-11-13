@@ -1,17 +1,17 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Adamina } from "next/font/google";
+import { Lato, Adamina } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Navigation } from "@/components/navigation";
 import { Suspense } from "react";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
-const inter = Inter({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-lato",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "700", "900"],
 });
 
 const adamina = Adamina({
@@ -59,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${adamina.variable} font-sans`}>
+      <body className={`${lato.variable} ${adamina.variable} font-sans`}>
         <Suspense fallback={null}>
           <Navigation />
           <div className="min-h-screen">{children}</div>

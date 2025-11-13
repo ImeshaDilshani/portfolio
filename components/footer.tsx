@@ -35,11 +35,11 @@ export function Footer() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 text-black">
-                  root@D4 IMESHA
+                  Imesha Dilshani
                 </h3>
                 <p className="text-gray-600 flex items-center gap-2">
-                  Data • Design • Development{" "}
-                  <Heart className="h-4 w-4 text-black fill-black" />
+                  Small Steps, Big System with Continous Improvements.{" "}
+                  <Heart className="h-4 w-4 text-black fill-red" />
                 </p>
               </div>
 

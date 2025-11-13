@@ -1,71 +1,28 @@
 "use client";
 
 import type React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Send,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
+    phone: "",
     message: "",
   });
-
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thank you for your message! I'll get back to you soon.");
-    // Reset form
     setFormData({
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
+      phone: "",
       message: "",
     });
   };
@@ -80,263 +37,108 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen pt-24 pb-20 px-4">
-      <div className="container max-w-6xl mx-auto">
-        {/* Page Header */}
-        <div className="text-center mb-16 animate-fadeInUp">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Let's{" "}
-            <span className="underline decoration-4">
-              Connect
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            I'm always excited to discuss new projects, creative ideas, or
-            opportunities to be part of your vision.
-          </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 border border-gray-300">
-            <span className="text-2xl">✨</span>
-            <span className="text-black font-medium">
-              Currently available for freelance projects and full-time
-              opportunities
-            </span>
+    <main className="min-h-screen bg-white">
+      <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* Left Side - Text Content */}
+          <div className="space-y-6 lg:sticky lg:top-24">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-[family-name:var(--font-adamina)] leading-tight">
+              Let's Contact ME
+            </h1>
+            
+            <div className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed max-w-xl">
+              <p>
+                I'm passionate about creating intelligent software and data systems that solve real-world problems. Whether you're looking to build a new product, improve existing systems, or explore data-driven insights, I'd love to hear from you.
+              </p>
+              <p>
+                With experience in full-stack development, data engineering, and cloud computing, I bring both technical expertise and a collaborative mindset to every project. Let's connect and discuss how we can work together.
+              </p>
+              <p className="text-black font-medium">
+                Share your information below, and I'll be in touch.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side - Contact Form */}
+          <div className="w-full">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+              <h2 className="text-xl md:text-2xl font-semibold mb-6 text-black">
+                Tell me how can I help
+              </h2>
+
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-2">
+                  <Label htmlFor="fullName" className="text-sm text-gray-700">
+                    Full name
+                  </Label>
+                  <Input
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Full name"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    className="h-12 bg-white border-gray-300 focus:border-black focus:ring-black"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm text-gray-700">
+                    Your email
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="email@company.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="h-12 bg-white border-gray-300 focus:border-black focus:ring-black"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-sm text-gray-700">
+                    Phone number
+                  </Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="1-(222)-333-4444"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="h-12 bg-white border-gray-300 focus:border-black focus:ring-black"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-sm text-gray-700">
+                    How can I help?
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="I'm interested in working together. I'd like to learn more about..."
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="bg-white border-gray-300 focus:border-black focus:ring-black resize-none"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-lg font-medium transition-colors"
+                >
+                  Send message
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Contact Information Cards */}
-          <div className="space-y-6 animate-fadeInUp animation-delay-200">
-            {/* Email Card */}
-            <Card className="transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
-                    <Mail className="h-6 w-6 text-black" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2">
-                      Email
-                    </h3>
-                    <a
-                      href="mailto:imesha.contact@gmail.com"
-                      className="text-gray-600 hover:text-black transition-colors break-all"
-                    >
-                      imesha.contact@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Phone Card */}
-            <Card className="transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
-                    <Phone className="h-6 w-6 text-black" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2">
-                      Phone
-                    </h3>
-                    <a
-                      href="tel:+1234567890"
-                      className="text-gray-600 hover:text-black transition-colors"
-                    >
-                      +94775933501
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Location Card */}
-            <Card className="transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-100 rounded-xl border border-gray-200">
-                    <MapPin className="h-6 w-6 text-black" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2">
-                      Location
-                    </h3>
-                    <p className="text-gray-600">
-                      Sri Lanka
-                      <br />
-                      <span className="text-black">
-                        Available for remote work
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Contact Form */}
-          <div className="md:col-span-2 animate-fadeInUp animation-delay-400">
-            <Card className="transition-all duration-500">
-              <CardHeader>
-                <CardTitle className="text-3xl">
-                  Send Me a Message
-                </CardTitle>
-                <CardDescription className="text-base text-gray-600">
-                  Fill out the form below and I'll get back to you as soon as
-                  possible.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label
-                        htmlFor="firstName"
-                        className="text-base"
-                      >
-                        First Name <span className="text-black">*</span>
-                      </Label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        placeholder="John"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                        className="h-12 text-base"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label
-                        htmlFor="lastName"
-                        className="text-base"
-                      >
-                        Last Name <span className="text-black">*</span>
-                      </Label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        placeholder="Doe"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                        className="h-12 text-base"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-base">
-                      Email Address <span className="text-black">*</span>
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="john.doe@example.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="h-12 text-base"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label
-                      htmlFor="message"
-                      className="text-base"
-                    >
-                      Message <span className="text-black">*</span>
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Tell me about your project or inquiry..."
-                      rows={8}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      className="text-base resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full rounded-full bg-black hover:bg-gray-800 text-white border-0 shadow-lg text-base font-semibold h-14 transition-all duration-300 hover:scale-105"
-                  >
-                    <Send className="mr-2 h-5 w-5" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        {/* Social Links Section */}
-        <div className="mt-20 text-center space-y-8 animate-fadeInUp animation-delay-600">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold">
-              Other Ways to{" "}
-              <span className="underline decoration-4">
-                Connect
-              </span>
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              You can also find me on various social platforms. Feel free to
-              connect and follow my work!
-            </p>
-          </div>
-
-          <div className="flex justify-center gap-4">
-            <a
-              href="https://github.com/ImeshaDilshani"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
-              aria-label="GitHub"
-            >
-              <Github className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
-            </a>
-            <a
-              href="www.linkedin.com/in/imesha-dilshani-61862422b"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
-            </a>
-            <a
-              href="https://x.com/ImeshaDilshani3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-5 bg-white border-2 border-gray-200 rounded-xl hover:border-black hover:bg-gray-50 transition-all duration-300 hover:scale-110 hover:shadow-xl"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-7 w-7 text-gray-600 group-hover:text-black transition-colors" />
-            </a>
-          </div>
-        </div>
-
-        {/* Additional CTA */}
-        {/*<div className="mt-16 text-center animate-fadeInUp animation-delay-800">
-          <div className="inline-block p-8 bg-gradient-to-br from-purple-950/50 to-purple-900/30 border border-purple-700/40 rounded-2xl backdrop-blur-sm">
-            <p className="text-white/80 text-lg mb-4">Prefer a quick chat?</p>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:text-purple-200 hover:border-purple-400 transition-all hover:scale-105"
-              asChild
-            >
-              <a href="mailto:imesha@example.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Me Directly
-              </a>
-            </Button>
-          </div>
-        </div>*/}
       </div>
     </main>
   );

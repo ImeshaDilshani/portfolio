@@ -78,11 +78,11 @@ export default function LearningPage() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
             Listening
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
             Voices that inspire and educate
           </p>
 
