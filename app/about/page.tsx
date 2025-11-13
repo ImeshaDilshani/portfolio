@@ -45,11 +45,11 @@ export default function AboutPage() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-adamina)] font-medium mb-6 text-black">
             Here's How I Grow
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-[family-name:var(--font-adamina)] font-medium text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
             Continuous learning and growth through experiences
           </p>
 
@@ -135,7 +135,7 @@ export default function AboutPage() {
             <div className="lg:col-span-3 space-y-12">
               {/* Introduction Section */}
               <section data-animate="fade-up">
-                <h2 className="text-3xl font-bold mb-6 hover-underline-effect">
+                <h2 className="text-3xl font-[family-name:var(--font-adamina)] font-medium mb-6 hover-underline-effect">
                   Introduction
                 </h2>
                 <div className="space-y-4 text-lg leading-relaxed">
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
               {/* How I Learn from My Childhood Section */}
               <section data-animate="fade-up">
-                <h2 className="text-3xl font-bold mb-6 hover-underline-effect">
+                <h2 className="text-3xl font-[family-name:var(--font-adamina)] font-medium mb-6 hover-underline-effect">
                   How I Learn from My Childhood
                 </h2>
                 <div className="space-y-12">

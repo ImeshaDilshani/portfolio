@@ -23,8 +23,8 @@ export default function HomePage() {
             </div>
 
             {/* Main Headline - Responsive */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100">
-              I'm Building intelligent software and data systems that make an impact.
+            <h1 className="font-[family-name:var(--font-adamina)] font-medium text-2xl sm:text-3xl md:text-4xl  leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100">
+              I'm Building Intelligent Software and Data Systems that make an Impact.
             </h1>
 
             {/* Mobile Image - Shows below headline on mobile */}
@@ -110,13 +110,13 @@ export default function HomePage() {
       {/* Life Motto Section */}
       <section className="py-16 md:py-20 mt-16 bg-gray-50">
         <div className="container px-4 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-black">
+          <h2 className="font-[family-name:var(--font-adamina)] font-medium text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-black">
             My Life Motto: "Small Steps, Big Systems with Continuous improvements."
           </h2>
 
           {/* Work Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left text-black">Work</h3>
+            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Work</h3>
             <div className="space-y-4 text-gray-700 text-left">
               <p>
                 Previously, I have worked at{" "}
@@ -171,7 +171,7 @@ export default function HomePage() {
 
           {/* Education Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left text-black">Education</h3>
+            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Education</h3>
             <div className="space-y-4 text-gray-700 text-left">
               <p>
                 Before this, I completed my graduation with a Bachelor's Degree
@@ -210,7 +210,7 @@ export default function HomePage() {
 
           {/* Side Hustles Section */}
           <div className="space-y-8 mb-12">
-            <h3 className="text-2xl font-bold text-left text-black">Side Hustles</h3>
+            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Side Hustles</h3>
             <div className="space-y-4 text-gray-700 text-left">
               <p>
                 I'm currently developing a stock photography portfolio on{" "}
@@ -245,7 +245,7 @@ export default function HomePage() {
 
           {/* Social Section */}
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-left text-black">Social</h3>
+            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Social</h3>
             <div className="space-y-4 text-gray-700 text-left">
               <p>
                 I maintain a list of the books I read on{" "}

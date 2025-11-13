@@ -76,8 +76,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  /* Using Mona Sans font */
-  --font-sans: 'Mona Sans', var(--font-mona-sans), var(--font-geist-sans), system-ui, sans-serif;
+  /* Font families - Inter for body, Adamina for headings */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-adamina), serif;
   --font-mono: var(--font-geist-mono);
 }
 
@@ -94,6 +95,10 @@
     font-size: 18px;
     @apply bg-background text-foreground;
     background: #ffffff;
+  }
+  /* Apply Adamina font to all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
 

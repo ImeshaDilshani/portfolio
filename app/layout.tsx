@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Adamina } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Navigation } from "@/components/navigation";
 import { Suspense } from "react";
@@ -12,6 +12,13 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const adamina = Adamina({
+  subsets: ["latin"],
+  variable: "--font-adamina",
+  display: "swap",
+  weight: ["400"],
 });
 
 // Emilio font configuration (you'll need to add the font files to /public/fonts/)
@@ -52,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.variable} ${adamina.variable} font-sans`}>
         <Suspense fallback={null}>
           <Navigation />
           <div className="min-h-screen">{children}</div>
