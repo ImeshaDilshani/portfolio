@@ -10,11 +10,15 @@ import { NAVIGATION_CONFIG } from "@/lib/config";
 export function Navigation() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 10);
+      // Show navbar after scrolling down 100px
+      setIsVisible(scrollPosition > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -41,8 +45,15 @@ export function Navigation() {
 
   return (
     <>
-      {/* Floating Navbar Container */}
-      <div className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 md:pt-6">
+      {/* Floating Navbar Container - Hidden initially, shows on scroll */}
+      <div 
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-4 md:pt-6 transition-all duration-500 ease-out",
+          isVisible 
+            ? "translate-y-0 opacity-100" 
+            : "-translate-y-full opacity-0"
+        )}
+      >
         <header
           className={cn(
             "max-w-5xl mx-auto rounded-2xl transition-all duration-300",

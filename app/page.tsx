@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section - Minimal Design */}
-      <section className="relative overflow-hidden pt-20 pb-12 md:pt-32 md:pb-20 lg:pt-40 lg:pb-32 min-h-[500px] md:min-h-[650px]">
+      <section className="relative overflow-hidden pt-12 pb-12 md:pt-20 md:pb-20 lg:pt-22 lg:pb-32 min-h-[500px] md:min-h-[650px]">
         <div className="container px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
           <div className="relative">
             {/* Top Label - Full Width */}
@@ -111,7 +111,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20 mt-16 bg-gray-50">
         <div className="container px-4 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-black">
-            My Life Motto: "Small Steps, Big Systems."
+            My Life Motto: "Small Steps, Big Systems with Continuous improvements."
           </h2>
 
           {/* Work Section */}
