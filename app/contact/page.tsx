@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,17 +15,54 @@ export default function ContactPage() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      // Using Web3Forms - Replace 'YOUR_ACCESS_KEY_HERE' with your actual access key
+      // Get free access key from: https://web3forms.com
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          subject: `New Contact Form Submission from ${formData.fullName}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "Failed to send message. Please try again.");
+      // Reset error after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   const handleChange = (
@@ -131,10 +169,38 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-lg font-medium transition-colors"
+                  disabled={status === "loading"}
+                  className="w-full h-12 bg-black hover:bg-gray-800 text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send message
+                  {status === "loading" ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send message"
+                  )}
                 </Button>
+
+                {/* Success Message */}
+                {status === "success" && (
+                  <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                    <p className="text-sm">
+                      Thank you for your message! I'll get back to you soon.
+                    </p>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === "error" && (
+                  <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                    <p className="text-sm">
+                      {errorMessage || "Failed to send message. Please try again."}
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
