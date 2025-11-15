@@ -78,7 +78,7 @@ export function Navigation() {
               <nav className="hidden lg:flex items-center gap-2">
                 {NAVIGATION_CONFIG.mainNav.map((item) => {
                   const isActive = pathname === item.href;
-                  const hasChildren = item.children && item.children.length > 0;
+                  const hasChildren = 'children' in item && item.children && item.children.length > 0;
                   
                   if (hasChildren) {
                     return (
@@ -104,7 +104,7 @@ export function Navigation() {
                           openDropdown === item.label ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
                         )}>
                           <div className="py-3 px-2">
-                            {item.children?.map((child, idx) => (
+                            {'children' in item && item.children?.map((child) => (
                               <Link
                                 key={child.href}
                                 href={child.href}
@@ -212,7 +212,7 @@ export function Navigation() {
           <nav className="relative px-4 py-6 flex flex-col gap-1">
             {NAVIGATION_CONFIG.mainNav.map((item, index) => {
               const isActive = pathname === item.href;
-              const hasChildren = item.children && item.children.length > 0;
+              const hasChildren = 'children' in item && item.children && item.children.length > 0;
               
               if (hasChildren) {
                 return (
@@ -220,7 +220,7 @@ export function Navigation() {
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                       {item.label}
                     </div>
-                    {item.children?.map((child, childIndex) => (
+                    {'children' in item && item.children?.map((child, childIndex) => (
                       <Link
                         key={child.href}
                         href={child.href}

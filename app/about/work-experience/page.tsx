@@ -122,7 +122,7 @@ export default function WorkExperiencePage() {
             {/* Right Content Area */}
             <div className="lg:col-span-3 space-y-12">
               <section data-animate="fade-up">
-                <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 mb-6 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
                   <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
                     Atlas Axillia Co. (Pvt) Ltd, Colombo, Sri Lanka
                   </h2>
@@ -191,7 +191,7 @@ export default function WorkExperiencePage() {
                         alt="Atlas Axillia Team"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img

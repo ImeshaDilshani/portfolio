@@ -136,7 +136,7 @@ export default function PresentationsPage() {
 
                 {/* Master's Thesis Defense */}
                 <section className="space-y-6" data-animate="fade-up">
-                  <div className="border-l-4 border-purple-500 dark:border-purple-400 pl-4 hover:border-purple-600 dark:hover:border-purple-300 transition-colors duration-300">
+                  <div className="border-l-4 border-black dark:border-gray-400 pl-4 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
                     <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
                       TEXT CLASSIFICATION
                     </h2>

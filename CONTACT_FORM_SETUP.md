@@ -1,8 +1,8 @@
-# Contact Form Setup Guide
+# Contact Form & Newsletter Setup Guide
 
-Your contact form is now ready! Follow these simple steps to activate it:
+Your contact form AND newsletter subscription are now ready! Follow these simple steps to activate both:
 
-## Option 1: Web3Forms (Recommended - FREE & Easy)
+## Quick Setup (Same Key for Both!)
 
 ### Steps:
 1. **Get your free access key:**
@@ -11,23 +11,58 @@ Your contact form is now ready! Follow these simple steps to activate it:
    - Click "Get Access Key"
    - Check your email and copy the access key
 
-2. **Add the access key to your code:**
-   - Open `app/contact/page.tsx`
-   - Find line with `access_key: "YOUR_ACCESS_KEY_HERE"`
-   - Replace `YOUR_ACCESS_KEY_HERE` with your actual access key
+2. **Add the access key to `.env.local`:**
+   - The file is already created with:
+   ```
+   NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key_here
+   ```
+   - Replace `your_access_key_here` with your actual access key
 
-3. **Configure email settings (Optional):**
-   - Login to https://web3forms.com/dashboard
-   - Set your preferred email address to receive submissions
-   - Customize email templates
-   - Add custom redirects
+3. **Restart your development server:**
+   ```bash
+   # Stop current server (Ctrl+C)
+   pnpm dev
+   ```
 
-### Features:
-✅ 100% Free forever (250 submissions/month)
-✅ No backend needed
-✅ Spam protection included
-✅ Email notifications
-✅ Works immediately after setup
+4. **Done! Both features now work:**
+   - ✅ Contact form at `/contact`
+   - ✅ Newsletter subscription in footer (every page)
+
+---
+
+## What's Included
+
+### 1. Contact Form (`/contact` page)
+- Full name, email, phone, message fields
+- Loading states and validation
+- Success/error notifications
+- Form reset after submission
+- Email notifications to your inbox
+
+### 2. Newsletter Subscription (Footer)
+- Email subscription form on every page
+- Loading states while submitting
+- Success/error notifications
+- Automatic form reset
+- Email notifications for new subscribers
+
+---
+
+## Email Configuration
+
+### Web3Forms Dashboard:
+1. Login to https://web3forms.com/dashboard
+2. **Set your email** where you want to receive:
+   - Contact form submissions
+   - Newsletter subscriptions
+3. **Customize email templates** (optional)
+4. **Enable spam protection** (recommended)
+
+### Email Subject Lines:
+- Contact form: "New Contact Form Submission from [Name]"
+- Newsletter: "New Newsletter Subscription"
+
+You'll receive separate emails for contact submissions and newsletter subscriptions.
 
 ---
 

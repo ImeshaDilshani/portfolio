@@ -11,16 +11,52 @@ import {
   Linkedin,
   Github,
   Heart,
+  Loader2,
+  CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Newsletter subscription:", email);
-    alert("Thank you for subscribing to my newsletter!");
-    setEmail("");
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: "New Newsletter Subscription",
+          email: email,
+          message: `New newsletter subscription from: ${email}`,
+          from_name: "Portfolio Newsletter",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setMessage("Thank you for subscribing! You're all set to receive updates.");
+        setEmail("");
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        throw new Error(result.message || "Subscription failed");
+      }
+    } catch (error) {
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : "Failed to subscribe. Please try again.");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -82,21 +118,48 @@ export function Footer() {
               <p className="text-gray-600">
                 Stay updated with latest articles from my blog.
               </p>
-              <form onSubmit={handleSubmit} className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1"
-                />
-                <Button
-                  type="submit"
-                  className="bg-black hover:bg-gray-800 text-white"
-                >
-                  Subscribe
-                </Button>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="flex gap-2">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={status === "loading"}
+                    className="flex-1"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="bg-black hover:bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Subscribing...
+                      </>
+                    ) : (
+                      "Subscribe"
+                    )}
+                  </Button>
+                </div>
+
+                {/* Success Message */}
+                {status === "success" && (
+                  <div className="flex items-start gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm">{message}</p>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === "error" && (
+                  <div className="flex items-start gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm">{message}</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
