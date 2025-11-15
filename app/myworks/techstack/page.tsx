@@ -44,17 +44,26 @@ export default function TechStackPage() {
               backgroundImage: "url('/PL1.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(80,0,180,0.08),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(50,0,120,0.06),transparent_60%)]" />
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-white">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
+              🛠️ Technology
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black font-[family-name:var(--font-adamina)]">
             Tech Stack
           </h1>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
             Technologies, frameworks, and tools I work with
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            My toolkit includes{" "}
+            <span className="text-black font-medium">modern frameworks</span>,{" "}
+            <span className="text-black font-medium">powerful libraries</span>, and{" "}
+            <span className="text-black font-medium">industry-standard tools</span>.
           </p>
         </div>
       </section>

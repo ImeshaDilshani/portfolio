@@ -28,21 +28,33 @@ export default function PhotographyPage() {
   return (
     <main>
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/portrait-person-ai-robot.jpg')",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+            style={{
+              backgroundImage: "url('/portrait-person-ai-robot.jpg')",
+            }}
+          />
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
+              📸 Visual Art
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black font-[family-name:var(--font-adamina)]">
             Stock Image Photography & Generation
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
             Turning creativity into passive income
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            Creating visual content through{" "}
+            <span className="text-black font-medium">photography</span>,{" "}
+            <span className="text-black font-medium">AI generation</span>, and{" "}
+            <span className="text-black font-medium">artistic expression</span>.
           </p>
         </div>
       </section>
@@ -51,10 +63,10 @@ export default function PhotographyPage() {
         <div className="container px-4 max-w-6xl mx-auto">
           <div className="mb-12">
             <Link
-              href="/captures"
+              href="/creative-lab"
               className="text-primary hover:underline mb-8 inline-block"
             >
-              ← Back to Life Capturing
+              ← Back to Creative Lab
             </Link>
 
             <h2 className="text-3xl font-bold mb-6">

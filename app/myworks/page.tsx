@@ -55,13 +55,26 @@ export default function MyWorksPage() {
               backgroundImage: "url('/data-science-code-on-multiple-monitors.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(80,0,180,0.08),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(50,0,120,0.06),transparent_60%)]" />
         </div>
 
         <div className="relative z-10 container text-center space-y-4 px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance font-[family-name:var(--font-adamina)]">Here's What I've Done</h1>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
+            <span className="text-sm font-medium text-black">
+              🚀 My Projects
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black font-[family-name:var(--font-adamina)]">Here's What I've Done</h1>
+          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
+            Showcase of my projects and creative work
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            A collection of{" "}
+            <span className="text-black font-medium">innovative solutions</span>,{" "}
+            <span className="text-black font-medium">creative experiments</span>, and{" "}
+            <span className="text-black font-medium">real-world applications</span>{" "}
+            I've built.
+          </p>
         </div>
       </section>
 

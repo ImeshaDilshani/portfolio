@@ -8,16 +8,34 @@ export interface NavItem {
   href: string;
   label: string;
   description?: string;
+  children?: readonly NavItem[];
 }
 
 export const NAVIGATION_CONFIG = {
   mainNav: [
     { href: "/", label: "Start Here", description: "Welcome to my portfolio" },
-    { href: "/about", label: "About", description: "Learn more about me" },
-    { href: "/writes", label: "Writes", description: "My writings and thoughts" },
-    { href: "/reads", label: "Reads", description: "Books and articles" },
-    { href: "/listening", label: "Listening", description: "Music and podcasts" },
-    { href: "/captures", label: "Captures", description: "Photography and visuals" },
+    { href: "/about", label: "About Me", description: "Learn more about me" },
+    { 
+      href: "/myworks", 
+      label: "Work", 
+      description: "My work and projects",
+      children: [
+        { href: "/about/data-portfolio", label: "Data Portfolio", description: "Data analysis projects" },
+        { href: "/about/coding-portfolio", label: "Code Portfolio", description: "Coding projects" },
+      ]
+    },
+    { href: "/myworks/techstack", label: "Skills", description: "My technical skills" },
+    { 
+      href: "#", 
+      label: "Learn", 
+      description: "Learning resources",
+      children: [
+        { href: "/writes", label: "Articles I Wrote", description: "My writings and thoughts" },
+        { href: "/reads", label: "Books I Read", description: "Books and articles" },
+        { href: "/listening", label: "Podcasts I Listen", description: "Podcasts and audio" },
+      ]
+    },
+    { href: "/creative-lab", label: "Creative Lab", description: "Creative projects and experiments" },
   ] as const satisfies readonly NavItem[],
   
   cta: {

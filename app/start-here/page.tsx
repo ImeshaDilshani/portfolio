@@ -316,7 +316,7 @@ export default function StartHerePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/captures">
+                  <Link href="/creative-lab">
                     Check Out My Collection{" "}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

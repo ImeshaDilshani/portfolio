@@ -47,7 +47,7 @@ export default function CapturesPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
-            Captures
+            Creative Lab
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
@@ -79,7 +79,7 @@ export default function CapturesPage() {
       <div className="py-16 md:py-24">
         <div className="container px-4 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/captures/gardening">
+            <Link href="/creative-lab/gardening">
               <Card
                 className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
@@ -112,7 +112,7 @@ export default function CapturesPage() {
               </Card>
             </Link>
 
-            <Link href="/captures/photography">
+            <Link href="/creative-lab/photography">
               <Card
                 className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
@@ -145,7 +145,7 @@ export default function CapturesPage() {
               </Card>
             </Link>
 
-            <Link href="/captures/digital-products">
+            <Link href="/creative-lab/digital-products">
               <Card
                 className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
                 data-animate="fade-up"
