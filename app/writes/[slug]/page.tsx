@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -60,6 +59,12 @@ const articles = [
   },
 ];
 
+export function generateStaticParams() {
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const article = articles.find((a) => a.slug === params.slug);
 
@@ -100,22 +105,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </Link>
           </Button>
 
-          <article className="prose prose-lg dark:prose-invert max-w-none text-left leading-relaxed">
+          <article className="prose prose-lg dark:prose-invert max-w-none text-left leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-purple-600 [&_h2]:dark:text-purple-400 [&_h2]:mt-6 [&_h2]:mb-4 [&_h2]:border-b-2 [&_h2]:border-purple-600 [&_h2]:dark:border-purple-400 [&_h2]:pb-2">
             <div
               className="space-y-6"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
-            <style jsx>{`
-              h2 {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #6b46c1; /* Purple highlight */
-                margin-top: 1.5rem;
-                margin-bottom: 1rem;
-                border-bottom: 2px solid #6b46c1;
-                padding-bottom: 0.5rem;
-              }
-            `}</style>
           </article>
 
           <div className="mt-12 pt-8 border-t flex justify-start">
