@@ -46,10 +46,13 @@ const emilio = localFont({
 */
 
 export const metadata: Metadata = {
-  title: "Imesha Dilshani - Portfolio",
+  title: "Imesha Dilshani | Engineer building intelligent AI/ML driven software and data systems with process automation & MLOps.",
   description:
-    "Graphic Designer, Software Engineer, Data Scientist, and Self-Learner",
+    "Data Engineer, Software Engineer, Data Scientist, and Self-Learner",
   generator: "v0.app",
+  icons: {
+    icon: "/profile.jpeg",
+  },
 };
 
 export default function RootLayout({
