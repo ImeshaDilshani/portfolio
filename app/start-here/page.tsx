@@ -32,7 +32,7 @@ export default function StartHerePage() {
 
                   {/* Profile Image */}
                   <img
-                    src="/profile.jpeg"
+                    src="/imesha.png"
                     alt="Imesha Dilshani"
                     className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-purple-500/40 shadow-2xl shadow-purple-900/50 ring-4 ring-purple-900/20"
                   />

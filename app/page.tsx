@@ -30,7 +30,7 @@ export default function HomePage() {
             {/* Mobile Image - Shows below headline on mobile */}
             <div className="mb-6 lg:hidden animate-fadeInUp animation-delay-200">
               <img
-                src="/profile.jpeg"
+                src="/imesha.png"
                 alt="Imesha Dilshani"
                 className="w-full max-w-sm mx-auto h-auto object-cover rounded-lg shadow-2xl"
               />
@@ -98,7 +98,7 @@ export default function HomePage() {
             {/* Image - Positioned Right, Aligned with Description */}
             <div className="absolute top-32 right-0 hidden lg:block animate-fadeInUp animation-delay-300">
               <img
-                src="/profile.jpeg"
+                src="/imesha.png"
                 alt="Imesha Dilshani"
                 className="w-80 h-auto object-cover rounded-lg shadow-2xl"
               />
