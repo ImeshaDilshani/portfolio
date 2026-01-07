@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     "Data Engineer, Software Engineer, Data Scientist, and Self-Learner",
   generator: "v0.app",
   icons: {
-    icon: "/profile.jpeg",
+    icon: "/imesha.png",
   },
 };
 
