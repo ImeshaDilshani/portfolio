@@ -24,7 +24,7 @@ export default function HomePage() {
 
             {/* Main Headline - Responsive */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100 font-[family-name:var(--font-adamina)] font-bold">
-              I'm Building Intelligent Software and Data Systems that make an Impact.
+              I'm Building Intelligent Software and Data Systems that make an Quality Impact.
             </h1>
 
             {/* Mobile Image - Shows below headline on mobile */}
@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="max-w-xl lg:max-w-2xl space-y-4 md:space-y-5 animate-fadeInUp animation-delay-200 lg:animation-delay-200">
               {/* Description */}
               <p className="text-gray-600 leading-relaxed text-sm max-w-lg">
-                I approach every project as a chance to learn, adapt, and evolve. Working at the intersection of data and software, I’m driven by the challenge of turning complexity into clarity creating tools that help people make sense of the world around them.
+                Every project is an opportunity to evolve. I’m a developer who actually enjoys the "messy" parts of tech, like untangling complex data or building systems that need to scale. I spend my time at the intersection of software engineering and data science, creating clean, intelligent tools that solve real-world problems without the extra fluff.
               </p>
 
               {/* CTA Button */}
@@ -51,7 +51,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link href="/contact">
-                    Let's Collaborate →
+                    Let’s talk about your project →
                   </Link>
                 </Button>
               </div>
@@ -115,59 +115,72 @@ export default function HomePage() {
           </h2>
 
           {/* Work Section */}
-          <div className="space-y-8 mb-12">
-            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Work</h3>
-            <div className="space-y-4 text-gray-700 text-left">
-              <p>
-                Previously, I have worked at{" "}
-                <span className="font-medium text-black">
-                  <a
-                    href="https://www.atlas.lk/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:no-underline"
-                  >
-                    Atlas Axillia Co. (Pvt) Ltd.
-                  </a>
-                </span>{" "}
-                as a Production Data Intern:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>
-                  Contributed to Production Data Updater software (Node.js,
-                  Express.js), improving reporting accuracy
-                </li>
-                <li>
-                  Conducted API testing with Postman and integrated database
-                  functionality with Excel export
-                </li>
-                <li>
-                  Developed interactive Power BI reports for department heads
-                </li>
-                <li>
-                  Integrated 30-day production data loss into SAP supporting OEE
-                  processes
-                </li>
-                <li>
-                  Built Loss Tree analysis with SAP BEx Analyzer to prioritize
-                  inefficiencies
-                </li>
-              </ul>
-              <p>
-                In my past lives, I also used to freelance as a designer and
-                currently as a developer at{" "}
-                <a
-                  href="https://www.freelancer.com/u/imeshadilshani03"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-black underline hover:no-underline"
-                >
-                  Freelancer.com
-                </a>
-                .
-              </p>
-            </div>
-          </div>
+          {/* Work Section */}
+<div className="space-y-12 mb-12">
+  <h3 className="font-[family-name:var(--font-adamina)] text-2xl font-bold text-left text-black">Work</h3>
+  
+  <div className="space-y-8 text-gray-700 text-left">
+    
+    {/* Current Role */}
+    <div className="space-y-1">
+      <p>
+        Currently, I’m an <span className="font-semibold text-black">Associate Data & Software Engineer</span> at{" "}
+        <span className="font-medium text-black"> 
+          <a
+            href="https://www.wirity.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline"
+          > Wirity Labs </a></span> (Part-time). Focusing on Software Engineering practices, Data Engineering, and Mobile App Development.
+      </p>
+    </div>
+
+    {/* Previous Role */}
+    <div className="space-y-1">
+      <p>
+        Previously, I worked at{" "}
+        <span className="font-medium text-black">
+          <a
+            href="https://www.atlas.lk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline"
+          >
+            Atlas Axillia Co. (Pvt) Ltd.
+          </a>
+        </span>{" "}
+        as a Production Data Analyst Intern, where I:
+      </p>
+      <ul className="list-disc list-inside space-y-2 ml-4">
+        <li>
+          Built a Production Data Updater using <span className="text-black font-medium">Node.js and Express.js</span> to fix reporting accuracy.
+        </li>
+        <li>
+          Tested APIs with Postman and handled database integrations with Excel exports.
+        </li>
+        <li>
+          Created interactive <span className="text-black font-medium">Power BI dashboards</span> for department heads.
+        </li>
+        <li>
+          Worked with <span className="text-black font-medium">SAP and BEx Analyzer</span> to track production loss and fix inefficiencies.
+        </li>
+      </ul>
+    </div>
+
+    {/* Freelance */}
+    <p>
+      In my past lives, I also used to freelance as a designer and I'm currently active as a developer at{" "}
+      <a
+        href="https://www.freelancer.com/u/imeshadilshani03"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-black underline hover:no-underline"
+      >
+        Freelancer.com
+      </a>.
+    </p>
+  </div>
+</div>
 
           {/* Education Section */}
           <div className="space-y-8 mb-12">
