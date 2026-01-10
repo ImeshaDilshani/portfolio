@@ -31,11 +31,12 @@ export default function CapturesPage() {
     <main>
       <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
         <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/garding/idea-hero.jpg')",
-            }}
+          <Image
+            src="/garding/idea-hero.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
 

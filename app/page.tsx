@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -29,10 +30,13 @@ export default function HomePage() {
 
             {/* Mobile Image - Shows below headline on mobile */}
             <div className="mb-6 lg:hidden animate-fadeInUp animation-delay-200">
-              <img
+              <Image
                 src="/imesha.png"
                 alt="Imesha Dilshani"
+                width={384}
+                height={500}
                 className="w-full max-w-sm mx-auto h-auto object-cover rounded-lg shadow-2xl"
+                priority
               />
             </div>
 
@@ -97,10 +101,13 @@ export default function HomePage() {
 
             {/* Image - Positioned Right, Aligned with Description */}
             <div className="absolute top-32 right-0 hidden lg:block animate-fadeInUp animation-delay-300">
-              <img
+              <Image
                 src="/imesha.png"
                 alt="Imesha Dilshani"
+                width={320}
+                height={420}
                 className="w-80 h-auto object-cover rounded-lg shadow-2xl"
+                priority
               />
             </div>
           </div>
@@ -115,72 +122,71 @@ export default function HomePage() {
           </h2>
 
           {/* Work Section */}
-          {/* Work Section */}
-<div className="space-y-12 mb-12">
-  <h3 className="font-[family-name:var(--font-adamina)] text-2xl font-bold text-left text-black">Work</h3>
-  
-  <div className="space-y-8 text-gray-700 text-left">
-    
-    {/* Current Role */}
-    <div className="space-y-1">
-      <p>
-        Currently, I’m an <span className="font-semibold text-black">Associate Data & Software Engineer</span> at{" "}
-        <span className="font-medium text-black"> 
-          <a
-            href="https://www.wirity.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:no-underline"
-          > Wirity Labs </a></span> (Part-time). Focusing on Software Engineering practices, Data Engineering, and Mobile App Development.
-      </p>
-    </div>
+          <div className="space-y-12 mb-12">
+            <h3 className="font-[family-name:var(--font-adamina)] text-2xl font-bold text-left text-black">Work</h3>
+            
+            <div className="space-y-8 text-gray-700 text-left">
+              
+              {/* Current Role */}
+              <div className="space-y-1">
+                <p>
+                  Currently, I’m an <span className="font-semibold text-black">Associate Data & Software Engineer</span> at{" "}
+                  <span className="font-medium text-black"> 
+                    <a
+                      href="https://www.wirity.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                    > Wirity Labs </a></span> (Part-time). Focusing on Software Engineering practices, Data Engineering, and Mobile App Development.
+                </p>
+              </div>
 
-    {/* Previous Role */}
-    <div className="space-y-1">
-      <p>
-        Previously, I worked at{" "}
-        <span className="font-medium text-black">
-          <a
-            href="https://www.atlas.lk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:no-underline"
-          >
-            Atlas Axillia Co. (Pvt) Ltd.
-          </a>
-        </span>{" "}
-        as a Production Data Analyst Intern, where I:
-      </p>
-      <ul className="list-disc list-inside space-y-2 ml-4">
-        <li>
-          Built a Production Data Updater using <span className="text-black font-medium">Node.js and Express.js</span> to fix reporting accuracy.
-        </li>
-        <li>
-          Tested APIs with Postman and handled database integrations with Excel exports.
-        </li>
-        <li>
-          Created interactive <span className="text-black font-medium">Power BI dashboards</span> for department heads.
-        </li>
-        <li>
-          Worked with <span className="text-black font-medium">SAP and BEx Analyzer</span> to track production loss and fix inefficiencies.
-        </li>
-      </ul>
-    </div>
+              {/* Previous Role */}
+              <div className="space-y-1">
+                <p>
+                  Previously, I worked at{" "}
+                  <span className="font-medium text-black">
+                    <a
+                      href="https://www.atlas.lk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                    >
+                      Atlas Axillia Co. (Pvt) Ltd.
+                    </a>
+                  </span>{" "}
+                  as a Production Data Analyst Intern, where I:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>
+                    Built a Production Data Updater using <span className="text-black font-medium">Node.js and Express.js</span> to fix reporting accuracy.
+                  </li>
+                  <li>
+                    Tested APIs with Postman and handled database integrations with Excel exports.
+                  </li>
+                  <li>
+                    Created interactive <span className="text-black font-medium">Power BI dashboards</span> for department heads.
+                  </li>
+                  <li>
+                    Worked with <span className="text-black font-medium">SAP and BEx Analyzer</span> to track production loss and fix inefficiencies.
+                  </li>
+                </ul>
+              </div>
 
-    {/* Freelance */}
-    <p>
-      In my past lives, I also used to freelance as a designer and I'm currently active as a developer at{" "}
-      <a
-        href="https://www.freelancer.com/u/imeshadilshani03"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-black underline hover:no-underline"
-      >
-        Freelancer.com
-      </a>.
-    </p>
-  </div>
-</div>
+              {/* Freelance */}
+              <p>
+                In my past lives, I also used to freelance as a designer and I'm currently active as a developer at{" "}
+                <a
+                  href="https://www.freelancer.com/u/imeshadilshani03"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-black underline hover:no-underline"
+                >
+                  Freelancer.com
+                </a>.
+              </p>
+            </div>
+          </div>
 
           {/* Education Section */}
           <div className="space-y-8 mb-12">
@@ -284,13 +290,15 @@ export default function HomePage() {
       {/* Featured Cards Section */}
       <section className="py-16 md:py-20">
         <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {/* Card 1 */}
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-1">
-              <div className="aspect-video relative overflow-hidden">
-                <img
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <Image
                   src="/CW1.jpg"
                   alt="Community Work"
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardHeader>
@@ -315,12 +323,14 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
+            {/* Card 2 */}
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-2">
-              <div className="aspect-video relative overflow-hidden">
-                <img
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <Image
                   src="/PL1.jpg"
                   alt="Tech Stack"
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardHeader>
@@ -344,12 +354,14 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
+            {/* Card 3 */}
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-3">
-              <div className="aspect-video relative overflow-hidden">
-                <img
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <Image
                   src="/J1.jpg"
                   alt="Journalism"
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardHeader>

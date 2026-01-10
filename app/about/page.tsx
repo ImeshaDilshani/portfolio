@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -30,11 +31,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
         <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/about-bg.jpg')",
-            }}
+          <Image
+            src="/about-bg.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
 

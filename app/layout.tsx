@@ -63,10 +63,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.variable} ${adamina.variable} font-sans`}>
+        <Navigation />
+        <div className="min-h-screen">
+          <Suspense fallback={null}>{children}</Suspense>
+        </div>
+        <Footer />
         <Suspense fallback={null}>
-          <Navigation />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
           <Analytics />
         </Suspense>
       </body>
