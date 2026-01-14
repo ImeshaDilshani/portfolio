@@ -2,8 +2,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://imesha.dev/sitemap.xml
-
-# Disallow admin or API paths
-Disallow: /api/

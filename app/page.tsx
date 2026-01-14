@@ -322,8 +322,8 @@ export default function HomePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/myworks/community" aria-label="Learn more about Imesha's community work">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  <Link href="/myworks/community">
+                    View Community Work <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </CardContent>
@@ -355,8 +355,8 @@ export default function HomePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/myworks/techstack" aria-label="Explore the tech stack Imesha uses">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  <Link href="/myworks/techstack">
+                    Explore Tech Stack <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </CardContent>
