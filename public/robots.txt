@@ -1,4 +1,3 @@
-# robots.txt for imesha.dev
 User-agent: *
 Allow: /
 
