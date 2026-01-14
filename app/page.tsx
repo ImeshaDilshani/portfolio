@@ -31,7 +31,7 @@ export default function HomePage() {
             {/* Mobile Image - Shows below headline on mobile */}
             <div className="mb-4 sm:mb-6 lg:hidden">
               <Image
-                src="/imesha.png"
+                src="/imesha.webp"
                 alt="Imesha Dilshani - Software and Data Engineer"
                 width={384}
                 height={500}
@@ -104,7 +104,7 @@ export default function HomePage() {
             {/* Desktop Image - Positioned Right */}
             <div className="absolute top-24 lg:top-28 right-0 hidden lg:block">
               <Image
-                src="/imesha.png"
+                src="/imesha.webp"
                 alt="Imesha Dilshani - Software and Data Engineer"
                 width={320}
                 height={420}
@@ -299,7 +299,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
-                  src="/CW1.jpg"
+                  src="/CW1.webp"
                   alt="Community work and collaboration activities"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -333,7 +333,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
-                  src="/PL1.jpg"
+                  src="/PL1.webp"
                   alt="Programming languages and tech stack visualization"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -366,7 +366,7 @@ export default function HomePage() {
             <Card className="overflow-hidden group hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-1">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
-                  src="/J1.jpg"
+                  src="/J1.webp"
                   alt="Journalism and writing - blog articles and insights"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
