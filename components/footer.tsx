@@ -84,17 +84,17 @@ export function Footer() {
                   href="https://x.com/ImeshaDilshani3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors"
-                  aria-label="Twitter"
+                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
+                  aria-label="Follow Imesha on Twitter/X"
                 >
                   <Twitter className="h-5 w-5" />
                 </a>
                 <a
-                  href="www.linkedin.com/in/imesha-dilshani-61862422b"
+                  href="https://www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors"
-                  aria-label="LinkedIn"
+                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
+                  aria-label="Connect with Imesha on LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
@@ -102,8 +102,8 @@ export function Footer() {
                   href="https://github.com/ImeshaDilshani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors"
-                  aria-label="GitHub"
+                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
+                  aria-label="View Imesha's GitHub profile"
                 >
                   <Github className="h-5 w-5" />
                 </a>

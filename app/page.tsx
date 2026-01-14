@@ -8,35 +8,37 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, Github, Linkedin, Twitter, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
     <main>
-      {/* Hero Section - Minimal Design */}
-      <section className="relative overflow-hidden pt-12 pb-12 md:pt-20 md:pb-20 lg:pt-22 lg:pb-32 min-h-[500px] md:min-h-[650px]">
-        <div className="container px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+      {/* Hero Section - Optimized for Performance and Mobile */}
+      <section className="relative overflow-hidden pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-16 md:pb-16 lg:pt-20 lg:pb-24 min-h-[auto] sm:min-h-[450px] md:min-h-[550px]">
+        <div className="container px-4 sm:px-6 md:px-8 lg:px-16 max-w-7xl mx-auto">
           <div className="relative">
             {/* Top Label - Full Width */}
-            <div className="flex items-center gap-2 text-xs md:text-sm text-gray-400 mb-4 md:mb-5 animate-fadeInUp">
-              <span className="w-6 md:w-8 h-[2px] bg-gray-300"></span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 md:mb-5">
+              <span className="w-5 sm:w-6 md:w-8 h-[2px] bg-gray-400" aria-hidden="true"></span>
               <span className="uppercase tracking-wider font-medium">Hello! I'm Imesha</span>
             </div>
 
-            {/* Main Headline - Responsive */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight text-black mb-6 md:mb-8 animate-fadeInUp animation-delay-100 font-[family-name:var(--font-adamina)] font-bold">
+            {/* Main Headline - LCP Element */}
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-4 sm:mb-6 md:mb-8 font-[family-name:var(--font-adamina)] font-bold max-w-3xl">
               I'm Building Intelligent Software and Data Systems that make an Quality Impact.
             </h1>
 
             {/* Mobile Image - Shows below headline on mobile */}
-            <div className="mb-6 lg:hidden animate-fadeInUp animation-delay-200">
+            <div className="mb-4 sm:mb-6 lg:hidden">
               <Image
                 src="/imesha.png"
-                alt="Imesha Dilshani"
+                alt="Imesha Dilshani - Software and Data Engineer"
                 width={384}
                 height={500}
-                className="w-full max-w-sm mx-auto h-auto object-cover rounded-lg shadow-2xl"
+                className="w-full max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto h-auto object-cover rounded-lg shadow-xl"
                 priority
+                fetchPriority="high"
+                sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 384px"
               />
             </div>
 
@@ -60,38 +62,38 @@ export default function HomePage() {
                 </Button>
               </div>
 
-              {/* Services/Skills Icons - Compact Layout */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 max-w-lg">
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Services/Skills Icons - Responsive Grid */}
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 pt-2 sm:pt-3 max-w-lg">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700">
+                  <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                   <span className="font-medium">Full-Stack Development</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700">
+                  <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
-                  <span className="font-medium">Data Engineering </span>
+                  <span className="font-medium">Data Engineering</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700">
+                  <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                   <span className="font-medium">Mobile App Development</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700">
+                  <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                   </svg>
                   <span className="font-medium">Process Automation</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:col-span-2 md:col-span-1">
+                  <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                   <span className="font-medium">Cloud Computing & Deployment</span>
@@ -99,15 +101,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Image - Positioned Right, Aligned with Description */}
-            <div className="absolute top-32 right-0 hidden lg:block animate-fadeInUp animation-delay-300">
+            {/* Desktop Image - Positioned Right */}
+            <div className="absolute top-24 lg:top-28 right-0 hidden lg:block">
               <Image
                 src="/imesha.png"
-                alt="Imesha Dilshani"
+                alt="Imesha Dilshani - Software and Data Engineer"
                 width={320}
                 height={420}
-                className="w-80 h-auto object-cover rounded-lg shadow-2xl"
+                className="w-72 xl:w-80 h-auto object-cover rounded-lg shadow-2xl"
                 priority
+                fetchPriority="high"
+                sizes="(min-width: 1280px) 320px, 288px"
               />
             </div>
           </div>
@@ -115,15 +119,15 @@ export default function HomePage() {
       </section>
 
       {/* Life Motto Section */}
-      <section className="py-16 md:py-20 mt-16 bg-gray-50">
-        <div className="container px-4 max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-adamina)] font-bold text-3xl md:text-4xl text-center mb-12 text-balance text-black">
+      <section className="py-12 sm:py-16 md:py-20 mt-8 sm:mt-12 md:mt-16 bg-gray-50">
+        <div className="container px-4 sm:px-6 max-w-4xl mx-auto">
+          <h2 className="font-[family-name:var(--font-adamina)] font-bold text-2xl sm:text-3xl md:text-4xl text-center mb-8 sm:mb-10 md:mb-12 text-balance text-black">
             My Life Motto: "Small Steps, Big Systems with Continuous improvements."
           </h2>
 
           {/* Work Section */}
-          <div className="space-y-12 mb-12">
-            <h3 className="font-[family-name:var(--font-adamina)] text-2xl font-bold text-left text-black">Work</h3>
+          <div className="space-y-8 sm:space-y-10 md:space-y-12 mb-8 sm:mb-10 md:mb-12">
+            <h3 className="font-[family-name:var(--font-adamina)] text-xl sm:text-2xl font-bold text-left text-black">Work</h3>
             
             <div className="space-y-8 text-gray-700 text-left">
               
@@ -263,17 +267,17 @@ export default function HomePage() {
           </div>
 
           {/* Social Section */}
-          <div className="space-y-8">
-            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-2xl font-bold text-left text-black">Social</h3>
+          <div className="space-y-6 sm:space-y-8">
+            <h3 className="font-[family-name:var(--font-adamina)] font-medium text-xl sm:text-2xl font-bold text-left text-black">Social</h3>
             <div className="space-y-4 text-gray-700 text-left">
               <p>
                 I maintain a list of the books I read on{" "}
                 <Link href="/reads" className="font-medium text-black underline hover:no-underline">
-                  Reads
+                  my Reads page
                 </Link>{" "}
                 and keep track of my reading. I always look to connect on{" "}
                 <a
-                  href="www.linkedin.com/in/imesha-dilshani-61862422b"
+                  href="https://www.linkedin.com/in/imesha-dilshani-61862422b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-black underline hover:no-underline"
@@ -288,17 +292,19 @@ export default function HomePage() {
       </section>
 
       {/* Featured Cards Section */}
-      <section className="py-16 md:py-20">
-        <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container px-4 sm:px-6 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {/* Card 1 */}
-            <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-1">
+            <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/CW1.jpg"
-                  alt="Community Work"
+                  alt="Community work and collaboration activities"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>
@@ -316,21 +322,23 @@ export default function HomePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/myworks/community">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href="/myworks/community" aria-label="Learn more about Imesha's community work">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
             {/* Card 2 */}
-            <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-2">
+            <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/PL1.jpg"
-                  alt="Tech Stack"
+                  alt="Programming languages and tech stack visualization"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>
@@ -347,21 +355,23 @@ export default function HomePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/myworks/techstack">
-                    Read Them <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href="/myworks/techstack" aria-label="Explore the tech stack Imesha uses">
+                    Read More <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
             {/* Card 3 */}
-            <Card className="overflow-hidden group hover:shadow-lg transition-shadow animate-card card-delay-3">
+            <Card className="overflow-hidden group hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-1">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/J1.jpg"
-                  alt="Journalism"
+                  alt="Journalism and writing - blog articles and insights"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>
@@ -379,8 +389,8 @@ export default function HomePage() {
                   className="p-0 h-auto font-semibold"
                   asChild
                 >
-                  <Link href="/writes">
-                    Check Them Out <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href="/writes" aria-label="Read Imesha's blog posts and articles">
+                    Read Articles <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </CardContent>
