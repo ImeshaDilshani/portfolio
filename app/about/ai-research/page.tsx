@@ -36,7 +36,7 @@ export default function AIResearchPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/J1-2.jpg')",
+              backgroundImage: "url('/J1-2.webp')",
             }}
           />
         </div>
@@ -133,7 +133,7 @@ export default function AIResearchPage() {
                   {/* Research Image */}
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-8 group">
                     <img
-                      src="/research/up1.jpeg"
+                      src="/research/up1.webp"
                       alt="NLP Research Project"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

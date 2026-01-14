@@ -36,7 +36,7 @@ export default function MOOCsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/free-knowledge.jpg')",
+              backgroundImage: "url('/free-knowledge.webp')",
             }}
           />
         </div>
@@ -150,7 +150,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/cisco-ds.png"
+                        src="/cisco-ds.webp"
                         alt="Introduction to Data Science"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -192,7 +192,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/stanford-online.png"
+                        src="/stanford-online.webp"
                         alt="Stanford Lagunita Courses"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -235,7 +235,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/linkdin-learn.png"
+                        src="/linkdin-learn.webp"
                         alt="Power BI ETL Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -278,7 +278,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/coursera.png"
+                        src="/coursera.webp"
                         alt="Java Programming Course"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -320,7 +320,7 @@ export default function MOOCsPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/forge.png"
+                        src="/forge.webp"
                         alt="Forage Virtual Experience"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />

@@ -37,7 +37,7 @@ export default function PresentationsPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
               backgroundImage:
-                "url('/academic-research-presentation-university.jpg')",
+                "url('/academic-research-presentation-university.webp')",
             }}
           />
         </div>
@@ -146,7 +146,7 @@ export default function PresentationsPage() {
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                     <img
-                      src="/presentation-1.png"
+                      src="/presentation-1.webp"
                       alt="Master's Thesis Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -176,7 +176,7 @@ export default function PresentationsPage() {
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                     <img
-                      src="/presentation-2.png"
+                      src="/presentation-2.webp"
                       alt="PhD Research Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -205,7 +205,7 @@ export default function PresentationsPage() {
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                     <img
-                      src="/PRESENTATION-3.png"
+                      src="/PRESENTATION-3.webp"
                       alt="PhD Research Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -235,7 +235,7 @@ export default function PresentationsPage() {
                   </div>
                   <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                     <img
-                      src="/presentation-5.png"
+                      src="/presentation-5.webp"
                       alt="PhD Research Defense Slides"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

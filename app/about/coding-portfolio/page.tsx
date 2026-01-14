@@ -36,7 +36,7 @@ export default function CodingPortfolioPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/about-bg.jpg')",
+              backgroundImage: "url('/about-bg.webp')",
             }}
           />
         </div>
@@ -136,7 +136,7 @@ export default function CodingPortfolioPage() {
                   <article>
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/c-1.png"
+                        src="/c-1.webp"
                         alt="Web Development Project"
                         className="w-full h-full object-cover"
                       />
@@ -178,7 +178,7 @@ export default function CodingPortfolioPage() {
                   <article>
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/c-2.png"
+                        src="/c-2.webp"
                         alt="Mobile Development Project"
                         className="w-full h-full object-cover"
                       />

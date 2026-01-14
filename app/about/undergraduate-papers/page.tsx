@@ -143,7 +143,7 @@ export default function UndergraduatePapersPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
                       <img
-                        src="/research/up1.jpeg"
+                        src="/research/up1.webp"
                         alt="Bridging Linguistic Gaps Paper"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -181,7 +181,7 @@ export default function UndergraduatePapersPage() {
                   <div className="md:col-span-1">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border hover:border-purple-500/50 transition-all duration-300 group">
                       <img
-                        src="/academic-research-presentation-university.jpg"
+                        src="/academic-research-presentation-university.webp"
                         alt="Research Paper 1"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />

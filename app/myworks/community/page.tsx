@@ -9,7 +9,7 @@ export default function CommunityPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/CW1.jpg')",
+              backgroundImage: "url('/CW1.webp')",
             }}
           />
         </div>
@@ -53,7 +53,7 @@ export default function CommunityPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW3.jpg"
+                    src="/CW3.webp"
                     alt="Community memory 1"
                     fill
                     className="object-cover"
@@ -61,7 +61,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW4.jpg"
+                    src="/CW4.webp"
                     alt="Community memory 2"
                     fill
                     className="object-cover"
@@ -69,7 +69,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW5.png"
+                    src="/CW5.webp"
                     alt="Community memory 3"
                     fill
                     className="object-cover"
@@ -77,7 +77,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW6.jpg"
+                    src="/CW6.webp"
                     alt="Community memory 4"
                     fill
                     className="object-cover"
@@ -85,7 +85,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW7.jpg"
+                    src="/CW7.webp"
                     alt="Community memory 5"
                     fill
                     className="object-cover"
@@ -93,7 +93,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW8.jpg"
+                    src="/CW8.webp"
                     alt="Community memory 6"
                     fill
                     className="object-cover"
@@ -101,7 +101,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW9.jpg"
+                    src="/CW9.webp"
                     alt="Community memory 7"
                     fill
                     className="object-cover"
@@ -109,7 +109,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW10.jpg"
+                    src="/CW10.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -117,7 +117,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW11.jpg"
+                    src="/CW11.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -125,7 +125,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW12.jpg"
+                    src="/CW12.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -133,7 +133,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW13.jpg"
+                    src="/CW13.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -141,7 +141,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW14.jpg"
+                    src="/CW14.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -149,7 +149,7 @@ export default function CommunityPage() {
                 </div>
                 {/* <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW15.jpg"
+                    src="/CW15.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -157,7 +157,7 @@ export default function CommunityPage() {
                 </div> */}
                 {/* <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW16.jpg"
+                    src="/CW16.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"
@@ -165,7 +165,7 @@ export default function CommunityPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-colors">
                   <Image
-                    src="/CW17.jpg"
+                    src="/CW17.webp"
                     alt="Community memory 8"
                     fill
                     className="object-cover"

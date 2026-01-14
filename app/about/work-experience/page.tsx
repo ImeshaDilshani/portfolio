@@ -33,7 +33,7 @@ export default function WorkExperiencePage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/about/experince.jpg')",
+              backgroundImage: "url('/about/experince.webp')",
             }}
           />
         </div>
@@ -187,7 +187,7 @@ export default function WorkExperiencePage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/about/Atlas1.jpeg"
+                        src="/about/Atlas1.webp"
                         alt="Atlas Axillia Team"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -195,7 +195,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/about/Atlas2.jpeg"
+                        src="/about/Atlas2.webp"
                         alt="Working on production data"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -203,7 +203,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/about/atlas (2).jpg"
+                        src="/about/atlas (2).webp"
                         alt="Power BI Dashboard"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -211,7 +211,7 @@ export default function WorkExperiencePage() {
                     </div>
                     <div className="relative h-64 rounded-lg overflow-hidden group">
                       <img
-                        src="/about/atlas.jpeg"
+                        src="/about/atlas.webp"
                         alt="Data Analysis Work"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -264,7 +264,7 @@ export default function WorkExperiencePage() {
                   <div className="lg:col-span-1 flex justify-center lg:justify-end">
                     <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center border-2 border-border hover:border-gray-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/10">
                       <img
-                        src="/about/freelancer.png"
+                        src="/about/freelancer.webp"
                         alt="Freelancer.com Logo"
                         className="max-w-full max-h-full object-contain p-4 hover:scale-110 transition-transform duration-300"
                       />

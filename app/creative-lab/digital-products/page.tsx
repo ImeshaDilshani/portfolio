@@ -9,7 +9,7 @@ export default function DigitalProductsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/about-bg.jpg')",
+              backgroundImage: "url('/about-bg.webp')",
             }}
           />
         </div>

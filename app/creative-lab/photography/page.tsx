@@ -32,7 +32,7 @@ export default function PhotographyPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/portrait-person-ai-robot.jpg')",
+              backgroundImage: "url('/portrait-person-ai-robot.webp')",
             }}
           />
         </div>

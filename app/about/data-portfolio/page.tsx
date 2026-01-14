@@ -36,7 +36,7 @@ export default function DataPortfolioPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/about-bg.jpg')",
+              backgroundImage: "url('/about-bg.webp')",
             }}
           />
         </div>
@@ -139,7 +139,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/r-1.png"
+                        src="/r-1.webp"
                         alt="Classifying Tweets with Weights & Biases"
                         className="w-full h-full object-cover"
                       />
@@ -181,7 +181,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/j-1.png"
+                        src="/j-1.webp"
                         alt="Instacart Market Basket Analysis"
                         className="w-full h-full object-cover"
                       />
@@ -223,7 +223,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/j-2.png"
+                        src="/j-2.webp"
                         alt="Data Analysis Project"
                         className="w-full h-full object-cover"
                       />
@@ -264,7 +264,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/j-3.png"
+                        src="/j-3.webp"
                         alt="Data Analysis Project"
                         className="w-full h-full object-cover"
                       />
@@ -305,7 +305,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/j-4.png"
+                        src="/j-4.webp"
                         alt="Data Analysis Project"
                         className="w-full h-full object-cover"
                       />
@@ -347,7 +347,7 @@ export default function DataPortfolioPage() {
                   <article data-animate="fade-up">
                     <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
                       <img
-                        src="/j-5.png"
+                        src="/j-5.webp"
                         alt="Data Analysis Project"
                         className="w-full h-full object-cover"
                       />

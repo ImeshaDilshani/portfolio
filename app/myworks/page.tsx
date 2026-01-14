@@ -10,7 +10,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce platform built with Next.js, featuring product management, shopping cart, and payment integration.",
-    image: "/modern-ecommerce-dashboard.png",
+    image: "/modern-ecommerce-dashboard.webp",
     tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     github: "https://github.com/imeshadilshani/ecommerce-platform",
     demo: "https://ecommerce-demo.vercel.app",
@@ -19,7 +19,7 @@ const projects = [
     title: "AI Content Generator",
     description:
       "An AI-powered content generation tool that helps writers create engaging blog posts and articles using advanced language models.",
-    image: "/ai-writing-assistant-interface.png",
+    image: "/ai-writing-assistant-interface.webp",
     tags: ["React", "OpenAI", "Node.js", "MongoDB"],
     github: "https://github.com/imeshadilshani/ai-content-generator",
     demo: "https://ai-content-gen.vercel.app",

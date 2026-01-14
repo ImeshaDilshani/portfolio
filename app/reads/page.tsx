@@ -12,17 +12,17 @@ const books = [
   {
     title: "Atomic Habits",
     author: "James Clear",
-    image: "/books/atomic habit.jpg",
+    image: "/books/atomic habit.webp",
   },
   {
     title: "The monk who sold his ferrari",
     author: "Robin Sharma",
-    image: "/books/the monk who sold his ferari.jpg",
+    image: "/books/the monk who sold his ferari.webp",
   },
   {
     title: "Mindsets",
     author: "Dr. Carol S. Dweck",
-    image: "/books/mindset.jpg",
+    image: "/books/mindset.webp",
   },
   {
     title: "Psychology of Money",
@@ -32,7 +32,7 @@ const books = [
   {
     title: "Deep Work",
     author: "Cal Newport",
-    image: "/books/deep work.jfif",
+    image: "/books/deep work.webp",
   },
   {
     title: "Don't Believe Everything You Think",
@@ -71,7 +71,7 @@ export default function ReadsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/garding/idea-hero.jpg')",
+              backgroundImage: "url('/garding/idea-hero.webp')",
             }}
           />
         </div>

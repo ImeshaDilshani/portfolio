@@ -41,7 +41,7 @@ export default function TechStackPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
-              backgroundImage: "url('/PL1.jpg')",
+              backgroundImage: "url('/PL1.webp')",
             }}
           />
         </div>

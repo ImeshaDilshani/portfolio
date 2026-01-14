@@ -57,7 +57,7 @@ export default function WritesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/J1.jpg')",
+              backgroundImage: "url('/J1.webp')",
             }}
           />
         </div>

@@ -13,7 +13,7 @@ const podcasts = [
   {
     title: "The 80,000 Hours Podcast",
     host: "80,000 Hours",
-    image: "/listen/8000.jfif",
+    image: "/listen/8000.webp",
     description:
       "The 80,000 Hours Podcast features unusually in-depth conversations about the world's most pressing problems and how you can use your career to solve them. We invite guests pursuing a wide range of career paths – from academics and activists to entrepreneurs – to share their wisdom, so that you can better understand the world and have a greater social impact.",
     link: "https://80000hours.org/podcast/",
@@ -21,7 +21,7 @@ const podcasts = [
   {
     title: "Diary of A CEO",
     host: "Steven Bartlett",
-    image: "/listen/ceo.jpg",
+    image: "/listen/ceo.webp",
     description:
       "One of the world's most popular business podcasts featuring in-depth conversations with some of the most successful entrepreneurs, business leaders, and experts. Steven Bartlett dives deep into their stories, strategies, and mindsets that led to their success.",
     link: "https://www.youtube.com/channel/UCGq-a57w-aPwyi3pW7XLiHw",
@@ -29,7 +29,7 @@ const podcasts = [
   {
     title: "Huberman Lab",
     host: "Andrew Huberman",
-    image: "/listen/androw.jfif",
+    image: "/listen/androw.webp",
     description:
       "The Huberman Lab Podcast is hosted by Dr. Andrew Huberman, a neuroscientist and professor at Stanford School of Medicine. The podcast discusses neuroscience and science-based tools for everyday life. Topics include how our brain and its connections with the organs of our body control our perceptions, behaviors, and health.",
     link: "https://www.youtube.com/@hubermanlab",
@@ -66,7 +66,7 @@ export default function LearningPage() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/listning.jpg')",
+              backgroundImage: "url('/listning.webp')",
             }}
           />
         </div>

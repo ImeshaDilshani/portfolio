@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/imesha.png",
+        url: "/imesha.webp",
         width: 1200,
         height: 630,
         alt: "Imesha Dilshani - Software & Data Engineer",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Imesha Dilshani | Software & Data Engineer",
     description: "Building intelligent software and data systems that make an quality impact.",
     creator: "@ImeshaDilshani3",
-    images: ["/imesha.png"],
+    images: ["/imesha.webp"],
   },
   robots: {
     index: true,
@@ -85,8 +85,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/imesha.png",
-    apple: "/imesha.png",
+    icon: "/imesha.webp",
+    apple: "/imesha.webp",
   },
 };
 

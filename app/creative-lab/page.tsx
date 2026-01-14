@@ -32,7 +32,7 @@ export default function CapturesPage() {
       <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/garding/idea-hero.jpg"
+            src="/garding/idea-hero.webp"
             alt="Background"
             fill
             className="object-cover"
@@ -87,7 +87,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/garding/senior-couple-harvesting-tomatoes.jpg"
+                    src="/garding/senior-couple-harvesting-tomatoes.webp"
                     alt="Gardening"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -120,7 +120,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/portrait-person-ai-robot.jpg"
+                    src="/portrait-person-ai-robot.webp"
                     alt="Stock Photography"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -153,7 +153,7 @@ export default function CapturesPage() {
               >
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
-                    src="/about-bg.jpg"
+                    src="/about-bg.webp"
                     alt="Digital Product Design"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

@@ -10,7 +10,7 @@ export default function GardeningPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{
               backgroundImage:
-                "url('/garding/senior-couple-harvesting-tomatoes.jpg')",
+                "url('/garding/senior-couple-harvesting-tomatoes.webp')",
             }}
           />
         </div>
