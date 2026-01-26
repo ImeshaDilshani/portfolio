@@ -25,7 +25,7 @@ export default function HomePage() {
 
             {/* Main Headline - LCP Element */}
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-4 sm:mb-6 md:mb-8 font-[family-name:var(--font-adamina)] font-bold max-w-3xl">
-              I'm Building Intelligent Software and Data Systems that make an Quality Impact.
+              I'm building intelligent software and data systems that make a quality impact by solving real-world problems.
             </h1>
 
             {/* Mobile Image - Shows below headline on mobile */}
