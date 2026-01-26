@@ -10,14 +10,22 @@ const techStack = {
     "Java",
     "C",
   ],
-  "Web Development": [
+  "Full Stack Engineering": [
     "Next.js",
     "React",
     "Node.js",
     "Express",
+    "Dagango",
+    "Spring Boot",
     "HTML/CSS",
     "Tailwind CSS",
     "Flutter",
+  ],
+  "Mobile Application Development": [
+    "Flutter",
+    "React Native",
+    "Superbase",
+    "Firebase"
   ],
   "Data Science & ML": [
     "TensorFlow",
@@ -27,10 +35,10 @@ const techStack = {
     "NumPy",
     "Keras",
   ],
-  Databases: ["PostgreSQL", "MongoDB", "MySQL", "Supabase"],
-  "Cloud & DevOps": ["Azure", "Docker", "Git"],
+  Databases: ["PostgreSQL", "MongoDB", "MySQL", "Supabase", "Firabase"],
+  "Cloud & DevOps": ["Azure", "Docker", "AWS","Git"],
   Design: ["Adobe Illustrator", "Adobe Photoshop"],
-  "Tools & Platforms": ["Jupyter", "VS Code", "Figma", "Power BI"],
+  "Tools & Platforms": ["Jupyter", "Google Collapsible", "VS Code", "Figma", "Power BI"],
 };
 
 export default function TechStackPage() {
@@ -49,7 +57,7 @@ export default function TechStackPage() {
         <div className="relative z-10 container text-center space-y-4 px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
             <span className="text-sm font-medium text-black">
-              🛠️ Technology
+              Technology
             </span>
           </div>
 
