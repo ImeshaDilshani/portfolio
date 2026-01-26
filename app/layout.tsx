@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Data Engineer, Software Engineer, Data Scientist, and Self-Learner building intelligent software and data systems.",
   generator: "Next.js",
   applicationName: "Imesha Dilshani Portfolio",
-  keywords: ["Data Engineer", "Software Engineer", "AI", "ML", "Data Science", "Full Stack Developer", "Sri Lanka"],
+  keywords: ["Data Engineer", "Software Engineer", "AI", "ML", "Data Science", "Full Stack Engineer", "Mobile App Developer", "Sri Lanka", "Solopreneur"],
   authors: [{ name: "Imesha Dilshani" }],
   creator: "Imesha Dilshani",
   publisher: "Imesha Dilshani",

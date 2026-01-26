@@ -74,4 +74,16 @@ export const codeProjects: ProjectMeta[] = [
     ],
     year: 2023,
   },
+  {
+    id: "woodwork-lk",
+    title: "WOODWORK LK",
+    description:
+      "Statc web site for furniture ",
+    image: "/c-2.webp",
+    tags: ["Flutter", "Mobile", "ML"],
+    links: [
+      { label: "GitHub", href: "https://github.com/FishSnap-2023/Fishsnap-mobile-app" },
+    ],
+    year: 2023,
+  },
 ];

@@ -42,7 +42,7 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Content - Description, Button, Icons */}
+            {/* Content */}
             <div className="max-w-xl lg:max-w-2xl space-y-4 md:space-y-5 animate-fadeInUp animation-delay-200 lg:animation-delay-200">
               {/* Description */}
               <p className="text-gray-600 leading-relaxed text-sm max-w-lg">
