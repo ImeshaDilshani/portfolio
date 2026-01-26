@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/project-card";
+import { dataProjects } from "@/lib/projects";
 
 export default function DataPortfolioPage() {
   useEffect(() => {
@@ -27,6 +29,10 @@ export default function DataPortfolioPage() {
 
     return () => observer.disconnect();
   }, []);
+
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const tags = useMemo(() => Array.from(new Set(dataProjects.flatMap((p) => p.tags || []))).sort(), []);
+  const filtered = selectedTag ? dataProjects.filter((p) => p.tags?.includes(selectedTag)) : dataProjects;
 
   return (
     <main>
@@ -135,256 +141,33 @@ export default function DataPortfolioPage() {
 
                 {/* Project Cards */}
                 <div className="space-y-8">
-                  {/* Project 1: Classifying Tweets */}
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/r-1.webp"
-                        alt="Classifying Tweets with Weights & Biases"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Sri Lanka District-wise Weather Forecasting using
-                            SARIMA
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            Time series analysis and forecasting system for
-                            weather data across different districts in Sri Lanka
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/SL-districtwise-weather-forecast-sarima/blob/main/1.R"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4" data-animate="fade-up">
+                    <div className="flex gap-2 flex-wrap">
+                      <button
+                        onClick={() => setSelectedTag(null)}
+                        className={`px-3 py-1 rounded-md text-sm font-medium ${selectedTag === null ? 'bg-black text-white' : 'bg-transparent text-muted-foreground border border-border'}`}
                       >
-                        [View R Code]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/SL-districtwise-weather-forecast-sarima"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
+                        All
+                      </button>
+                      {tags.map((tag) => (
+                        <button
+                          key={tag}
+                          onClick={() => setSelectedTag(tag)}
+                          className={`px-3 py-1 rounded-md text-sm font-medium ${selectedTag === tag ? 'bg-black text-white' : 'bg-transparent text-muted-foreground border border-border'}`}
+                        >
+                          {tag}
+                        </button>
+                      ))}
                     </div>
-                  </article>
 
-                  {/* Project 2: Instacart Market Basket Analysis */}
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/j-1.webp"
-                        alt="Instacart Market Basket Analysis"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Customer-Segmentation
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            Project focuses on developing a data-driven solution
-                            for KJ Marketing, a retail company seeking to
-                            enhance its understanding of customer segments.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/Data-Storm-5.0-Customer-Segmentation-Team-RiverBorn/blob/main/Semi%20Final%20Solution%20-%20Team%20%20RiverBorn.ipynb"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [View Notebook]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/Data-Storm-5.0-Customer-Segmentation-Team-RiverBorn"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
-                    </div>
-                  </article>
+                    <div className="text-sm text-muted-foreground">{filtered.length} project{filtered.length > 1 ? 's' : ''}</div>
+                  </div>
 
-                  {/* Project 3: Additional Project Placeholder */}
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/j-2.webp"
-                        alt="Data Analysis Project"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Sign Language Detection Computer Vision YOLO-v5
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            The project focuses on leveraging computer vision
-                            techniques to detect sign language gestures using
-                            the YOLO v5 model.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/Sign-Language-Detection-Computer-Vision-YOLO-v5/blob/main/Sign_Language_Detection_YOLO_v5_Computer_Vision_.ipynb"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [View Notebook]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/Sign-Language-Detection-Computer-Vision-YOLO-v5"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
-                    </div>
-                  </article>
-
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/j-3.webp"
-                        alt="Data Analysis Project"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Customer Churn Analysis-ChurnPrediction
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            Customer churn, also known as customer attrition,
-                            refers to the phenomenon where customers cease their
-                            relationship with a company.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction/blob/main/Churn%20Prediction%20Model.ipynb"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [View Notebook]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
-                    </div>
-                  </article>
-
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/j-4.webp"
-                        alt="Data Analysis Project"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Content Base Movie Recommender System
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            This type of recommender system is particularly
-                            useful for recommending items with similar
-                            attributes and providing personalized suggestions to
-                            users.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System/blob/main/Movie_Recommender_System_Content_Base.ipynb"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [View Notebook]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
-                    </div>
-                  </article>
-
-                  <article data-animate="fade-up">
-                    <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border-2 border-border">
-                      <img
-                        src="/j-5.webp"
-                        alt="Data Analysis Project"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent flex items-end p-6">
-                        <div className="text-black">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                            Diabetes Prediction System
-                          </h3>
-                          <p className="text-sm md:text-base opacity-90">
-                            The Diabetes Prediction System is a web-based
-                            application that predicts the likelihood of an
-                            individual having diabetes based on various
-                            health-related features.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-4 flex justify-center gap-4">
-                      <a
-                        href="https://github.com/ImeshaDilshani/Diabetes-Prediction-System/blob/main/Diabetes-Prediction-System.ipynb"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [View Notebook]
-                      </a>
-                      <span className="text-muted-foreground">|</span>
-                      <a
-                        href="https://github.com/ImeshaDilshani/Diabetes-Prediction-System"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        [GitHub]
-                      </a>
-                    </div>
-                  </article>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-animate="fade-up">
+                    {filtered.map((p) => (
+                      <ProjectCard key={p.id} project={p} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
