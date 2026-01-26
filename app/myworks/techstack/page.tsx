@@ -19,7 +19,6 @@ const techStack = {
     "Spring Boot",
     "HTML/CSS",
     "Tailwind CSS",
-    "Flutter",
   ],
   "Mobile Application Development": [
     "Flutter",
