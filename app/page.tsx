@@ -134,15 +134,22 @@ export default function HomePage() {
               {/* Current Role */}
               <div className="space-y-1">
                 <p>
-                  Currently, I’m an <span className="font-semibold text-black">Associate Data & Software Engineer</span> at{" "}
+                  Currently, I’m working as a <span className="font-semibold text-black">Associate Software Engineer</span> at {""} 
+                  <span className="font-medium text-black"> 
+                    <a
+                      href="https://sterlingbpo.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                    > Sterling Bpo Solution (Pvt) Ltd. </a></span> Focusing on Software Engineering and Mobile App Development. Also I'm working as a
+                  <span className="font-semibold text-black"> Associate Data & Software Engineer</span> part time at{" "}
                   <span className="font-medium text-black"> 
                     <a
                       href="https://www.wirity.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:no-underline"
-                    > Wirity Labs </a></span> (Part-time). Focusing on Software Engineering practices, Data Engineering, and Mobile App Development.
-                </p>
+                    > Wirity Labs </a></span> focusing on Software Engineering, Data Engineering, and Mobile App Development. </p>
               </div>
 
               {/* Previous Role */}
