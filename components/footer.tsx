@@ -170,7 +170,7 @@ export function Footer() {
       <div className="py-6 bg-white">
         <div className="container px-4 max-w-7xl mx-auto">
           <p className="text-center text-sm text-gray-600">
-            © 2025 Imesha Dilshani. All rights reserved.
+            © 2026 Imesha Dilshani. All rights reserved.
           </p>
         </div>
       </div>
