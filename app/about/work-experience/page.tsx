@@ -210,16 +210,23 @@ export default function WorkExperiencePage() {
               <section data-animate="fade-up">
                 <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
                   <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                    Atlas Axillia Co. (Pvt) Ltd
+                    <a href="https://www.atlas.lk" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-black hover:underline font-medium" >Atlas Axillia Co. (Pvt) Ltd </a>
                   </h2>
                   <p className="text-lg text-muted-foreground mt-2">
-                    Internship – Production Data | 2024 – 2025
+                    Internship – Production Data Analyst | 2024 – 2025
                   </p>
                 </div>
 
                 <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
                   <p>
-                    Atlas Axillia, a leading stationery brand under Hemas
+                    <a href="https://www.atlas.lk" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-black hover:underline font-medium" >Atlas Axillia Co. (Pvt) Ltd </a>
+                    , a leading stationery brand under Hemas
                     Holdings PLC, is one of Sri Lanka's most respected
                     companies. Known for its high-quality learning tools and
                     innovative products, Atlas has been shaping the learning
