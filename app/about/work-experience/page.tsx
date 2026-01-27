@@ -121,10 +121,96 @@ export default function WorkExperiencePage() {
 
             {/* Right Content Area */}
             <div className="lg:col-span-3 space-y-12">
+
               <section data-animate="fade-up">
                 <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
                   <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                    Atlas Axillia Co. (Pvt) Ltd, Colombo, Sri Lanka
+                  Sterling BPO Solutions (Pvt.) Ltd
+                  </h2>
+                  <p className="text-lg text-muted-foreground mt-2">
+                  Associate Software Engineer | 2025 – Present
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
+                  <p>
+                  <a href="http://www.sterlingbpo.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-black dark:text-black hover:underline font-medium"> Sterling BPO Solutions (Pvt) Ltd</a>
+                  , established in 2011 in Sri Lanka, 
+                  is a respected IT-BPM service provider delivering desktop, web, 
+                  and cloud applications, enterprise solutions, and innovative 
+                  AI & AR app development to international clients across Australia and the UAE. 
+                  Integrity, client focus, and engineering excellence drive their work. </p> 
+                  
+
+                  <p>
+                  In my role as an Associate Software Engineer 
+                  I develop and implement scalable software and mobile solutions, 
+                  collaborate with cross-functional teams.
+                  </p>
+
+                  <div className="mt-6">
+                  <h3 className="text-2xl font-semibold mb-4">
+                    Key contributions during my role:
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>Delivered production-ready mobile web and backend services using modern frameworks and best practices.</li>
+                    <li>Implemented RESTful APIs and integrated external services to streamline client workflows.</li>
+                    <li>Improved performance, test coverage, and documentation while participating in code reviews and mentoring peers.</li>
+                  </ul>
+                  </div>
+                </div>
+              </section>
+
+                <section data-animate="fade-up">
+                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
+                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
+                  <a
+                    href="https://wirity.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-black hover:underline font-medium"
+                  > Wirity Labs </a>
+                  </h2>
+                  <p className="text-lg text-muted-foreground mt-2">
+                  Associate Software & Data Engineer | 2025 – Present (Part Time)
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
+                  <p>
+                  <a 
+                    href="https://wirity.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-black hover:underline font-medium"
+                  > Wirity Labs </a> is a dedicated technology partner focused on designing, 
+                  developing, and deploying software solutions that translate business 
+                  challenges into powerful, scalable, and intelligent applications. 
+                  Their offerings span custom software development, AI & ML, mobile 
+                  app development, and Microsoft Power Apps to help organizations 
+                  modernize workflows and drive measurable results.
+                  </p>
+                  <p>
+                  During my time at <a 
+                    href="https://wirity.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-black hover:underline font-medium"
+                  > Wirity Labs </a> I worke on <b>software and mobile development, api integration 
+                  and data engineering </b> contributing to the delivery of high-performance, 
+                  scalable applications that support data-driven decision-making.
+                  </p>
+                </div>
+                </section>
+
+            
+              <section data-animate="fade-up">
+                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
+                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
+                    Atlas Axillia Co. (Pvt) Ltd
                   </h2>
                   <p className="text-lg text-muted-foreground mt-2">
                     Internship – Production Data | 2024 – 2025
