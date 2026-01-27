@@ -142,7 +142,7 @@ export default function HomePage() {
                       rel="noopener noreferrer"
                       className="underline hover:no-underline"
                     > Sterling BPO Solution (Pvt) Ltd. </a></span> Focusing on Software Engineering and Mobile App Development. Also I'm working as a
-                  <span className="font-semibold text-black"> Associate Data & Software Engineer</span> part time at{" "}
+                  <span className="font-semibold text-black"> Associate Software & Data Engineer</span> part time at{" "}
                   <span className="font-medium text-black"> 
                     <a
                       href="https://www.wirity.com/"
