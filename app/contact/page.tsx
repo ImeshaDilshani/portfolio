@@ -24,8 +24,7 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      // Using Web3Forms - Replace 'YOUR_ACCESS_KEY_HERE' with your actual access key
-      // Get free access key from: https://web3forms.com
+      // Using Web3Forms
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {

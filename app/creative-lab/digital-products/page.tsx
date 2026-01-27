@@ -25,7 +25,7 @@ export default function DigitalProductsPage() {
             Digital Product Design
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
-            Coming soon - Currently in research phase
+            Coming soon - Currently in Development Phase
           </p>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Exploring opportunities in{" "}
@@ -49,30 +49,46 @@ export default function DigitalProductsPage() {
             <h2 className="text-3xl font-bold mb-6">Exploring New Horizons</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Digital product design is an exciting venture I'm currently
-              researching. This space combines my technical skills, design
+              researching and developing MVP as a solontrupener. This space combines my technical skills, design
               sensibilities, and entrepreneurial interests in a way that could
               create meaningful value for others.
             </p>
 
             <div className="prose dark:prose-invert max-w-none mb-12">
               <h3 className="text-2xl font-semibold mb-4">
-                Current Status: Research & Planning
+                Current Status: Building a Mobile App MVP
               </h3>
               <p className="text-muted-foreground mb-6">
-                Before diving in, I'm taking the time to thoroughly research the
-                digital products landscape. This includes understanding market
-                needs, studying successful products, learning about design
-                systems, and identifying opportunities where my skills can make
-                a real impact.
+                I’m currently designing and developing a mobile application 
+                MVP called ClassLinka — a platform focused on shaping the future 
+                of tutoring in Sri Lanka. This project represents my transition 
+                from research into real-world product execution, where I’m applying 
+                my skills in product design, frontend development, and backend systems.
               </p>
 
-              <h3 className="text-2xl font-semibold mb-4">What's Next</h3>
+              <p className="text-muted-foreground mb-6" >
+                ClassLinka aims to connect high-quality educators with students 
+                who want to excel, while giving teachers better tools to grow 
+                their careers and manage their work digitally.
+              </p>
+
+              <h3 className="text-2xl font-semibold mb-4">MVP Status</h3>
               <p className="text-muted-foreground mb-8">
-                I'm exploring various types of digital products - from design
-                templates and UI kits to productivity tools and educational
-                resources. The goal is to create products that solve real
-                problems and provide genuine value to users. Once I identify the
-                right opportunity, I'll begin the creation process.
+                The MVP is under active development and testing. Once testing is complete, I will open an <b>exclusive 
+                waitlist</b> for early users ahead of the public mobile app launch. <b>ClassLinka</b> connects 
+                the island’s elite educators with students who want to excel.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                <b>👉 Project site:{" "}
+                <a
+                  href="https://classlinka.imesha.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  ClassLinka
+                </a>
+                </b>
               </p>
             </div>
 
@@ -80,19 +96,19 @@ export default function DigitalProductsPage() {
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="text-4xl">🚀</div>
-                  <div>
+                    <div>
                     <h3 className="text-xl font-semibold mb-3">
-                      Stay Tuned for Updates
+                      Stay Tuned for Updatess
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      This is an exciting new chapter I'm preparing to embark
+                      This is an exciting new chapter I'm preparing to embarking
                       on. I'll be documenting the journey from research to
                       creation to launch. Follow along to see how this venture
-                      develops!
+                      develop!
                     </p>
                     <p className="text-sm text-muted-foreground italic">
-                      Expected timeline: Research phase ongoing • Planning to
-                      launch first product in 2025
+                      Expected timeline: Development phase ongoings • Planing to
+                      open waitlisting collection on March, 2026.
                     </p>
                   </div>
                 </div>
@@ -105,11 +121,11 @@ export default function DigitalProductsPage() {
                   Areas of Interest
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Design templates and UI component libraries</li>
-                  <li>• Productivity and workflow tools</li>
-                  <li>• Educational resources and guides</li>
-                  <li>• Digital assets for creators</li>
                   <li>• SaaS products for niche markets</li>
+                  <li>• Digital assets for creators</li>
+                  <li>• Productivity and workflow tools</li>
+                  <li>• Design templates and UI component libraries</li>
+                  <li>• Educational resources and guides</li>
                 </ul>
               </CardContent>
             </Card>
