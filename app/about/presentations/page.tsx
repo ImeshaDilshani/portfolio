@@ -1,258 +1,108 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function PresentationsPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <main>
-      {/* Cover Section */}
-      <section className="relative h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-            style={{
-              backgroundImage:
-                "url('/academic-research-presentation-university.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container text-center space-y-4 px-4 animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              🎤 Speaking Engagements
-            </span>
+      {/* ── HEADER ──────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Presentations
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Speaking Engagements</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Sharing knowledge through talks and presentations at conferences, universities, and industry events.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black hover-text-glow transition-all duration-300 font-[family-name:var(--font-adamina)]">
-            Presentations
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
-            Sharing knowledge through talks and presentations
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Speaking at conferences and events about{" "}
-            <span className="text-black font-medium">technology trends</span>,{" "}
-            <span className="text-black font-medium">research findings</span>, and{" "}
-            <span className="text-black font-medium">industry insights</span>.
-          </p>
         </div>
       </section>
 
-      {/* Content Section */}
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Persistent Sidebar Navigation */}
-            <aside className="lg:col-span-1" data-animate="fade-right">
-              <div className="sticky top-24 space-y-2">
-                <a href="/about" className="block">
-                  <h2 className="text-xl font-bold mb-6 text-black dark:text-white hover-text-glow">
-                    About
-                  </h2>
-                </a>
-                <nav className="space-y-1">
-                  <a
-                    href="/about/work-experience"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    WORK EXPERIENCE
-                  </a>
-                  <a
-                    href="/about/ai-research"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    MY RESEARCH
-                  </a>
-                  <a
-                    href="/about/presentations"
-                    className="block py-2 text-sm text-foreground font-medium hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    PRESENTATIONS
-                  </a>
-                  <a
-                    href="/about/data-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    DATA PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    CODING PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/moocs"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    MOOCS
-                  </a>
-                  <a
-                    href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    UNDERGRADUATE PAPERS
-                  </a>
-                </nav>
-              </div>
-            </aside>
+      {/* ── SIDEBAR + CONTENT ───────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10 py-16 md:py-20">
 
-            {/* Right Content Area */}
-            <div className="lg:col-span-3 space-y-8">
-              <div className="space-y-12">
-                <p
-                  className="text-lg text-center text-muted-foreground hover-lift transition-all duration-300"
-                  data-animate="fade-up"
-                >
-                  These are academic and industry presentations that I have
-                  given.
-                </p>
+          {/* Sidebar Nav */}
+          <aside className="lg:self-start lg:sticky lg:top-20">
+            <nav className="space-y-0">
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Sections</p>
+              {[
+                { label: "About", href: "/about" },
+                { label: "Work Experience", href: "/about/work-experience" },
+                { label: "My Research", href: "/about/ai-research" },
+                { label: "Presentations", href: "/about/presentations" },
+                { label: "Data Portfolio", href: "/about/data-portfolio" },
+                { label: "Coding Portfolio", href: "/about/coding-portfolio" },
+                { label: "MOOCs", href: "/about/moocs" },
+                { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
+              ].map((item) => {
+                const isActive = item.href === "/about/presentations";
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block py-2 text-sm transition-colors border-b border-transparent ${
+                      isActive 
+                        ? "text-[var(--foreground)] font-medium" 
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[var(--border)]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </aside>
 
-                {/* Master's Thesis Defense */}
-                <section className="space-y-6" data-animate="fade-up">
-                  <div className="border-l-4 border-black dark:border-gray-400 pl-4 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
-                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      TEXT CLASSIFICATION
-                    </h2>
-                    <p className="text-muted-foreground mt-2">
-                      Academic Presentation
-                    </p>
+          {/* Main Content */}
+          <div className="space-y-16">
+            <p className="text-[var(--foreground)] font-medium text-lg border-b border-[var(--border)] pb-4">
+              Academic and industry presentations I've delivered.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Text Classification",
+                  type: "Academic Presentation",
+                  img: "/presentation-1.webp",
+                  link: "https://drive.google.com/file/d/1QUDfTq7X8h0tbaBz9FUOrDf0vcXEGbHs/view?usp=sharing"
+                },
+                {
+                  title: "NoSQL Solutions to Handle Big Data",
+                  type: "Academic Presentation",
+                  img: "/presentation-2.webp",
+                  link: "https://drive.google.com/file/d/1ADBl8-gjo85Gp7MGZ7Xowr17mO57_hFn/view?usp=sharing"
+                },
+                {
+                  title: "The SAP S/4HANA Transformation",
+                  type: "Academic Presentation",
+                  img: "/PRESENTATION-3.webp",
+                  link: "https://drive.google.com/file/d/1l8tZvlJgmL3dYumRy87n9jyEDsjHB3he/view?usp=sharing"
+                },
+                {
+                  title: "Next-gen Real-time Speech Translation",
+                  type: "Research Final Viva",
+                  img: "/presentation-5.webp",
+                  link: "https://drive.google.com/file/d/1ItWURTqZKqqlg8ZIeyzMTphR_iBKZIHo/view?usp=sharing"
+                }
+              ].map((pres, i) => (
+                <div key={i} className="group border border-[var(--border)] bg-[var(--card)] p-4 flex flex-col justify-between hover:bg-[var(--muted)] transition-colors">
+                  <div className="relative aspect-[4/3] bg-[var(--muted)] mb-6 border border-[var(--border)] overflow-hidden">
+                    <Image src={pres.img} alt={pres.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                   </div>
-                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
-                    <img
-                      src="/presentation-1.webp"
-                      alt="Master's Thesis Defense Slides"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1QUDfTq7X8h0tbaBz9FUOrDf0vcXEGbHs/view?usp=sharing"
-                      className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      [View Slides]
+                  <div>
+                    <h3 className="text-xl font-medium text-[var(--foreground)] mb-1">{pres.title}</h3>
+                    <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-6">{pres.type}</p>
+                    <a href={pres.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:opacity-70 underline underline-offset-4 decoration-1 text-[var(--foreground)]">
+                      View Slides ↗
                     </a>
                   </div>
-                </section>
-
-                {/* PhD Research Defense */}
-                <section className="space-y-6" data-animate="fade-up">
-                  <div className="border-l-4 border-black dark:border-gray-400 pl-4 hover:border-gray-800 dark:hover:border-gray-300 transition-colors duration-300">
-                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      NOSQL SOLUTIONS TO HANDLE BIG DATA
-                    </h2>
-                    <p className="text-muted-foreground mt-2">
-                      Academic Presentation
-                    </p>
-                  </div>
-                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
-                    <img
-                      src="/presentation-2.webp"
-                      alt="PhD Research Defense Slides"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1ADBl8-gjo85Gp7MGZ7Xowr17mO57_hFn/view?usp=sharing"
-                      className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      [View Slides]
-                    </a>
-                  </div>
-                </section>
-
-                <section className="space-y-6" data-animate="fade-up">
-                  <div className="border-l-4 border-black dark:border-gray-400 pl-4 hover:border-gray-800 dark:hover:border-gray-300 transition-colors duration-300">
-                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      The SAP S/4HANA TRANSFORMATION
-                    </h2>
-                    <p className="text-muted-foreground mt-2">
-                      Academic Presentation
-                    </p>
-                  </div>
-                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
-                    <img
-                      src="/PRESENTATION-3.webp"
-                      alt="PhD Research Defense Slides"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1l8tZvlJgmL3dYumRy87n9jyEDsjHB3he/view?usp=sharing"
-                      className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      [View Slides]
-                    </a>
-                  </div>
-                </section>
-
-                <section className="space-y-6" data-animate="fade-up">
-                  <div className="border-l-4 border-black dark:border-gray-400 pl-4 hover:border-gray-800 dark:hover:border-gray-300 transition-colors duration-300">
-                    <h2 className="text-2xl font-bold hover-text-glow transition-all duration-300">
-                      NEXT-GENERATION REAL-TIME SPEECH TRANSLATION (RESEARCH
-                      FINAL VIVA)
-                    </h2>
-                    <p className="text-muted-foreground mt-2">
-                      Academic Presentation
-                    </p>
-                  </div>
-                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-border hover:border-gray-500/50 transition-all duration-300 group">
-                    <img
-                      src="/presentation-5.webp"
-                      alt="PhD Research Defense Slides"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="flex justify-center">
-                    <a
-                      href="https://drive.google.com/file/d/1ItWURTqZKqqlg8ZIeyzMTphR_iBKZIHo/view?usp=sharing"
-                      className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      [View Slides]
-                    </a>
-                  </div>
-                </section>
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

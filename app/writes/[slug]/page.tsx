@@ -65,8 +65,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const article = articles.find((a) => a.slug === params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const article = articles.find((a) => a.slug === resolvedParams.slug);
 
   if (!article) {
     notFound();

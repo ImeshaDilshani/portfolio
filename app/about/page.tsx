@@ -1,374 +1,124 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <main>
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/about-bg.webp"
-            alt="Background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              👋 About Me
-            </span>
+      {/* ── HEADER ──────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              About
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Here's How I Grow</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                My journey through professional experience, research, continuous education, and a passion for building things that matter.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-adamina)] font-medium mb-6 text-black">
-            Here's How I Grow
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
-            Continuous learning and growth through experiences
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            My journey through{" "}
-            <span className="text-black font-medium">
-              professional experience
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              research
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              continuous education
-            </span>
-            , and passion for innovation.
-          </p>
         </div>
       </section>
 
-      {/* Content Section */}
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Left Sidebar Navigation */}
-            <aside
-              className="lg:col-span-1 animate-fadeIn"
-              data-animate="fade-right"
-            >
-              <div className="sticky top-24 space-y-2">
-                <h2 className="text-xl font-bold mb-6 text-black">
-                  About
-                </h2>
-                <nav className="space-y-1">
-                  <a
-                    href="/about/work-experience"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    WORK EXPERIENCE
-                  </a>
-                  <a
-                    href="/about/ai-research"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    MY RESEARCH
-                  </a>
-                  <a
-                    href="/about/presentations"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    PRESENTATIONS
-                  </a>
-                  <a
-                    href="/about/data-portfolio"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    DATA PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    CODING PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/moocs"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    MOOCS
-                  </a>
-                  <a
-                    href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-gray-600 hover:text-black transition-all duration-300 uppercase tracking-wide hover:translate-x-2"
-                  >
-                    UNDERGRADUATE PAPERS
-                  </a>
-                </nav>
+      {/* ── SIDEBAR + CONTENT ───────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10 py-16 md:py-20">
+
+          {/* Sidebar Nav */}
+          <aside className="lg:self-start lg:sticky lg:top-20">
+            <nav className="space-y-0">
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Sections</p>
+              {[
+                { label: "Work Experience", href: "/about/work-experience" },
+                { label: "My Research", href: "/about/ai-research" },
+                { label: "Presentations", href: "/about/presentations" },
+                { label: "Data Portfolio", href: "/about/data-portfolio" },
+                { label: "Coding Portfolio", href: "/about/coding-portfolio" },
+                { label: "MOOCs", href: "/about/moocs" },
+                { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block py-2 text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors border-b border-transparent hover:border-[var(--border)]"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </aside>
+
+          {/* Main Content */}
+          <div className="space-y-20">
+
+            {/* Introduction */}
+            <section className="space-y-6">
+              <h2 className="text-2xl text-[var(--foreground)] border-b border-[var(--border)] pb-4">Introduction</h2>
+              <div className="space-y-3 text-[var(--muted-foreground)] leading-relaxed">
+                <p>I am passionate about <strong className="text-[var(--foreground)]">data science</strong> and <strong className="text-[var(--foreground)]">AI-based software development</strong>.</p>
+                <p>I am very curious and enjoy meeting people with different interests.</p>
+                <p>I love to travel and explore new places.</p>
+                <p>I enjoy reading books to learn new things.</p>
+                <p className="pt-2">Over the past few years, I have built strong skills to prepare for a career in the <strong className="text-[var(--foreground)]">tech industry</strong>. I have gained practical experience in software development, data science, digital product management, and technical writing.</p>
               </div>
-            </aside>
+            </section>
 
-            {/* Right Content Area */}
-            <div className="lg:col-span-3 space-y-12">
-              {/* Introduction Section */}
-              <section data-animate="fade-up">
-                <h2 className="text-3xl font-[family-name:var(--font-adamina)] font-medium mb-6 hover-underline-effect">
-                  Introduction
-                </h2>
-                <div className="space-y-4 text-lg leading-relaxed">
-                  <p className="hover-lift transition-all duration-300">
-                    1. I am passionate about{" "}
-                    <span className="text-black font-medium hover-highlight cursor-pointer">
-                      data science
-                    </span>{" "}
-                    and{" "}
-                    <span className="text-black font-medium hover-highlight cursor-pointer">
-                      AI-based software development
-                    </span>
-                    .
-                  </p>
-                  <p className="hover-lift transition-all duration-300">
-                    2. I am very curious and enjoy meeting people with different
-                    interests.
-                  </p>
-                  <p className="hover-lift transition-all duration-300">
-                    3. I love to travel and explore new places.
-                  </p>
-                  <p className="hover-lift transition-all duration-300">
-                    4. I enjoy reading books to learn new things.
-                  </p>
-                  <p className="mt-6 hover-lift transition-all duration-300">
-                    Over the past few years, I have built strong skills to
-                    prepare for a career in the{" "}
-                    <span className="text-black font-medium hover-highlight cursor-pointer">
-                      tech industry
-                    </span>
-                    . I have gained practical experience in software
-                    development, data science, digital product management, and
-                    technical writing.
-                  </p>
-                </div>
-              </section>
-
-              {/* How I Learn from My Childhood Section */}
-              <section data-animate="fade-up">
-                <h2 className="text-3xl font-[family-name:var(--font-adamina)] font-medium mb-6 hover-underline-effect">
-                  How I Learn from My Childhood
-                </h2>
-                <div className="space-y-12">
-                  {/* Primary School */}
-                  <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
-                      <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
-                        Arangawa Sri Dhammarama Primary College
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Grade 1 to 5 • 2004 - 2009
-                      </p>
-                    </div>
-                    <div className="text-lg leading-relaxed">
-                      <p className="hover-lift transition-all duration-300">
-                        I grew up in a{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          small village
-                        </span>{" "}
-                        and attended Minu/Arangawa Sri Dhammarama Primary
-                        College. Those early years taught me the value of
-                        curiosity, hard work, and learning from the world around
-                        me.
-                      </p>
-                    </div>
-                    <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/arangawa.webp"
-                        alt="Minu/Arangawa Sri Dhammarama Primary College"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            {/* Education Timeline */}
+            <section className="space-y-6">
+              <h2 className="text-2xl text-[var(--foreground)] border-b border-[var(--border)] pb-4">Education</h2>
+              <div className="space-y-12">
+                {[
+                  {
+                    name: "University of Kelaniya",
+                    period: "BSc (Hons) Computer Science, specializing in Data Science · 2022–2025",
+                    body: "Gained strong theoretical knowledge and practical skills in programming, data analysis, machine learning, and AI-driven software development. Research focused on AI solutions for Sinhala and Tamil language communication in Sri Lanka.",
+                    img: "/about/kelaniya.webp",
+                  },
+                  {
+                    name: "InTech College, Gampaha",
+                    period: "Graphic Design & Advertising · 2020–2021",
+                    body: "Solid foundation in design principles, visual communication, and creative thinking — skills that carry into every product and interface I build today.",
+                    img: "/about/intech.webp",
+                  },
+                  {
+                    name: "President's College, Minuwangoda",
+                    period: "Advanced Level — Mathematics Stream · 2016–2019",
+                    body: "Mathematics, Physics, Chemistry. Built strong analytical and problem-solving foundations that underpin everything data-related I do.",
+                    img: "/about/president.webp",
+                  },
+                  {
+                    name: "Seelavimala Maha Vidyalaya",
+                    period: "Ordinary Level · Grade 6–11 · 2010–2015",
+                    body: "Achieved excellent results in O/L exams. A turning point that shaped discipline and academic ambition.",
+                    img: "/about/seelavimala-2.webp",
+                  },
+                  {
+                    name: "Arangawa Sri Dhammarama Primary College",
+                    period: "Grade 1–5 · 2004–2009",
+                    body: "Grew up in a small village. Early years taught the value of curiosity, hard work, and learning from the world around me.",
+                    img: "/about/arangawa.webp",
+                  },
+                ].map((edu) => (
+                  <div key={edu.name} className="grid grid-cols-1 md:grid-cols-2 gap-8 border border-[var(--border)]">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)]">
+                      <Image
+                        src={edu.img}
+                        alt={edu.name}
+                        fill
+                        className="object-cover grayscale"
+                        loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-6 md:p-8 flex flex-col justify-center space-y-3">
+                      <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">{edu.period}</p>
+                      <h3 className="text-xl text-[var(--foreground)]">{edu.name}</h3>
+                      <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{edu.body}</p>
                     </div>
                   </div>
-
-                  {/* Secondary School - O/L */}
-                  <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
-                      <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
-                        Seelavimala Maha Vidyalaya, Minuwangoda
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Ordinary Level • Grade 6 to 11 • 2010 - 2015
-                      </p>
-                    </div>
-                    <div className="text-lg leading-relaxed">
-                      <p className="hover-lift transition-all duration-300">
-                        I worked hard and achieved{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          excellent results
-                        </span>{" "}
-                        in my O/L (Ordinary Level) exams. That school was a
-                        turning point in my life.
-                      </p>
-                    </div>
-                    <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/seelavimala-2.webp"
-                        alt="Minu/Seelavimala Maha Vidyalaya"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-
-                  {/* Advanced Level */}
-                  <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
-                      <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
-                        President's College, Minuwangoda
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Advanced Level • Mathematics Stream • 2016 - 2019
-                      </p>
-                    </div>
-                    <div className="text-lg leading-relaxed">
-                      <p className="hover-lift transition-all duration-300">
-                        During this time, I focused on{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          Mathematics
-                        </span>
-                        ,{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          Physics
-                        </span>
-                        , and{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          Chemistry
-                        </span>
-                        , which helped me develop strong analytical and
-                        problem-solving skills. Studying these subjects not only
-                        deepened my understanding of logical thinking and
-                        scientific concepts but also taught me discipline, time
-                        management, and the importance of consistent effort.
-                        This period of study laid a strong foundation for my
-                        future career in science and data-driven fields.
-                      </p>
-                    </div>
-                    <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/president.webp"
-                        alt="President's College, Minuwangoda"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-
-                  {/* Graphic Design Course */}
-                  <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
-                      <h3 className="text-2xl font-medium hover-text-glow transition-all duration-300">
-                        InTech College, Gampaha
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Graphic Design and Advertising Course • 2020 - 2021
-                      </p>
-                    </div>
-                    <div className="text-lg leading-relaxed">
-                      <p className="hover-lift transition-all duration-300">
-                        While waiting for my Advanced Level results, I enrolled
-                        in this course which gave me a solid foundation in{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          design principles
-                        </span>
-                        ,{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          visual communication
-                        </span>
-                        , and creative thinking. I learned how to create
-                        appealing graphics, work with different design tools,
-                        and develop concepts for advertising and branding. This
-                        experience not only strengthened my creative skills but
-                        also taught me the importance of attention to detail,
-                        aesthetics, and combining creativity with
-                        practicality—skills that have been very useful in both
-                        my tech projects and professional work.
-                      </p>
-                    </div>
-                    <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/intech.webp"
-                        alt="InTech College, Gampaha"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-
-                  {/* University - Computer Science */}
-                  <div className="space-y-4" data-animate="fade-up">
-                    <div className="border-l-4 border-black pl-4 hover:border-gray-700 transition-colors duration-300">
-                      <h3 className="text-2xl font-semibold hover-text-glow transition-all duration-300">
-                        University of Kelaniya
-                      </h3>
-                      <p className="text-muted-foreground">
-                        BSc (Hons) in Computer Science, specializing in Data
-                        Science • 2022 - 2025
-                      </p>
-                    </div>
-                    <div className="text-lg leading-relaxed">
-                      <p className="hover-lift transition-all duration-300">
-                        After completing my Advanced Level studies and design
-                        course, I pursued my degree in{" "}
-                        <span className="text-black font-medium hover-highlight cursor-pointer">
-                          Computer Science
-                        </span>
-                        . During this time, I gained strong theoretical
-                        knowledge and practical skills in programming, data
-                        analysis, machine learning, and AI-driven software
-                        development. I worked on various projects that involved
-                        data processing, predictive modeling, and
-                        problem-solving using real-world datasets. This degree
-                        not only enhanced my technical expertise but also helped
-                        me develop critical thinking, research abilities, and
-                        teamwork skills—preparing me for a successful career in
-                        the tech industry.
-                      </p>
-                    </div>
-                    <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/kelaniya.webp"
-                        alt="University of Kelaniya"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </div>

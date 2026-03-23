@@ -1,123 +1,122 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce platform built with Next.js, featuring product management, shopping cart, and payment integration.",
-    image: "/modern-ecommerce-dashboard.webp",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    github: "https://github.com/imeshadilshani/ecommerce-platform",
-    demo: "https://ecommerce-demo.vercel.app",
+    label: "Data & Analytics",
+    title: "Production Data Updater",
+    desc: "Built with Node.js and Express.js at Atlas Axillia to fix reporting accuracy across manufacturing operations. Integrated with SAP and exported to Excel for Power BI dashboards.",
+    tags: ["Node.js", "Express", "SAP", "Power BI"],
+    img: "/PL1.webp",
+    href: "/about/work-experience",
   },
   {
-    title: "AI Content Generator",
-    description:
-      "An AI-powered content generation tool that helps writers create engaging blog posts and articles using advanced language models.",
-    image: "/ai-writing-assistant-interface.webp",
-    tags: ["React", "OpenAI", "Node.js", "MongoDB"],
-    github: "https://github.com/imeshadilshani/ai-content-generator",
-    demo: "https://ai-content-gen.vercel.app",
+    label: "Research & AI",
+    title: "Sinhala & Tamil NLP Research",
+    desc: "Undergraduate research on AI solutions for Sinhala and Tamil language communication in Sri Lanka, bridging local language barriers with modern NLP techniques.",
+    tags: ["Python", "NLP", "AI", "Research"],
+    img: "/CW1.webp",
+    href: "/about/ai-research",
   },
   {
-    title: "Data Visualization Dashboard",
-    description:
-      "Interactive dashboard for visualizing complex datasets with real-time updates and customizable charts.",
-    image: "/data-analytics-dashboard.png",
-    tags: ["React", "D3.js", "Python", "FastAPI"],
-    github: "https://github.com/imeshadilshani/data-viz-dashboard",
-    demo: "https://dataviz-demo.vercel.app",
+    label: "Community & Writing",
+    title: "Community Contributions",
+    desc: "Active contributor to the tech community through knowledge sharing, mentoring, tech talks, and open-source participation.",
+    tags: ["Community", "Mentoring", "Talks"],
+    img: "/J1.webp",
+    href: "/myworks/community",
   },
-  {
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates, team collaboration features, and project tracking.",
-    image: "/modern-task-management-app-interface.jpg",
-    tags: ["Next.js", "Supabase", "Tailwind CSS", "WebSocket"],
-    github: "https://github.com/imeshadilshani/task-manager",
-    demo: "https://taskmanager-demo.vercel.app",
-  },
-]
+];
 
 export default function MyWorksPage() {
   return (
     <main>
-      <section className="relative h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-            style={{
-              backgroundImage: "url('/data-science-code-on-multiple-monitors.jpg')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container text-center space-y-4 px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              🚀 My Projects
-            </span>
+      {/* Header */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              My Works
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Selected Projects</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                A collection of projects spanning data engineering, AI research, software development, and community work.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black font-[family-name:var(--font-adamina)]">Here's What I've Done</h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
-            Showcase of my projects and creative work
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            A collection of{" "}
-            <span className="text-black font-medium">innovative solutions</span>,{" "}
-            <span className="text-black font-medium">creative experiments</span>, and{" "}
-            <span className="text-black font-medium">real-world applications</span>{" "}
-            I've built.
-          </p>
         </div>
       </section>
 
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
+      {/* Project list */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="space-y-0 border border-[var(--border)]">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
+            >
+              {/* Image */}
+              <div className={`relative aspect-[4/3] overflow-hidden bg-[var(--muted)] ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Info */}
+              <div className={`p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 border-[var(--border)] ${i % 2 === 1 ? "md:order-1 md:border-r" : "md:border-l"}`}>
+                <div className="space-y-4">
+                  <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    {project.label}
+                  </span>
+                  <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{project.title}</h2>
+                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
+                    {project.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <span
+                        key={tag}
+                        className="px-2.5 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
+                      >
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </Link>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+                <Link
+                  href={project.href}
+                  className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
+                >
+                  View details ↗
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+
+        {/* Nav to sub-sections */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-0 border border-[var(--border)]">
+          {[
+            { label: "Community Work", href: "/myworks/community" },
+            { label: "Tech Stack", href: "/myworks/techstack" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="px-6 py-5 border-b sm:border-b-0 sm:border-r border-[var(--border)] last:border-0 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors flex items-center justify-between"
+            >
+              {item.label}
+              <span>↗</span>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
-  )
+  );
 }

@@ -1,187 +1,97 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Calendar, Tag } from "lucide-react";
 
 const articles = [
   {
     slug: "2024-annual-review",
-    date: "January 23, 2025",
-    title: "2024 Annual Review - The Year of Adventure",
+    date: "Jan 23, 2025",
+    title: "2024 Annual Review — The Year of Adventure",
     category: "Personal Reflection",
     excerpt:
-      "After a journey I'm taking stock at my twenty days within, I have begun. Challenges, growth, and lessons learned throughout an incredible year of exploration and self-discovery.",
-    tags: ["Reflection", "Growth", "2024"],
-    readTime: "8 min read",
+      "Challenges, growth, and lessons learned throughout an incredible year of exploration and self-discovery.",
+    tags: ["Reflection", "Growth"],
+    readTime: "8 min",
+  },
+  {
+    slug: "datacast-episode-133",
+    date: "Jan 14, 2024",
+    title: "Datacast Episode 133: Full Data Stack Observability with Gantry Raakesh",
+    category: "Podcast",
+    excerpt:
+      "James Raakesh, CEO of Gantry and former Director of ML at Uber, on observability in production machine learning systems.",
+    tags: ["ML", "MLOps", "Data"],
+    readTime: "12 min",
   },
 ];
 
 export default function WritesPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/J1.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <BookOpen className="w-4 h-4 text-black" />
-            <span className="text-sm font-medium text-black">
-              Blog & Articles
-            </span>
+    <main>
+      {/* Header */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Writes
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Writes</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Writings on data science, machine learning, technology, and lessons learned along the way.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
-            Writes
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
-            Lessons I've learned along the way
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            A collection of my writings on{" "}
-            <span className="text-black font-medium">
-              technology
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              data science
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              personal growth
-            </span>
-            , and the lessons I've learned through my journey.
-          </p>
         </div>
       </section>
 
-      {/* Articles Section */}
-      <section className="py-16 px-4">
-        <div className="container max-w-5xl mx-auto">
-          <div className="space-y-8">
-            {articles.map((article, index) => (
-              <Card
-                key={article.slug}
-                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border-2 hover:border-black"
-                data-animate="fade-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader>
-                  <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <Badge
-                      variant="outline"
-                      className="border-black text-black hover:bg-gray-100 transition-colors duration-300"
+      {/* Articles list */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="border border-[var(--border)]">
+          {articles.map((article, i) => (
+            <Link
+              key={article.slug}
+              href={`/writes/${article.slug}`}
+              className={`group grid grid-cols-1 md:grid-cols-[120px_1fr_80px] gap-4 md:gap-8 px-6 md:px-8 py-6 md:py-8 border-b border-[var(--border)] last:border-b-0 hover:bg-[var(--muted)] transition-colors ${i % 2 === 1 ? "bg-[var(--card)]" : ""}`}
+            >
+              {/* Date */}
+              <span className="text-xs text-[var(--muted-foreground)] pt-0.5 shrink-0">{article.date}</span>
+
+              {/* Content */}
+              <div className="space-y-2">
+                <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                  {article.category}
+                </span>
+                <h2 className="text-base md:text-lg font-medium text-[var(--foreground)] group-hover:underline underline-offset-4">
+                  {article.title}
+                </h2>
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed line-clamp-2">
+                  {article.excerpt}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {article.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
                     >
-                      {article.category}
-                    </Badge>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Calendar className="w-4 h-4" />
-                      <time>{article.date}</time>
-                    </div>
-                    <span className="text-sm text-gray-600">
-                      • {article.readTime}
+                      {tag}
                     </span>
-                  </div>
+                  ))}
+                </div>
+              </div>
 
-                  <CardTitle className="text-2xl md:text-3xl mb-3 group-hover:text-black transition-colors duration-300">
-                    <Link
-                      href={`/writes/${article.slug}`}
-                      className="hover:underline"
-                    >
-                      {article.title}
-                    </Link>
-                  </CardTitle>
-                </CardHeader>
+              {/* Read time */}
+              <span className="text-xs text-[var(--muted-foreground)] text-right hidden md:block pt-0.5">
+                {article.readTime}
+              </span>
+            </Link>
+          ))}
+        </div>
 
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base md:text-lg leading-relaxed">
-                    {article.excerpt}
-                  </CardDescription>
-
-                  <div className="flex flex-wrap gap-2">
-                    {article.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="hover:bg-gray-200 hover:text-black transition-all duration-300 hover:scale-105 cursor-pointer"
-                      >
-                        <Tag className="w-3 h-3 mr-1" />
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <Button
-                    variant="outline"
-                    className="mt-4 hover:bg-gray-100 hover:border-black transition-all duration-300 group/btn"
-                    asChild
-                  >
-                    <Link href={`/writes/${article.slug}`}>
-                      Read Full Article
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Coming Soon Section */}
-          <div
-            className="mt-16 text-center p-12 border-2 border-dashed border-gray-300 rounded-2xl"
-            data-animate="fade-up"
-          >
-            <BookOpen className="w-16 h-16 mx-auto mb-4 text-black opacity-50" />
-            <h3 className="text-2xl font-bold mb-4 text-black">
-              More Articles Coming Soon
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              I'm constantly learning and sharing my experiences. Subscribe to
-              stay updated with new articles on data science, software
-              engineering, and personal development.
-            </p>
-          </div>
+        {/* Coming soon */}
+        <div className="mt-16 border border-dashed border-[var(--border)] px-8 py-12 text-center space-y-3">
+          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Coming Soon</p>
+          <p className="text-[var(--muted-foreground)] text-sm max-w-md mx-auto">
+            More articles are on the way. Subscribe via the footer to get notified.
+          </p>
         </div>
       </section>
     </main>

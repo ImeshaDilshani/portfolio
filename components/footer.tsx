@@ -2,19 +2,8 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Github,
-  Heart,
-  Loader2,
-  CheckCircle2,
-  AlertCircle,
-} from "lucide-react";
+import Link from "next/link";
+import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -29,24 +18,20 @@ export function Footer() {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
           subject: "New Newsletter Subscription",
-          email: email,
+          email,
           message: `New newsletter subscription from: ${email}`,
           from_name: "Portfolio Newsletter",
         }),
       });
 
       const result = await response.json();
-
       if (result.success) {
         setStatus("success");
-        setMessage("Thank you for subscribing! You're all set to receive updates.");
+        setMessage("You're subscribed. Thank you.");
         setEmail("");
         setTimeout(() => setStatus("idle"), 5000);
       } else {
@@ -54,129 +39,96 @@ export function Footer() {
       }
     } catch (error) {
       setStatus("error");
-      setMessage(error instanceof Error ? error.message : "Failed to subscribe. Please try again.");
+      setMessage(error instanceof Error ? error.message : "Failed. Please try again.");
       setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
   return (
-    <footer className="mt-auto">
-      {/* Top decorative line */}
-      <div className="border-t-2 border-gray-200" />
-
-      <div className="border-b border-gray-200 py-12 md:py-16 bg-gray-50">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Side - Logo and Social Media */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-black">
-                  Imesha Dilshani
-                </h3>
-                <p className="text-gray-600 flex items-center gap-2">
-                  Small Steps, Big System with Continous Improvements.{" "}
-                  <Heart className="h-4 w-4 text-black fill-red" />
-                </p>
-              </div>
-
-              <div className="flex gap-4 items-center">
-                <a
-                  href="https://x.com/ImeshaDilshani3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
-                  aria-label="Follow Imesha on Twitter/X"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/imesha-dilshani-61862422b"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
-                  aria-label="Connect with Imesha on LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://github.com/ImeshaDilshani"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black transition-colors p-2 rounded-full hover:bg-gray-100"
-                  aria-label="View Imesha's GitHub profile"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </div>
+    <footer className="border-t border-[var(--border)] mt-auto">
+      {/* Main footer */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-[var(--foreground)] tracking-tight">
+              Imesha Dilshani
+            </h3>
+            <p className="text-xs text-[var(--muted-foreground)] leading-relaxed max-w-xs">
+              Software &amp; Data Engineer. Building intelligent systems with small steps and continuous improvement.
+            </p>
+            <div className="flex gap-4 text-xs text-[var(--muted-foreground)]">
+              <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">Twitter ↗</a>
+              <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">LinkedIn ↗</a>
+              <a href="https://github.com/ImeshaDilshani" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">GitHub ↗</a>
             </div>
+          </div>
 
-            {/* Right Side - Newsletter Subscription */}
-            <div className="space-y-4">
-              <h3 className="text-xl md:text-2xl font-semibold text-black">
-                Subscribe to my newsletter
-              </h3>
-              <p className="text-gray-600">
-                Stay updated with latest articles from my blog.
-              </p>
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={status === "loading"}
-                    className="flex-1"
-                  />
-                  <Button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="bg-black hover:bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {status === "loading" ? (
-                      <>
-                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        Subscribing...
-                      </>
-                    ) : (
-                      "Subscribe"
-                    )}
-                  </Button>
+          {/* Links */}
+          <div className="space-y-4">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Pages</p>
+            <div className="space-y-2 text-sm">
+              {[
+                { label: "About", href: "/about" },
+                { label: "Work", href: "/myworks" },
+                { label: "Writes", href: "/writes" },
+                { label: "Reads", href: "/reads" },
+                { label: "Contact", href: "/contact" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="block text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div className="space-y-4">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Newsletter</p>
+            <p className="text-sm text-[var(--muted-foreground)]">Stay updated with latest articles and projects.</p>
+            <form onSubmit={handleSubmit} className="space-y-2">
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={status === "loading"}
+                  className="flex-1 px-3 py-2 text-sm border border-[var(--border)] border-r-0 bg-[var(--background)] text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] outline-none focus:border-[var(--foreground)] transition-colors disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="px-4 py-2 text-xs font-medium uppercase tracking-wide bg-[var(--foreground)] text-[var(--primary-foreground)] border border-[var(--foreground)] hover:opacity-80 transition-opacity disabled:opacity-50"
+                >
+                  {status === "loading" ? <Loader2 className="w-3 h-3 animate-spin" /> : "Go"}
+                </button>
+              </div>
+
+              {status === "success" && (
+                <div className="flex items-center gap-2 text-xs text-green-700">
+                  <CheckCircle2 className="w-3 h-3" />
+                  <span>{message}</span>
                 </div>
-
-                {/* Success Message */}
-                {status === "success" && (
-                  <div className="flex items-start gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                    <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm">{message}</p>
-                  </div>
-                )}
-
-                {/* Error Message */}
-                {status === "error" && (
-                  <div className="flex items-start gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                    <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm">{message}</p>
-                  </div>
-                )}
-              </form>
-            </div>
+              )}
+              {status === "error" && (
+                <div className="flex items-center gap-2 text-xs text-red-700">
+                  <AlertCircle className="w-3 h-3" />
+                  <span>{message}</span>
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
 
-      {/* Copyright Section */}
-      <div className="py-6 bg-white">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <p className="text-center text-sm text-gray-600">
-            © 2026 Imesha Dilshani. All rights reserved.
-          </p>
-        </div>
+      {/* Copyright */}
+      <div className="border-t border-[var(--border)] px-6 md:px-10 py-4 max-w-7xl mx-auto">
+        <p className="text-xs text-[var(--muted-foreground)]">
+          © 2026 Imesha Dilshani. All rights reserved.
+        </p>
       </div>
-
-      {/* Bottom decorative line */}
-      <div className="border-b-2 border-gray-200" />
     </footer>
   );
 }
