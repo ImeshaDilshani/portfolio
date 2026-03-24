@@ -1,5 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+
+const presentations = [
+  {
+    title: "Text Classification",
+    type: "ACADEMIC PRESENTATION",
+    img: "/presentation-1.webp",
+    link: "https://drive.google.com/file/d/1QUDfTq7X8h0tbaBz9FUOrDf0vcXEGbHs/view?usp=sharing",
+    desc: "A comprehensive look at text classification techniques and methodologies used in modern natural language processing applications."
+  },
+  {
+    title: "NoSQL Solutions to Handle Big Data",
+    type: "ACADEMIC PRESENTATION",
+    img: "/presentation-2.webp",
+    link: "https://drive.google.com/file/d/1ADBl8-gjo85Gp7MGZ7Xowr17mO57_hFn/view?usp=sharing",
+    desc: "Exploring the landscape of NoSQL databases and their critical role in architecting scalable solutions for high-volume data processing."
+  },
+  {
+    title: "The SAP S/4HANA Transformation",
+    type: "ACADEMIC PRESENTATION",
+    img: "/PRESENTATION-3.webp",
+    link: "https://drive.google.com/file/d/1l8tZvlJgmL3dYumRy87n9jyEDsjHB3he/view?usp=sharing",
+    desc: "A deep dive into the digital transformation journey through SAP S/4HANA, focusing on business agility and real-time operational insights."
+  },
+  {
+    title: "Next-gen Real-time Speech Translation",
+    type: "RESEARCH FINAL VIVA",
+    img: "/presentation-5.webp",
+    link: "https://drive.google.com/file/d/1ItWURTqZKqqlg8ZIeyzMTphR_iBKZIHo/view?usp=sharing",
+    desc: "Presenting the final research findings on high-performance speech-to-speech translation systems tailored for local linguistic contexts."
+  }
+];
 
 export default function PresentationsPage() {
   return (
@@ -58,52 +91,26 @@ export default function PresentationsPage() {
           </aside>
 
           {/* Main Content */}
-          <div className="space-y-16">
-            <p className="text-[var(--foreground)] font-medium text-lg border-b border-[var(--border)] pb-4">
-              Academic and industry presentations I've delivered.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Text Classification",
-                  type: "Academic Presentation",
-                  img: "/presentation-1.webp",
-                  link: "https://drive.google.com/file/d/1QUDfTq7X8h0tbaBz9FUOrDf0vcXEGbHs/view?usp=sharing"
-                },
-                {
-                  title: "NoSQL Solutions to Handle Big Data",
-                  type: "Academic Presentation",
-                  img: "/presentation-2.webp",
-                  link: "https://drive.google.com/file/d/1ADBl8-gjo85Gp7MGZ7Xowr17mO57_hFn/view?usp=sharing"
-                },
-                {
-                  title: "The SAP S/4HANA Transformation",
-                  type: "Academic Presentation",
-                  img: "/PRESENTATION-3.webp",
-                  link: "https://drive.google.com/file/d/1l8tZvlJgmL3dYumRy87n9jyEDsjHB3he/view?usp=sharing"
-                },
-                {
-                  title: "Next-gen Real-time Speech Translation",
-                  type: "Research Final Viva",
-                  img: "/presentation-5.webp",
-                  link: "https://drive.google.com/file/d/1ItWURTqZKqqlg8ZIeyzMTphR_iBKZIHo/view?usp=sharing"
-                }
-              ].map((pres, i) => (
-                <div key={i} className="group border border-[var(--border)] bg-[var(--card)] p-4 flex flex-col justify-between hover:bg-[var(--muted)] transition-colors">
-                  <div className="relative aspect-[4/3] bg-[var(--muted)] mb-6 border border-[var(--border)] overflow-hidden">
-                    <Image src={pres.img} alt={pres.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div className="space-y-0 border border-[var(--border)]">
+            {presentations.map((pres, i) => (
+              <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] border-b border-[var(--border)] last:border-0 group bg-[var(--card)] hover:bg-[var(--muted)] transition-colors">
+                <div className="relative h-48 md:h-full w-full border-b md:border-b-0 md:border-r border-[var(--border)] bg-[var(--muted)] overflow-hidden">
+                  <Image src={pres.img} alt={pres.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                </div>
+                <div className="p-6 md:p-10 flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--muted-foreground)]">{pres.type}</p>
+                    <h2 className="text-2xl md:text-3xl font-medium text-[var(--foreground)] leading-tight">{pres.title}</h2>
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-2xl">{pres.desc}</p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-[var(--foreground)] mb-1">{pres.title}</h3>
-                    <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-6">{pres.type}</p>
-                    <a href={pres.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:opacity-70 underline underline-offset-4 decoration-1 text-[var(--foreground)]">
-                      View Slides ↗
+                  <div className="mt-12 pt-6 border-t border-[var(--border)]">
+                    <a href={pres.link} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--foreground)] hover:opacity-70 flex items-center gap-1 w-fit">
+                      VIEW SLIDES ↗
                     </a>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

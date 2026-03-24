@@ -1,14 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
 const papers = [
   {
     title: "Bridging Linguistic Gaps: A Review of AI-Driven Speech-to-Speech Translation for Sinhala and Tamil in Sri Lanka",
-    conference: "8ᵗʰ International Research Conference on Smart Computing and Systems Engineering, University of Kelaniya, Sri Lanka",
+    conference: "8ᵗʰ INTERNATIONAL RESEARCH CONFERENCE ON SMART COMPUTING AND SYSTEMS ENGINEERING",
     img: "/research/up1.webp",
-    link: "https://ieeexplore.ieee.org/document/11030975"
+    link: "https://ieeexplore.ieee.org/document/11030975",
+    desc: "A published review of AI-driven linguistic bridge systems, detailing the challenges and opportunities for speech recognition and synthesis in highly localized diverse language settings."
   }
-  // Add new papers here
 ];
 
 export default function UndergraduatePapersPage() {
@@ -19,7 +21,7 @@ export default function UndergraduatePapersPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
             <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
-              Undergraduate Papers
+              Academic Work
             </p>
             <div className="space-y-4 max-w-2xl">
               <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Academic Papers</h1>
@@ -67,22 +69,22 @@ export default function UndergraduatePapersPage() {
             </nav>
           </aside>
 
-          {/* Main Content */}
+          {/* Main Content Area */}
           <div className="space-y-0 border border-[var(--border)]">
             {papers.map((paper, i) => (
               <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] border-b border-[var(--border)] last:border-0 group bg-[var(--card)] hover:bg-[var(--muted)] transition-colors">
                 <div className="relative h-48 md:h-full w-full border-b md:border-b-0 md:border-r border-[var(--border)] bg-[var(--muted)] overflow-hidden">
                   <Image src={paper.img} alt={paper.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
-                <div className="p-6 md:p-8 flex flex-col justify-between">
-                  <div className="space-y-3">
-                    <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Research Paper</p>
-                    <h2 className="text-xl md:text-2xl font-medium text-[var(--foreground)]">{paper.title}</h2>
-                    <p className="text-sm italic text-[var(--muted-foreground)] max-w-2xl">{paper.conference}</p>
+                <div className="p-6 md:p-10 flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--muted-foreground)]">RESEARCH PAPER • {paper.conference}</p>
+                    <h2 className="text-2xl md:text-3xl font-medium text-[var(--foreground)] leading-tight">{paper.title}</h2>
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-2xl">{paper.desc}</p>
                   </div>
-                  <div className="mt-8 pt-4 border-t border-[var(--border)]">
-                    <a href={paper.link} target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase text-[var(--foreground)] hover:opacity-70 flex items-center gap-1 w-fit">
-                      Read Paper ↗
+                  <div className="mt-12 pt-6 border-t border-[var(--border)]">
+                    <a href={paper.link} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--foreground)] hover:opacity-70 flex items-center gap-1 w-fit">
+                      READ PAPER ↗
                     </a>
                   </div>
                 </div>
