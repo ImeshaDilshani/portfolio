@@ -70,29 +70,18 @@ export default function TechStackPage() {
   return (
     <main className="min-h-screen bg-[var(--background)]">
       {/* ── HEADER ──────────────────────────────────────── */}
-      <section className="border-b border-[var(--border)] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[var(--muted)]/20 -skew-x-12 transform translate-x-1/2" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 relative z-10">
-          <div className="flex flex-col space-y-4">
-            <Link
-              href="/myworks"
-              className="group inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors mb-4"
-            >
-              <ArrowLeft className="w-3 h-3 transition-transform group-hover:-translate-x-1" />
-              Back to My Works
-            </Link>
-
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12 items-end">
-              <div className="space-y-6">
-                <h1 className="text-5xl md:text-7xl text-[var(--foreground)] tracking-tight">
-                  The Engine <span className="text-[var(--muted-foreground)]">&amp;</span> Tools
-                </h1>
-                <p className="text-lg md:text-xl text-[var(--muted-foreground)] leading-relaxed max-w-2xl font-light">
-                  A curated collection of technologies I leverage to transform complex problems into elegant digital systems.
-                </p>
-              </div>
-
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Tech
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Tech Stack & Tools</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Technologies, frameworks, and tools I work with
+              </p>
             </div>
           </div>
         </div>

@@ -3,82 +3,80 @@ import Image from "next/image";
 
 const projects = [
   {
-    label: "Data & Analytics",
-    title: "Production Data Updater",
-    desc: "Built with Node.js and Express.js at Atlas Axillia to fix reporting accuracy across manufacturing operations. Integrated with SAP and exported to Excel for Power BI dashboards.",
-    tags: ["Node.js", "Express", "SAP", "Power BI"],
+    label: "DATA ENGINEERING",
+    title: "Data Portfolio",
+    desc: "Building robust pipelines, ETL workflows, and intelligent data systems that transform raw information into strategic assets.",
+    tags: ["Data Engineering", "AI", "ETL", "Analytics"],
     img: "/PL1.webp",
-    href: "/about/work-experience",
+    href: "/about/data-portfolio",
   },
   {
-    label: "Research & AI",
-    title: "Sinhala & Tamil NLP Research",
-    desc: "Undergraduate research on AI solutions for Sinhala and Tamil language communication in Sri Lanka, bridging local language barriers with modern NLP techniques.",
-    tags: ["Python", "NLP", "AI", "Research"],
+    label: "SOFTWARE ENGINEERING",
+    title: "Coding Portfolio",
+    desc: "A gallery of full-stack applications and experimental tools built with clean architecture and performant code.",
+    tags: ["Full Stack", "TypeScript", "Architecture", "Mobile"],
     img: "/CW1.webp",
-    href: "/about/ai-research",
-  },
-  {
-    label: "Community & Writing",
-    title: "Community Contributions",
-    desc: "Active contributor to the tech community through knowledge sharing, mentoring, tech talks, and open-source participation.",
-    tags: ["Community", "Mentoring", "Talks"],
-    img: "/J1.webp",
-    href: "/myworks/community",
-  },
+    href: "/about/coding-portfolio",
+  }
 ];
 
 export default function MyWorksPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-[var(--background)]">
+
       {/* Header */}
       <section className="border-b border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
             <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
-              My Works
+              Work
             </p>
             <div className="space-y-4 max-w-2xl">
-              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Selected Projects</h1>
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">
+                Two Worlds, <span className="text-[var(--muted-foreground)]">Integrated.</span>
+              </h1>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
-                A collection of projects spanning data engineering, AI research, software development, and community work.
+               My work exists at the intersection of data-driven intelligence and robust software engineering. Explore the specific portfolios below.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Project list */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
-        <div className="space-y-0 border border-[var(--border)]">
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
-            >
-              {/* Image */}
-              <div className={`relative aspect-[4/3] overflow-hidden bg-[var(--muted)] ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                  loading="lazy"
-                />
-              </div>
+      {/* ── GATEWAY ────────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[var(--border)] group">
+            {projects.map((project, i) => (
+              <Link
+                key={i}
+                href={project.href}
+                className={`relative group/item overflow-hidden flex flex-col ${i === 0 ? "border-b md:border-b-0 md:border-r" : ""} border-[var(--border)]`}
+              >
+                {/* Visual */}
+                <div className="relative aspect-[16/9] md:aspect-[4/3] overflow-hidden bg-[var(--muted)]">
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    fill
+                    className="object-cover grayscale transition-all duration-700 group-hover/item:grayscale-0 group-hover/item:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/5 opacity-40 group-hover/item:opacity-0 transition-opacity" />
+                </div>
 
-              {/* Info */}
-              <div className={`p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 border-[var(--border)] ${i % 2 === 1 ? "md:order-1 md:border-r" : "md:border-l"}`}>
-                <div className="space-y-4">
+                {/* Info */}
+                <div className="p-8 md:p-12 space-y-4 bg-[var(--background)] transition-colors group-hover/item:bg-[var(--muted)]/30 flex-1">
                   <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
                     {project.label}
                   </span>
-                  <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{project.title}</h2>
-                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
+                  <div className="flex items-end justify-between">
+                    <h2 className="text-3xl md:text-4xl text-[var(--foreground)]">{project.title}</h2>
+                    <span className="text-2xl transition-transform duration-300 group-hover/item:translate-x-2">↗</span>
+                  </div>
+                  <p className="text-[var(--muted-foreground)] leading-relaxed max-w-md">
                     {project.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
+                  <div className="flex flex-wrap gap-2 pt-4">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -89,32 +87,46 @@ export default function MyWorksPage() {
                     ))}
                   </div>
                 </div>
-                <Link
-                  href={project.href}
-                  className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
-                >
-                  View details ↗
-                </Link>
-              </div>
-            </div>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Nav to sub-sections */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-0 border border-[var(--border)]">
-          {[
-            { label: "Community Work", href: "/myworks/community" },
-            { label: "Tech Stack", href: "/myworks/techstack" },
-          ].map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="px-6 py-5 border-b sm:border-b-0 sm:border-r border-[var(--border)] last:border-0 text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors flex items-center justify-between"
-            >
-              {item.label}
-              <span>↗</span>
-            </Link>
-          ))}
+      {/* ── EXPLORATIONS ─────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+            Explorations
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Community Work",
+                desc: "Mentoring, leadership and giving back to the tech ecosystem.",
+                href: "/myworks/community"
+              },
+              {
+                title: "Tech Stack",
+                desc: "The languages and frameworks driving my current projects.",
+                href: "/myworks/techstack"
+              }
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group p-8 border border-[var(--border)] hover:bg-[var(--muted)]/30 transition-all duration-300"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl text-[var(--foreground)]">{item.title}</h3>
+                  <span className="text-[var(--muted-foreground)] group-hover:text-[var(--foreground)] transition-colors">↗</span>
+                </div>
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-xs">
+                  {item.desc}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>

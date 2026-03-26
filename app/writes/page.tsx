@@ -36,7 +36,7 @@ export default function WritesPage() {
             <div className="space-y-4 max-w-2xl">
               <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Writes</h1>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
-                Writings on data science, machine learning, technology, and lessons learned along the way.
+                A collection of my writings on technology, data science, personal growth, and the lessons I've learned through my journey.
               </p>
             </div>
           </div>

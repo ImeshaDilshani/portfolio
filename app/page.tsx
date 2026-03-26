@@ -7,7 +7,7 @@ const projects = [
     label: "TECH",
     title: "Tech Stack & Tools",
     desc: "Every project starts with the right tools. Here's a look at the languages, frameworks, and platforms I use to build things that actually work.",
-    tags: ["Full Stack Engineering", "Data Engineering", "Data Science", "Mobile Dev","AI"],
+    tags: ["Full Stack Engineering", "Data Engineering", "Data Science", "Mobile Dev", "AI"],
     img: "/PL1.webp",
     href: "/myworks/techstack/",
   },
@@ -93,6 +93,27 @@ export default function HomePage() {
                 fetchPriority="high"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LIFE MOTTO ──────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-10">
+            Life Motto
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-[var(--border)]">
+            {[
+              { word: "Small Steps.", sub: "Momentum starts in the tiniest actions." },
+              { word: "Big Systems.", sub: "Frameworks that endure, processes that perform." },
+              { word: "Continuous.", sub: "Iterate, adapt, excel again and again." },
+            ].map((item, i) => (
+              <div key={i} className="p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-[var(--border)] last:border-0 space-y-3">
+                <p className="text-2xl md:text-3xl text-[var(--foreground)]">{item.word}</p>
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{item.sub}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
