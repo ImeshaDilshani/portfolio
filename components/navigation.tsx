@@ -39,7 +39,7 @@ export function Navigation() {
             {/* Logo */}
             <Link
               href={NAVIGATION_CONFIG.logo.href}
-              className="text-sm font-semibold tracking-tight text-[var(--foreground)] font-[family-name:var(--font-adamina)]"
+              className="text-lg font-bold tracking-tight text-[var(--foreground)] font-[family-name:var(--font-adamina)]"
             >
               {NAVIGATION_CONFIG.logo.text}
             </Link>

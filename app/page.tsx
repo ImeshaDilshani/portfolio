@@ -1,6 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
+const projects = [
+  {
+    label: "TECH",
+    title: "Tech Stack & Tools",
+    desc: "Every project starts with the right tools. Here's a look at the languages, frameworks, and platforms I use to build things that actually work.",
+    tags: ["Full Stack Engineering", "Data Engineering", "Data Science", "Mobile Dev","AI"],
+    img: "/PL1.webp",
+    href: "/myworks/techstack/",
+  },
+  {
+    label: "COMMUNITY",
+    title: "Community Work & Collaboration",
+    desc: "Learning means nothing if it stays with you. I share what I know, support who I can, and stay active in spaces where tech people grow together.",
+    tags: ["Community", "Mentoring", "Tech"],
+    img: "/CW1.webp",
+    href: "/myworks/community",
+  },
+  {
+    label: "JOURNALISM",
+    title: "Journalism & Blog",
+    desc: "Writing is how I think out loud. I cover data science, machine learning, and life lessons — keeping it simple, honest, and worth your time.",
+    tags: ["Writing", "Blogging", "AI"],
+    img: "/J1.webp",
+    href: "/writes/",
+  },
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -19,10 +47,10 @@ export default function HomePage() {
               </h1>
 
               <p className="max-w-xl text-[var(--muted-foreground)] leading-relaxed text-base">
-                I work at the intersection of software engineering, data science, and product—creating clean, intelligent tools without the extra fluff. Currently an Associate Software Engineer at{" "}
-                <a href="https://sterlingbpo.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-[var(--foreground)]">Sterling BPO</a>{" "}
-                and Associate Software &amp; Data Engineer at{" "}
-                <a href="https://www.wirity.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-[var(--foreground)]">Wirity Labs</a>.
+                Every project is an opportunity to evolve. I’m a developer who actually enjoys the
+                "messy" parts of tech, like untangling complex data or building systems that need
+                to scale. I spend my time at the intersection of software engineering and data
+                science, creating clean, intelligent tools that solve real-world problems without the extra fluff.
               </p>
 
               {/* Role tags */}
@@ -114,105 +142,96 @@ export default function HomePage() {
             <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
               Background
             </p>
-            <div className="space-y-6 max-w-2xl">
-              <p className="text-[var(--foreground)] leading-relaxed">
-                BSc (Hons) Computer Science specialising in <strong>Data Science</strong> — University of Kelaniya, 2025. My research focused on AI solutions for Sinhala and Tamil language communication in Sri Lanka.
-              </p>
-              <p className="text-[var(--muted-foreground)] leading-relaxed text-sm">
-                Previously a Production Data Analyst Intern at Atlas Axillia, where I built Power BI dashboards, production data tools with Node.js, and worked with SAP BEx Analyzer. I also freelance on Freelancer.com and shoot stock photography for Adobe Stock and Shutterstock.
-              </p>
+
+            <div className="space-y-10 max-w-2xl">
+
+              {/* Work */}
+              <div className="space-y-3">
+                <p className="text-[var(--foreground)] leading-relaxed">
+                  Right now I'm an <strong>Associate Software Engineer</strong> at
+                  <a href="https://sterlingbpo.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-4 hover:opacity-70 transition-opacity"
+                  > Sterling BPO Solution
+                  </a>,
+                  working on software and mobile app development. Alongside that, I do part-time work as an <strong>Associate Data & Software Engineer</strong> at
+                  <a href="https://www.wirity.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-4 hover:opacity-70 transition-opacity"
+                  > Wirity Labs</a> — covering software, data engineering, and mobile apps.
+                </p>
+                <p className="text-[var(--muted-foreground)] leading-relaxed text-sm">
+                  Before this, I interned at Atlas Axillia as a Production Data Analyst and graduated with a <strong>BSc (Hons) in Computer Science</strong>, specialising in Data Science, from the University of Kelaniya in 2025. I'm Slowly pulling back from social media to make more room for real things.</p>
+              </div>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-1 text-sm font-medium text-[var(--foreground)] underline underline-offset-4 hover:opacity-70 transition-opacity"
               >
                 Read full story →
               </Link>
+
             </div>
           </div>
         </div>
       </section>
 
       {/* ── SELECTED WORK ───────────────────────────────── */}
-      <section className="border-b border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
-          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-12">
-            Selected Work
-          </p>
 
-          <div className="space-y-0 border border-[var(--border)]">
-            {[
-              {
-                label: "Community",
-                title: "Community Work & Collaboration",
-                desc: "Continuous learning and knowledge sharing within the tech community through talks, mentoring and open collaboration.",
-                tags: ["Community", "Mentoring", "Tech"],
-                href: "/myworks/community",
-                img: "/CW1.webp",
-              },
-              {
-                label: "Tech",
-                title: "Tech Stack & Tools",
-                desc: "A comprehensive overview of the technologies, frameworks and tools powering my projects — from data pipelines to mobile apps.",
-                tags: ["Python", "Next.js", "React Native", "Power BI"],
-                href: "/myworks/techstack",
-                img: "/PL1.webp",
-              },
-              {
-                label: "Writing",
-                title: "Journalism & Blog",
-                desc: "Articles on data science, machine learning, and lessons from life — making complex ideas accessible to everyone.",
-                tags: ["Data Science", "ML", "Writing"],
-                href: "/writes",
-                img: "/J1.webp",
-              },
-            ].map((work, i) => (
-              <div
-                key={i}
-                className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
-              >
-                {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)]">
-                  <Image
-                    src={work.img}
-                    alt={work.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
-                  />
-                </div>
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-12">
+          MY CANVAS
+        </p>
+        <div className="space-y-0 border border-[var(--border)]">
 
-                {/* Info */}
-                <div className="p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 md:border-l border-[var(--border)]">
-                  <div className="space-y-4">
-                    <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                      {work.label}
-                    </span>
-                    <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{work.title}</h2>
-                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
-                      {work.desc}
-                    </p>
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {work.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2.5 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <Link
-                    href={work.href}
-                    className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
-                  >
-                    View work ↗
-                  </Link>
-                </div>
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
+            >
+              {/* Image */}
+              <div className={`relative aspect-[4/3] overflow-hidden bg-[var(--muted)] ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  loading="lazy"
+                />
               </div>
-            ))}
-          </div>
+
+              {/* Info */}
+              <div className={`p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 border-[var(--border)] ${i % 2 === 1 ? "md:order-1 md:border-r" : "md:border-l"}`}>
+                <div className="space-y-4">
+                  <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    {project.label}
+                  </span>
+                  <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{project.title}</h2>
+                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
+                    {project.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Link
+                  href={project.href}
+                  className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
+                >
+                  View details ↗
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

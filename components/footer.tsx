@@ -51,11 +51,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-[var(--foreground)] tracking-tight">
+            <h3 className="text-lg font-bold text-[var(--foreground)] tracking-tight">
               Imesha Dilshani
             </h3>
             <p className="text-xs text-[var(--muted-foreground)] leading-relaxed max-w-xs">
-              Software &amp; Data Engineer. Building intelligent systems with small steps and continuous improvement.
+              Data &amp; Software Engineer. Building intelligent systems with small steps and continuous improvement.
             </p>
             <div className="flex gap-4 text-xs text-[var(--muted-foreground)]">
               <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">Twitter ↗</a>
