@@ -36,18 +36,13 @@ export default function CodingPortfolioPage() {
           {/* Sidebar Nav */}
           <aside className="lg:self-start lg:sticky lg:top-20">
             <nav className="space-y-0">
-              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Sections</p>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Work</p>
               {[
-                { label: "About", href: "/about" },
-                { label: "Work Experience", href: "/about/work-experience" },
-                { label: "My Research", href: "/about/ai-research" },
-                { label: "Presentations", href: "/about/presentations" },
-                { label: "Data Portfolio", href: "/about/data-portfolio" },
-                { label: "Coding Portfolio", href: "/about/coding-portfolio" },
-                { label: "MOOCs", href: "/about/moocs" },
-                { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
+                { label: "Back to Projects", href: "/myworks" },
+                { label: "Data Portfolio", href: "/myworks/data-portfolio" },
+                { label: "Coding Portfolio", href: "/myworks/coding-portfolio" },
               ].map((item) => {
-                const isActive = item.href === "/about/coding-portfolio";
+                const isActive = item.href === "/myworks/coding-portfolio";
                 return (
                   <Link
                     key={item.href}

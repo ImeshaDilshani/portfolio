@@ -34,8 +34,6 @@ export default function AIResearchPage() {
                 { label: "Work Experience", href: "/about/work-experience" },
                 { label: "My Research", href: "/about/ai-research" },
                 { label: "Presentations", href: "/about/presentations" },
-                { label: "Data Portfolio", href: "/about/data-portfolio" },
-                { label: "Coding Portfolio", href: "/about/coding-portfolio" },
                 { label: "MOOCs", href: "/about/moocs" },
                 { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
               ].map((item) => {

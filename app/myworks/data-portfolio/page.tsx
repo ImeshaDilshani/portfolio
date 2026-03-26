@@ -20,7 +20,7 @@ export default function DataPortfolioPage() {
               Data Portfolio
             </p>
             <div className="space-y-4 max-w-2xl">
-              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Data & Analytics</h1>
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Data Engineering</h1>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
                 A collection of data analysis, machine learning models, and visualization projects, mostly open-sourced as Jupyter and R notebooks.
               </p>
@@ -36,18 +36,13 @@ export default function DataPortfolioPage() {
           {/* Sidebar Nav */}
           <aside className="lg:self-start lg:sticky lg:top-20">
             <nav className="space-y-0">
-              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Sections</p>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Work</p>
               {[
-                { label: "About", href: "/about" },
-                { label: "Work Experience", href: "/about/work-experience" },
-                { label: "My Research", href: "/about/ai-research" },
-                { label: "Presentations", href: "/about/presentations" },
-                { label: "Data Portfolio", href: "/about/data-portfolio" },
-                { label: "Coding Portfolio", href: "/about/coding-portfolio" },
-                { label: "MOOCs", href: "/about/moocs" },
-                { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
+                { label: "Back to Projects", href: "/myworks" },
+                { label: "Data Portfolio", href: "/myworks/data-portfolio" },
+                { label: "Coding Portfolio", href: "/myworks/coding-portfolio" },
               ].map((item) => {
-                const isActive = item.href === "/about/data-portfolio";
+                const isActive = item.href === "/myworks/data-portfolio";
                 return (
                   <Link
                     key={item.href}
