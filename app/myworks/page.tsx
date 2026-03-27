@@ -7,7 +7,7 @@ const projects = [
     title: "Data Portfolio",
     desc: "Building robust pipelines, ETL workflows, and intelligent data systems that transform raw information into strategic assets.",
     tags: ["Data Engineering", "AI", "ETL", "Analytics"],
-    img: "/PL1.webp",
+    img: "/data-1.jpg",
     href: "/myworks/data-portfolio",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     title: "Coding Portfolio",
     desc: "A gallery of full-stack applications and experimental tools built with clean architecture and performant code.",
     tags: ["Full Stack", "TypeScript", "Architecture", "Mobile"],
-    img: "/CW1.webp",
+    img: "/about-bg.webp",
     href: "/myworks/coding-portfolio",
   }
 ];
@@ -58,7 +58,7 @@ export default function MyWorksPage() {
                   src={project.img}
                   alt={project.title}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-opacity duration-500"
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
 

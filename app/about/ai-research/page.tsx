@@ -12,7 +12,7 @@ export default function AIResearchPage() {
               My Research
             </p>
             <div className="space-y-4 max-w-2xl">
-              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">AI & Machine Learning</h1>
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">AI, NLP & Machine Learning</h1>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
                 My research focuses on artificial intelligence, machine learning, and data-driven solutions to real-world problems.
               </p>
@@ -42,11 +42,10 @@ export default function AIResearchPage() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`block py-2 text-sm transition-colors border-b border-transparent ${
-                      isActive 
-                        ? "text-[var(--foreground)] font-medium" 
+                    className={`block py-2 text-sm transition-colors border-b border-transparent ${isActive
+                        ? "text-[var(--foreground)] font-medium"
                         : "text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[var(--border)]"
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -59,9 +58,7 @@ export default function AIResearchPage() {
           <div className="space-y-20">
 
             <section className="space-y-6">
-              <div className="relative aspect-video border border-[var(--border)]">
-                <Image src="/research/up1.webp" fill alt="NLP Research" className="object-cover grayscale hover:grayscale-0 transition-all duration-500" />
-              </div>
+
 
               <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
                 <p className="text-[var(--foreground)] text-lg">
@@ -70,6 +67,9 @@ export default function AIResearchPage() {
                 <p>
                   Natural Language Processing (NLP) for low-resource languages presents unique challenges due to limited datasets, dialectal variations, and lack of standardized tools. Developing AI solutions for such languages requires creative approaches to handle data scarcity, noise, and linguistic diversity. My research focused on applying advanced NLP techniques to address these challenges and create practical solutions for real-world communication in Sri Lanka.
                 </p>
+              </div>
+              <div className="relative aspect-video border border-[var(--border)] group">
+                <Image src="/research/up1.webp" fill alt="NLP Research" className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
               </div>
             </section>
 
@@ -97,10 +97,10 @@ export default function AIResearchPage() {
                 <div className="space-y-2">
                   <h3 className="text-lg font-medium text-[var(--foreground)]">Research Challenges</h3>
                   <p>
-                    The major limitation in building Sinhala and Tamil speech translation systems is creating large datasets of high-quality annotations. As low-resource languages, they lack the digital infrastructure needed to develop stable models of Automatic Speech Recognition (ASR), Machine Translation (MT), and Text-to-Speech (TTS). 
+                    The major limitation in building Sinhala and Tamil speech translation systems is creating large datasets of high-quality annotations. As low-resource languages, they lack the digital infrastructure needed to develop stable models of Automatic Speech Recognition (ASR), Machine Translation (MT), and Text-to-Speech (TTS).
                   </p>
                   <p>
-                    Another central drawback is poor model performance in background noise. Background noise limits ASR accuracy in hospitals, markets, and transit systems where dialect diversity intersects with unpredictable noise profiles. 
+                    Another central drawback is poor model performance in background noise. Background noise limits ASR accuracy in hospitals, markets, and transit systems where dialect diversity intersects with unpredictable noise profiles.
                   </p>
                   <p>
                     These constraints demanded that speech translation solutions designed for Sri Lanka be explicitly robust against noise. This project resolves these issues by analyzing real-life environmental conditions, directly improving multilingual communication robustness across Sri Lanka.
@@ -112,16 +112,16 @@ export default function AIResearchPage() {
                   <p className="text-xs font-medium tracking-widest uppercase text-[var(--foreground)]">Project Resources</p>
                   <div className="grid gap-2 text-sm">
                     <a href="https://github.com/SpeechChain-LK" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:underline underline-offset-2">
-                       <span className="w-40 text-[var(--muted-foreground)] shrink-0">GitHub Repository:</span> 
-                       <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">SpeechChain-LK ↗</span>
+                      <span className="w-40 text-[var(--muted-foreground)] shrink-0">GitHub Repository:</span>
+                      <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">SpeechChain-LK ↗</span>
                     </a>
                     <a href="https://ieeexplore.ieee.org/document/11030975" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:underline underline-offset-2">
-                       <span className="w-40 text-[var(--muted-foreground)] shrink-0">Research Review Paper:</span> 
-                       <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">IEEE Xplore Link ↗</span>
+                      <span className="w-40 text-[var(--muted-foreground)] shrink-0">Research Review Paper:</span>
+                      <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">IEEE Xplore Link ↗</span>
                     </a>
                     <a href="https://drive.google.com/file/d/1iqoZjSOsXGJWYhiGUSSAmXLGzmNA6XTC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:underline underline-offset-2">
-                       <span className="w-40 text-[var(--muted-foreground)] shrink-0">Thesis:</span> 
-                       <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">Google Drive PDF ↗</span>
+                      <span className="w-40 text-[var(--muted-foreground)] shrink-0">Thesis:</span>
+                      <span className="text-[var(--foreground)] text-ellipsis overflow-hidden">Google Drive PDF ↗</span>
                     </a>
                   </div>
                 </div>

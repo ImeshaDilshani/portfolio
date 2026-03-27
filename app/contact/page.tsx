@@ -79,8 +79,8 @@ export default function ContactPage() {
           <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[var(--border)] space-y-8">
             <div className="space-y-2">
               <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Email</p>
-              <a href="mailto:imeshadilshani03@gmail.com" className="text-sm text-[var(--foreground)] hover:opacity-70 transition-opacity underline underline-offset-2">
-                imeshadilshani03@gmail.com
+              <a href="mailto:work@imesha.dev" className="text-sm text-[var(--foreground)] hover:opacity-70 transition-opacity underline underline-offset-2">
+                work@imesha.dev
               </a>
             </div>
 
@@ -97,9 +97,10 @@ export default function ContactPage() {
             <div className="space-y-2">
               <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Available for</p>
               <div className="flex flex-col gap-1 text-sm text-[var(--muted-foreground)]">
-                <span>→ Full-stack development projects</span>
-                <span>→ Data engineering & pipelines</span>
-                <span>→ ML/AI consulting</span>
+                <span>→ Full-stack Development projects</span>
+                <span>→ Mobile Application Development projects</span>
+                <span>→ Data Engineering & Data Pipelines projects</span>
+                <span>→ AI/ML Development projects</span>
                 <span>→ Freelance contracts</span>
               </div>
             </div>

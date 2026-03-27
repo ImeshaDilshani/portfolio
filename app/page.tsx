@@ -35,27 +35,43 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────── */}
       <section className="border-b border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 lg:py-36">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-16 items-start">
             {/* Left */}
             <div className="space-y-8">
-              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                Software &amp; Data Engineer · Sri Lanka
-              </p>
+              <div className="space-y-4">
+                <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                  Software &amp; Data Engineer · Sri Lanka
+                </p>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-[var(--foreground)]">
-                Building intelligent software and data systems that solve real-world problems.
-              </h1>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-[var(--foreground)] font-light tracking-tight">
+                  Building intelligent software and data systems that solve real-world problems.
+                </h1>
+              </div>
+
+              {/* Mobile Photo: Visible on mobile/tablet, hidden on desktop */}
+              <div className="lg:hidden relative group max-w-[400px]">
+                 <div className="relative border border-[var(--border)] p-1 bg-[var(--background)] z-10">
+                    <Image
+                      src="/imesha.webp"
+                      alt="Imesha Dilshani"
+                      width={400}
+                      height={500}
+                      className="w-full h-auto object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                      priority
+                    />
+                 </div>
+              </div>
 
               <p className="max-w-xl text-[var(--muted-foreground)] leading-relaxed text-base">
                 Every project is an opportunity to evolve. I’m a developer who actually enjoys the
                 "messy" parts of tech, like untangling complex data or building systems that need
-                to scale. I spend my time at the intersection of software engineering and data
+                to scale. I spend my time with software engineering and data
                 science, creating clean, intelligent tools that solve real-world problems without the extra fluff.
               </p>
 
               {/* Role tags */}
               <div className="flex flex-wrap gap-2">
-                {["Data Scientist", "Data Engineer", "Software Engineer", "Product Builder"].map((role) => (
+                {["Data Scientist", "Data Engineer", "Software Engineer", "Solo Product Builder"].map((role) => (
                   <span
                     key={role}
                     className="px-3 py-1 text-xs font-medium tracking-wide border border-[var(--border)] text-[var(--muted-foreground)]"
@@ -81,39 +97,59 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right – Photo */}
-            <div className="hidden lg:block">
-              <Image
-                src="/imesha.webp"
-                alt="Imesha Dilshani"
-                width={320}
-                height={420}
-                className="w-full h-auto object-cover grayscale"
-                priority
-                fetchPriority="high"
-              />
+            {/* Right – Desktop Photo: Hidden on mobile, visible on desktop */}
+            <div className="hidden lg:block relative group">
+              {/* Image Container */}
+              <div className="relative border border-[var(--border)] p-1 bg-[var(--background)] z-10">
+                <Image
+                  src="/imesha.webp"
+                  alt="Imesha Dilshani"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  priority
+                  fetchPriority="high"
+                />
+              </div>
+
+              {/* Technical Label */}
+              <div className="absolute -bottom-10 left-0">
+                <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-[var(--muted-foreground)] opacity-60 group-hover:opacity-100 transition-opacity duration-500 underline underline-offset-4 decoration-[var(--border)]">ID://Asset_Hero_Main.img</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── LIFE MOTTO ──────────────────────────────────────── */}
-      <section className="border-b border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
-          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-10">
-            Life Motto
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-[var(--border)]">
-            {[
-              { word: "Small Steps.", sub: "Momentum starts in the tiniest actions." },
-              { word: "Big Systems.", sub: "Frameworks that endure, processes that perform." },
-              { word: "Continuous.", sub: "Iterate, adapt, excel again and again." },
-            ].map((item, i) => (
-              <div key={i} className="p-8 md:p-10 border-b sm:border-b-0 sm:border-r border-[var(--border)] last:border-0 space-y-3">
-                <p className="text-2xl md:text-3xl text-[var(--foreground)]">{item.word}</p>
-                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{item.sub}</p>
+      <section className="border-b border-[var(--border)] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-12 md:gap-20">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-2">
+              My Life Motto
+            </p>
+            
+            <div className="space-y-12 md:space-y-16">
+              {/* Motto Headline */}
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-[var(--foreground)] leading-[1.1] tracking-tight text-balance">
+                Small Steps. <span className="text-[var(--muted-foreground)]">Big System With</span> Continuous Improvement.
+              </h2>
+
+              {/* Descriptions Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-[var(--border)] pt-12">
+                {[
+                  { title: "Small Steps.", desc: "Because momentum starts in the tiniest actions." },
+                  { title: "Big System.", desc: "Frameworks that endure and scale independently." },
+                  { title: "Continuous Improvement.", desc: "To iterate, adapt, and refine every single day." },
+                ].map((item, i) => (
+                  <div key={i} className="space-y-2">
+                    <h3 className="text-xs font-bold tracking-widest uppercase text-[var(--foreground)]">{item.title}</h3>
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

@@ -50,13 +50,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-[var(--foreground)] tracking-tight">
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-[var(--foreground)] tracking-tight uppercase">
               Imesha Dilshani
             </h3>
-            <p className="text-xs text-[var(--muted-foreground)] leading-relaxed max-w-xs">
-              Data &amp; Software Engineer. Building intelligent systems with small steps and continuous improvement.
-            </p>
+            <div className="space-y-2">
+              
+              <p className="text-xs text-[var(--foreground)] leading-relaxed max-w-xs font-medium">
+                Small Steps. Big System With Continuous Improvement.
+              </p>
+            </div>
             <div className="flex gap-4 text-xs text-[var(--muted-foreground)]">
               <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">Twitter ↗</a>
               <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">LinkedIn ↗</a>
@@ -125,8 +128,8 @@ export function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-[var(--border)] px-6 md:px-10 py-4 max-w-7xl mx-auto">
-        <p className="text-xs text-[var(--muted-foreground)]">
-          © 2026 Imesha Dilshani. All rights reserved.
+        <p className="text-[10px] font-medium tracking-widest uppercase text-[var(--muted-foreground)] opacity-60">
+          © 2026 Imesha Dilshani • Small Steps. Big System With Continuous Improvement.
         </p>
       </div>
     </footer>

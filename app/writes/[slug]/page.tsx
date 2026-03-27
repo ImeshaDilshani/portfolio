@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Badge variant="outline" className="mb-4">
             {article.category}
           </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-balance max-w-4xl mx-auto">
             {article.title}
           </h1>
           <time className="text-sm text-muted-foreground">{article.date}</time>
@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </Link>
           </Button>
 
-          <article className="prose prose-lg dark:prose-invert max-w-none text-left leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-purple-600 [&_h2]:dark:text-purple-400 [&_h2]:mt-6 [&_h2]:mb-4 [&_h2]:border-b-2 [&_h2]:border-purple-600 [&_h2]:dark:border-purple-400 [&_h2]:pb-2">
+          <article className="prose prose-lg dark:prose-invert max-w-none text-left leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-[var(--foreground)] [&_h2]:mt-6 [&_h2]:mb-4 [&_h2]:border-b border-[var(--border)] [&_h2]:pb-2">
             <div
               className="space-y-6"
               dangerouslySetInnerHTML={{ __html: article.content }}

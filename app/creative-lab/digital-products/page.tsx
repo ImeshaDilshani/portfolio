@@ -1,137 +1,128 @@
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
+
+const products = [
+  
+  {
+    id: "01",
+    title: "Orbit Engine",
+    desc: "Transform Any Content Into a Viral Distribution Machine. Whether it’s a YouTube link or a Blog post, Orbit handles the rest. Synthesize your Video into SEO Blogs, turn your Articles into Viral Shorts, and generate Designer-grade Flyers with captions. Total content repurposing in one click.",
+    status: "Development & Beta Testing",
+    link: "https://orbit.everytuesdays.com/",
+    active: true
+  },
+  {
+    id: "02",
+    title: "ClassLinka",
+    desc: "A platform designed to revolutionize the tutoring ecosystem in Sri Lanka, connecting elite educators with ambitious students through a streamlined digital interface.",
+    status: "Research & Conceptualization",
+    link: "https://classlinka.imesha.dev/",
+    active: true
+  },
+  {
+    id: "03",
+    title: "Coming Soon",
+    desc: "Something new is taking shape in the lab. I'm deep in the ideation phase — exploring bold ideas, questioning assumptions, and designing the next tool that'll make you wonder how you ever worked without it.",
+    status: "Ideation",
+    link: null,
+    active: false
+  }
+];
 
 export default function DigitalProductsPage() {
   return (
     <main>
-      <section className="relative h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-            style={{
-              backgroundImage: "url('/about-bg.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container text-center space-y-4 px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              💡 Digital Innovation
-            </span>
+      {/* ── HEADER ──────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Creative Lab
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Digital Product Design</h1>
+              <p className="text-lg text-[var(--muted-foreground)] leading-relaxed">
+                Exploring opportunities in digital products, creative design, and innovative solutions.
+              </p>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Currently in Development Phase.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black font-[family-name:var(--font-adamina)]">
-            Digital Product Design
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
-            Coming soon - Currently in Development Phase
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Exploring opportunities in{" "}
-            <span className="text-black font-medium">digital products</span>,{" "}
-            <span className="text-black font-medium">creative design</span>, and{" "}
-            <span className="text-black font-medium">innovative solutions</span>.
-          </p>
         </div>
       </section>
 
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-6xl mx-auto">
-          <div className="mb-12">
-            <Link
-              href="/creative-lab"
-              className="text-primary hover:underline mb-8 inline-block"
-            >
-              ← Back to Creative Lab
-            </Link>
+      {/* ── IMAGE ────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="w-full relative h-[400px] md:h-[500px] bg-[var(--muted)]">
+          <Image
+            src="/about-bg.webp"
+            alt="Digital Product Design"
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+          />
+        </div>
+      </section>
 
-            <h2 className="text-3xl font-bold mb-6">Exploring New Horizons</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Digital product design is an exciting venture I'm currently
-              researching and developing MVP as a solontrupener. This space combines my technical skills, design
-              sensibilities, and entrepreneurial interests in a way that could
-              create meaningful value for others.
-            </p>
+      {/* ── CONTENT ───────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+        <div className="max-w-3xl ml-auto lg:mx-auto">
+          <Link href="/creative-lab" className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors mb-12 inline-block">
+            ← Back to Creative Lab
+          </Link>
 
-            <div className="prose dark:prose-invert max-w-none mb-12">
-              <h3 className="text-2xl font-semibold mb-4">
-                Current Status: Building a Mobile App MVP
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                I’m currently designing and developing a mobile application 
-                MVP called ClassLinka — a platform focused on shaping the future 
-                of tutoring in Sri Lanka. This project represents my transition 
-                from research into real-world product execution, where I’m applying 
-                my skills in product design, frontend development, and backend systems.
-              </p>
+          <h2 className="text-3xl text-[var(--foreground)] mb-6">The Journey So Far</h2>
+          <p className="text-[var(--muted-foreground)] leading-relaxed mb-16">
+            Digital product design is where my technical foundation in software engineering meets my creative drive. I'm building a portfolio of products that solve real problems, starting with local solutions and expanding into broader tools.
+          </p>
 
-              <p className="text-muted-foreground mb-6" >
-                ClassLinka aims to connect high-quality educators with students 
-                who want to excel, while giving teachers better tools to grow 
-                their careers and manage their work digitally.
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-4">MVP Status</h3>
-              <p className="text-muted-foreground mb-8">
-                The MVP is under active development and testing. Once testing is complete, I will open an <b>exclusive 
-                waitlist</b> for early users ahead of the public mobile app launch. <b>ClassLinka</b> connects 
-                the island’s elite educators with students who want to excel.
-              </p>
-              <p className="text-muted-foreground mb-8">
-                <b>👉 Project site:{" "}
-                <a
-                  href="https://classlinka.imesha.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  ClassLinka
-                </a>
-                </b>
-              </p>
-            </div>
-
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">🚀</div>
-                    <div>
-                    <h3 className="text-xl font-semibold mb-3">
-                      Stay Tuned for Updatess
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      This is an exciting new chapter I'm preparing to embarking
-                      on. I'll be documenting the journey from research to
-                      creation to launch. Follow along to see how this venture
-                      develop!
+          <div className="space-y-24">
+            {products.map((product) => (
+              <div key={product.id} className={`group ${!product.active ? "opacity-60" : ""}`}>
+                <div className="flex items-center gap-4 mb-6 border-b border-[var(--border)] pb-4">
+                  <span className="text-xs font-bold tracking-widest text-[var(--muted-foreground)] uppercase">Product {product.id}</span>
+                  <h3 className="text-2xl md:text-3xl text-[var(--foreground)]">{product.title}</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_200px] gap-12">
+                  <div className="space-y-6">
+                    <p className="text-[var(--muted-foreground)] leading-relaxed">
+                      {product.desc}
                     </p>
-                    <p className="text-sm text-muted-foreground italic">
-                      Expected timeline: Development phase ongoings • Planing to
-                      open waitlisting collection on March, 2026.
-                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-2.5 py-0.5 text-[10px] font-medium tracking-widest uppercase border border-[var(--border)] text-[var(--muted-foreground)]">
+                        {product.status}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-start md:items-end">
+                    {product.link ? (
+                      <a 
+                        href={product.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-[var(--foreground)] underline underline-offset-4 hover:opacity-70 transition-opacity"
+                      >
+                        Visit Project ↗
+                      </a>
+                    ) : (
+                      <span className="text-sm font-medium text-[var(--muted-foreground)] italic">
+                        In progress...
+                      </span>
+                    )}
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            ))}
 
-            <Card className="mt-8 bg-muted/50">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold mb-4">
-                  Areas of Interest
-                </h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• SaaS products for niche markets</li>
-                  <li>• Digital assets for creators</li>
-                  <li>• Productivity and workflow tools</li>
-                  <li>• Design templates and UI component libraries</li>
-                  <li>• Educational resources and guides</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="border border-[var(--border)] p-8 mt-12 bg-[var(--muted)]/20">
+              <h3 className="text-xl font-medium text-[var(--foreground)] mb-4">Waitlist & Launch</h3>
+              <p className="text-[var(--muted-foreground)] leading-relaxed text-sm">
+                I'm preparing to open an exclusive waitlist for early users of <strong>ClassLinka</strong> and future tools. The journey from research to real-world product is ongoing, with first public releases expected in May 2026.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

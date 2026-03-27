@@ -98,13 +98,13 @@ export default function AboutPage() {
                     img: "/about/arangawa.webp",
                   },
                 ].map((edu) => (
-                  <div key={edu.name} className="grid grid-cols-1 md:grid-cols-2 gap-8 border border-[var(--border)]">
+                  <div key={edu.name} className="grid grid-cols-1 md:grid-cols-2 gap-8 border border-[var(--border)] group">
                     <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)]">
                       <Image
                         src={edu.img}
                         alt={edu.name}
                         fill
-                        className="object-cover grayscale"
+                        className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                         loading="lazy"
                       />
                     </div>

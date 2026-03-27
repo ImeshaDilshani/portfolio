@@ -126,8 +126,8 @@ export default function WorkExperiencePage() {
               {/* Photos */}
               <div className="grid grid-cols-2 gap-4 pt-6">
                 {["/about/Atlas1.webp", "/about/Atlas2.webp", "/about/atlas (2).webp", "/about/atlas.webp"].map((src, i) => (
-                  <div key={i} className="relative aspect-video bg-[var(--muted)] border border-[var(--border)] overflow-hidden">
-                    <Image src={src} fill alt={`Atlas Memory ${i+1}`} className="object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  <div key={i} className="relative aspect-video bg-[var(--muted)] border border-[var(--border)] overflow-hidden group">
+                    <Image src={src} fill alt={`Atlas Memory ${i+1}`} className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                   </div>
                 ))}
               </div>
@@ -148,8 +148,8 @@ export default function WorkExperiencePage() {
                     Currently, I work as a freelance developer on <a href="https://www.freelancer.com/u/imeshadilshani03" target="_blank" rel="noopener noreferrer" className="text-[var(--foreground)] underline underline-offset-2 hover:opacity-70">Freelancer.com</a>, building web and software solutions for clients. I focus on developing data-driven applications, interactive dashboards, and AI-based tools.
                   </p>
                 </div>
-                <div className="bg-[var(--card)] border border-[var(--border)] flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all">
-                  <Image src="/about/freelancer.webp" width={100} height={100} alt="Freelancer" className="object-contain" />
+                <div className="bg-[var(--card)] border border-[var(--border)] flex items-center justify-center p-6 group">
+                  <Image src="/about/freelancer.webp" width={100} height={100} alt="Freelancer" className="object-contain grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
               </div>
             </section>
