@@ -19,10 +19,6 @@ export const NAVIGATION_CONFIG = {
       href: "/myworks", 
       label: "Work", 
       description: "My work and projects",
-      children: [
-        { href: "/about/data-portfolio", label: "Data Portfolio", description: "Data analysis projects" },
-        { href: "/about/coding-portfolio", label: "Code Portfolio", description: "Coding projects" },
-      ]
     },
     { href: "/myworks/techstack", label: "Skills", description: "My technical skills" },
     { 

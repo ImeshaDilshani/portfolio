@@ -1,185 +1,69 @@
-"use client";
-
-import { useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CapturesPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+export default function CreativeLabPage() {
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/garding/idea-hero.webp"
-            alt="Background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              ✨ Side Projects & Passions
-            </span>
+      {/* Header */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Creative Lab
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Blooming Ideas</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                A space where passion meets purpose. Where I explore, experiment, and create beyond the boundaries of my professional work.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
-            Creative Lab
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
-            Blooming Ideas
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            A space where passion meets purpose. Where I explore,{" "}
-            <span className="text-black font-medium">
-              experiment
-            </span>
-            , and{" "}
-            <span className="text-black font-medium">
-              create
-            </span>{" "}
-            beyond the boundaries of my professional work through{" "}
-            <span className="text-black font-medium">
-              gardening
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              photography
-            </span>
-            , and digital innovation.
-          </p>
         </div>
       </section>
 
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/creative-lab/gardening">
-              <Card
-                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
-                data-animate="fade-up"
-              >
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src="/garding/senior-couple-harvesting-tomatoes.webp"
-                    alt="Gardening"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-black">
-                    Gardening for Mindful Living
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    Gardening has become my calm space a reminder that growth
-                    takes time, care, and patience. Tending to plants helps me
-                    reconnect with nature and slow down in a digital world that
-                    never stops. Each seed I plant is a small act of creativity
-                    and mindfulness.
-                  </p>
-                  <span className="text-black hover:underline font-semibold">
-                    Explore My Garden →
-                  </span>
-                </CardContent>
-              </Card>
+      {/* Grid */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-[var(--border)]">
+          {[
+            {
+              title: "Gardening for Mindful Living",
+              desc: "Gardening has become my calm space, a reminder that growth takes time, care, and patience.",
+              img: "/garding/senior-couple-harvesting-tomatoes.webp",
+              link: "/creative-lab/gardening"
+            },
+            {
+              title: "Photography & Illustration",
+              desc: "Visual storytelling combining creativity with entrepreneurship on platforms like Adobe Stock.",
+              img: "/portrait-person-ai-robot.webp",
+              link: "/creative-lab/photography"
+            },
+            {
+              title: "Digital Product Design",
+              desc: "Exploring opportunities in creating digital products that combine technical skills with creative design.",
+              img: "/about-bg.webp",
+              link: "/creative-lab/digital-products"
+            }
+          ].map((item, i) => (
+            <Link key={i} href={item.link} className="group border-r border-b border-[var(--border)] bg-[var(--card)] hover:bg-[var(--muted)] transition-colors p-6 md:p-8 flex flex-col space-y-6">
+              <div className="aspect-[4/3] relative w-full overflow-hidden border border-[var(--border)] bg-[var(--muted)]">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <div className="space-y-3 flex-1">
+                <h3 className="text-xl font-medium text-[var(--foreground)] leading-tight">{item.title}</h3>
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{item.desc}</p>
+              </div>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--foreground)] hover:opacity-70 mt-auto">
+                Explore ↗
+              </p>
             </Link>
-
-            <Link href="/creative-lab/photography">
-              <Card
-                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
-                data-animate="fade-up"
-              >
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src="/portrait-person-ai-robot.webp"
-                    alt="Stock Photography"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-black">
-                    Visual Storytelling Through Photos
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    Stock photography and Illustration allows me to blend
-                    creativity with entrepreneurship building a portfolio across
-                    platforms like Adobe Stock, Shutterstock, and Dreamstime.
-                    Each photo I create or generate is a small step toward
-                    artistic expression.
-                  </p>
-                  <span className="text-black hover:underline font-semibold">
-                    View My Portfolio →
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/creative-lab/digital-products">
-              <Card
-                className="h-full hover:shadow-lg transition-all duration-500 cursor-pointer overflow-hidden group hover:-translate-y-1"
-                data-animate="fade-up"
-              >
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src="/about-bg.webp"
-                    alt="Digital Product Design"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-black">
-                    Digital Product Design
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    This is not yet started - still doing research. I'm
-                    exploring opportunities in creating digital products that
-                    combine my technical skills with creative design. Stay tuned
-                    for updates as I venture into this exciting space!
-                  </p>
-                  <span className="text-gray-600 font-semibold">
-                    Coming Soon →
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
+          ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }
