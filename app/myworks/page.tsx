@@ -7,7 +7,7 @@ const projects = [
     title: "Data Portfolio",
     desc: "Building robust pipelines, ETL workflows, and intelligent data systems that transform raw information into strategic assets.",
     tags: ["Data Engineering", "AI", "ETL", "Analytics"],
-    img: "/data-1.jpg",
+    img: "/data-1.webp",
     href: "/myworks/data-portfolio",
   },
   {

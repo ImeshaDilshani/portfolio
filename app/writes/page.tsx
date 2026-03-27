@@ -1,29 +1,10 @@
 import Link from "next/link";
+import { getPosts } from "@/sanity/lib/queries";
+import { format } from "date-fns";
 
-const articles = [
-  {
-    slug: "2024-annual-review",
-    date: "Jan 23, 2025",
-    title: "2024 Annual Review — The Year of Adventure",
-    category: "Personal Reflection",
-    excerpt:
-      "Challenges, growth, and lessons learned throughout an incredible year of exploration and self-discovery.",
-    tags: ["Reflection", "Growth"],
-    readTime: "8 min",
-  },
-  {
-    slug: "datacast-episode-133",
-    date: "Jan 14, 2024",
-    title: "Datacast Episode 133: Full Data Stack Observability with Gantry Raakesh",
-    category: "Podcast",
-    excerpt:
-      "James Raakesh, CEO of Gantry and former Director of ML at Uber, on observability in production machine learning systems.",
-    tags: ["ML", "MLOps", "Data"],
-    readTime: "12 min",
-  },
-];
+export default async function WritesPage() {
+  const posts = await getPosts();
 
-export default function WritesPage() {
   return (
     <main>
       {/* Header */}
@@ -46,44 +27,52 @@ export default function WritesPage() {
       {/* Articles list */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
         <div className="border border-[var(--border)]">
-          {articles.map((article, i) => (
-            <Link
-              key={article.slug}
-              href={`/writes/${article.slug}`}
-              className={`group grid grid-cols-1 md:grid-cols-[120px_1fr_80px] gap-4 md:gap-8 px-6 md:px-8 py-6 md:py-8 border-b border-[var(--border)] last:border-b-0 hover:bg-[var(--muted)] transition-colors ${i % 2 === 1 ? "bg-[var(--card)]" : ""}`}
-            >
-              {/* Date */}
-              <span className="text-xs text-[var(--muted-foreground)] pt-0.5 shrink-0">{article.date}</span>
-
-              {/* Content */}
-              <div className="space-y-2">
-                <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                  {article.category}
+          {posts.length > 0 ? (
+            posts.map((post: any, i: number) => (
+              <Link
+                key={post.slug?.current || post._id}
+                href={post.slug?.current ? `/writes/${post.slug.current}` : '#'}
+                className={`group grid grid-cols-1 md:grid-cols-[120px_1fr_80px] gap-4 md:gap-8 px-6 md:px-8 py-6 md:py-8 border-b border-[var(--border)] last:border-b-0 hover:bg-[var(--muted)] transition-colors ${i % 2 === 1 ? "bg-[var(--card)]" : ""}`}
+              >
+                {/* Date */}
+                <span className="text-xs text-[var(--muted-foreground)] pt-0.5 shrink-0">
+                  {post.publishedAt ? format(new Date(post.publishedAt), "MMM dd, yyyy") : "Draft"}
                 </span>
-                <h2 className="text-base md:text-lg font-medium text-[var(--foreground)] group-hover:underline underline-offset-4">
-                  {article.title}
-                </h2>
-                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed line-clamp-2">
-                  {article.excerpt}
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {article.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
-              {/* Read time */}
-              <span className="text-xs text-[var(--muted-foreground)] text-right hidden md:block pt-0.5">
-                {article.readTime}
-              </span>
-            </Link>
-          ))}
+                {/* Content */}
+                <div className="space-y-2">
+                  <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    {post.categories?.[0]?.title || "Article"}
+                  </span>
+                  <h2 className="text-base md:text-lg font-medium text-[var(--foreground)] group-hover:underline underline-offset-4">
+                    {post.title || "Untitled Post"}
+                  </h2>
+                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed line-clamp-2">
+                    {post.excerpt || (post.body?.[0]?.children?.[0]?.text ? post.body[0].children[0].text.substring(0, 160) + "..." : "No content available.")}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {(post.tags || []).map((tag: string) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Read time */}
+                <span className="text-xs text-[var(--muted-foreground)] text-right hidden md:block pt-0.5">
+                  {post.readTime || "5 min"}
+                </span>
+              </Link>
+            ))
+          ) : (
+            <div className="px-8 py-12 text-center text-[var(--muted-foreground)]">
+              No posts found. Add some in Sanity Studio!
+            </div>
+          )}
         </div>
 
         {/* Coming soon */}
