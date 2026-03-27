@@ -40,6 +40,27 @@ export const postType = defineType({
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      rows: 4,
+    }),
+    defineField({
+      name: 'readTime',
+      title: 'Read Time',
+      type: 'string',
+      description: 'E.g., "5 min"',
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Keywords (Tags)',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+    }),
+    defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',

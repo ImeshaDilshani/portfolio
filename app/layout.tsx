@@ -2,10 +2,7 @@ import type React from "react";
 import type { Metadata, Viewport } from "next";
 import { Lato, Adamina } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { Navigation } from "@/components/navigation";
 import { Suspense } from "react";
-import { Footer } from "@/components/footer";
-import "./globals.css";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -105,14 +102,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
       </head>
       <body className={`${lato.variable} ${adamina.variable} font-sans antialiased`}>
-        <Navigation />
-        <div className="min-h-screen">
-          <Suspense fallback={null}>{children}</Suspense>
-        </div>
-        <Footer />
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>
+        {children}
       </body>
     </html>
   );
