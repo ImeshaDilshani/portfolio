@@ -1,13 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Image from "next/image";
 
 const podcasts = [
   {
@@ -15,7 +6,7 @@ const podcasts = [
     host: "80,000 Hours",
     image: "/listen/8000.webp",
     description:
-      "The 80,000 Hours Podcast features unusually in-depth conversations about the world's most pressing problems and how you can use your career to solve them. We invite guests pursuing a wide range of career paths – from academics and activists to entrepreneurs – to share their wisdom, so that you can better understand the world and have a greater social impact.",
+      "The 80,000 Hours Podcast features unusually in-depth conversations about the world's most pressing problems and how you can use your career to solve them. We invite guests pursuing a wide range of career paths – from academics and activists to entrepreneurs – to share their wisdom.",
     link: "https://80000hours.org/podcast/",
   },
   {
@@ -31,122 +22,62 @@ const podcasts = [
     host: "Andrew Huberman",
     image: "/listen/androw.webp",
     description:
-      "The Huberman Lab Podcast is hosted by Dr. Andrew Huberman, a neuroscientist and professor at Stanford School of Medicine. The podcast discusses neuroscience and science-based tools for everyday life. Topics include how our brain and its connections with the organs of our body control our perceptions, behaviors, and health.",
+      "The Huberman Lab Podcast is hosted by Dr. Andrew Huberman, a neuroscientist and professor at Stanford School of Medicine. The podcast discusses neuroscience and science-based tools for everyday life, exploring how our brain controls our perceptions, behaviors, and health.",
     link: "https://www.youtube.com/@hubermanlab",
   },
 ];
 
 export default function LearningPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/listning.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              🎧 Podcasts & Audio
-            </span>
+      {/* Header */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Listening
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Voices that inspire and educate</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Podcasts allow you to hear diverse perspectives. Below is my personal listening list of podcasts that have shaped my thinking, acting as the successors of the radio shows that informed entire generations.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
-            Listening
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
-            Voices that inspire and educate
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Below is my personal listening list of podcasts that have shaped my
-            thinking. Modern day podcasts are the successors of{" "}
-            <span className="text-black font-medium">
-              radio shows
-            </span>{" "}
-            that informed and educated entire generations. Podcasts allow you to
-            hear diverse{" "}
-            <span className="text-black font-medium">
-              voices
-            </span>{" "}
-            and{" "}
-            <span className="text-black font-medium">
-              perspectives
-            </span>{" "}
-            that continue to inspire me.
-          </p>
         </div>
       </section>
 
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {podcasts.map((podcast, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden group hover:shadow-xl transition-all duration-500 hover:scale-105"
-                data-animate="fade-up"
-              >
-                <a
-                  href={podcast.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <div className="relative aspect-square overflow-hidden bg-gray-100">
-                    <img
-                      src={podcast.image}
-                      alt={podcast.title}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                      }}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-lg uppercase text-black">
-                      {podcast.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-sm leading-relaxed text-gray-600">
-                      {podcast.description}
-                    </CardDescription>
-                  </CardContent>
-                </a>
-              </Card>
-            ))}
-          </div>
+      {/* Grid */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-[var(--border)]">
+          {podcasts.map((podcast, index) => (
+            <a
+              key={index}
+              href={podcast.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border-r border-b border-[var(--border)] bg-[var(--card)] hover:bg-[var(--muted)] transition-colors p-6 md:p-8 flex flex-col space-y-6"
+            >
+              <div className="aspect-square relative w-full overflow-hidden border border-[var(--border)] bg-[var(--muted)]">
+                <Image
+                  src={podcast.image}
+                  alt={podcast.title}
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <div className="space-y-3 flex-1">
+                <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">{podcast.host}</p>
+                <h3 className="text-xl font-medium text-[var(--foreground)] leading-tight">{podcast.title}</h3>
+                <p className="text-sm text-[var(--muted-foreground)] line-clamp-4 leading-relaxed">{podcast.description}</p>
+              </div>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--foreground)] hover:opacity-70 mt-auto">
+                Listen Now ↗
+              </p>
+            </a>
+          ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

@@ -1,12 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Image from "next/image";
 
 const books = [
   {
@@ -42,106 +34,46 @@ const books = [
 ];
 
 export default function ReadsPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <main>
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gray-50">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/garding/idea-hero.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container max-w-5xl mx-auto text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              📚 Reading List
-            </span>
+      {/* Header */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Reads
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Books that shaped my thinking</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                I believe in continuous learning through reading. This collection features an eclectic set of books on personal development, productivity, psychology, and more.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-black font-[family-name:var(--font-adamina)]">
-            Reads
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-adamina)]">
-            Books that shaped my thinking
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            I believe in continuous learning through reading. This collection
-            features an eclectic set of books on{" "}
-            <span className="text-black font-medium">
-              personal development
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              productivity
-            </span>
-            ,{" "}
-            <span className="text-black font-medium">
-              psychology
-            </span>
-            , and more. This list is a constant work in progress.
-          </p>
         </div>
       </section>
 
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4"
-            data-animate="fade-up"
-          >
-            {books.map((book, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden group hover:shadow-lg transition-all duration-500 hover:scale-105 cursor-pointer"
-              >
-                <div className="aspect-[4/5] relative overflow-hidden">
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <CardHeader className="p-2 space-y-0">
-                  <CardTitle className="text-xs font-semibold line-clamp-1 leading-tight text-black">
-                    {book.title}
-                  </CardTitle>
-                  <CardDescription className="text-[10px] line-clamp-1 leading-tight">
-                    {book.author}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
+      {/* Grid */}
+      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 border-t border-l border-[var(--border)]">
+          {books.map((book, index) => (
+            <div key={index} className="group border-r border-b border-[var(--border)] bg-[var(--card)] hover:bg-[var(--muted)] transition-colors p-4 flex flex-col items-center text-center space-y-4">
+              <div className="aspect-[3/4] relative w-full overflow-hidden border border-[var(--border)] bg-[var(--muted)]">
+                <Image
+                  src={book.image}
+                  alt={book.title}
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-[var(--foreground)] line-clamp-2 leading-tight mb-1">{book.title}</h3>
+                <p className="text-xs text-[var(--muted-foreground)] line-clamp-1">{book.author}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

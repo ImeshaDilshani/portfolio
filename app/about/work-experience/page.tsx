@@ -1,393 +1,172 @@
-"use client";
-
-import { useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function WorkExperiencePage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-in");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll("[data-animate]");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <main>
-      {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-            style={{
-              backgroundImage: "url('/about/experince.webp')",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 container text-center space-y-4 px-4 animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-black rounded-full mb-6">
-            <span className="text-sm font-medium text-black">
-              💼 Professional Journey
-            </span>
+      {/* ── HEADER ──────────────────────────────────────── */}
+      <section className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-1">
+              Work Experience
+            </p>
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Professional Journey</h1>
+              <p className="text-[var(--muted-foreground)] leading-relaxed">
+                Exploring my professional path through various roles in software development, data analytics, and technology innovation.
+              </p>
+            </div>
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-black hover-text-glow transition-all duration-300 font-[family-name:var(--font-adamina)]">
-            Work Experience
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-[family-name:var(--font-adamina)]">
-            Professional journey and career milestones
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Exploring my professional path through various roles in{" "}
-            <span className="text-black font-medium">software development</span>,{" "}
-            <span className="text-black font-medium">data science</span>, and{" "}
-            <span className="text-black font-medium">technology innovation</span>.
-          </p>
         </div>
       </section>
 
-      {/* Content Section with Sidebar */}
-      <div className="py-16 md:py-24">
-        <div className="container px-4 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Left Sidebar Navigation */}
-            <aside className="lg:col-span-1" data-animate="fade-right">
-              <div className="sticky top-24 space-y-2">
-                <a href="/about" className="block">
-                  <h2 className="text-xl font-bold mb-6 text-black dark:text-white hover-text-glow">
-                    About
-                  </h2>
-                </a>
-                <nav className="space-y-1">
-                  <a
-                    href="/about/work-experience"
-                    className="block py-2 text-sm text-foreground font-medium hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
+      {/* ── SIDEBAR + CONTENT ───────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10 py-16 md:py-20">
+
+          {/* Sidebar Nav */}
+          <aside className="lg:self-start lg:sticky lg:top-20">
+            <nav className="space-y-0">
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">Sections</p>
+              {[
+                { label: "About", href: "/about" },
+                { label: "Work Experience", href: "/about/work-experience" },
+                { label: "My Research", href: "/about/ai-research" },
+                { label: "Presentations", href: "/about/presentations" },
+                { label: "MOOCs", href: "/about/moocs" },
+                { label: "Undergraduate Papers", href: "/about/undergraduate-papers" },
+              ].map((item) => {
+                const isActive = item.href === "/about/work-experience";
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block py-2 text-sm transition-colors border-b border-transparent ${
+                      isActive 
+                        ? "text-[var(--foreground)] font-medium" 
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[var(--border)]"
+                    }`}
                   >
-                    WORK EXPERIENCE
-                  </a>
-                  <a
-                    href="/about/ai-research"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    MY RESEARCH
-                  </a>
-                  <a
-                    href="/about/presentations"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    PRESENTATIONS
-                  </a>
-                  <a
-                    href="/about/data-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    DATA PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/coding-portfolio"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    CODING PORTFOLIO
-                  </a>
-                  <a
-                    href="/about/moocs"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    MOOCS
-                  </a>
-                  <a
-                    href="/about/undergraduate-papers"
-                    className="block py-2 text-sm text-muted-foreground hover:text-black dark:hover:text-white transition-all duration-300 uppercase tracking-wide hover:translate-x-2 hover-lift"
-                  >
-                    UNDERGRADUATE PAPERS
-                  </a>
-                </nav>
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </aside>
+
+          {/* Main Content */}
+          <div className="space-y-20">
+
+            {/* Sterling BPO */}
+            <section className="space-y-6">
+              <div className="border-b border-[var(--border)] pb-4 space-y-1">
+                <h2 className="text-2xl text-[var(--foreground)]"><a href="http://www.sterlingbpo.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Sterling BPO Solutions (Pvt.) Ltd ↗</a></h2>
+                <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Associate Software Engineer · 2025 – Present</p>
               </div>
-            </aside>
-
-            {/* Right Content Area */}
-            <div className="lg:col-span-3 space-y-12">
-
-              <section data-animate="fade-up">
-                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
-                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                  Sterling BPO Solutions (Pvt.) Ltd
-                  </h2>
-                  <p className="text-lg text-muted-foreground mt-2">
-                  Associate Software Engineer | 2025 – Present
-                  </p>
-                </div>
-
-                <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
-                  <p>
-                  <a href="http://www.sterlingbpo.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-black dark:text-black hover:underline font-medium"> Sterling BPO Solutions (Pvt) Ltd</a>
-                  , established in 2011 in Sri Lanka, 
-                  is a respected IT-BPM service provider delivering desktop, web, 
-                  and cloud applications, enterprise solutions, and innovative 
-                  AI & AR app development to international clients across Australia and the UAE. 
-                  Integrity, client focus, and engineering excellence drive their work. </p> 
-                  
-
-                  <p>
-                  In my role as an Associate Software Engineer 
-                  I develop and implement scalable software and mobile solutions, 
-                  collaborate with cross-functional teams.
-                  </p>
-
-                  <div className="mt-6">
-                  <h3 className="text-2xl font-semibold mb-4">
-                    Key contributions during my role:
-                  </h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>Delivered production-ready mobile web and backend services using modern frameworks and best practices.</li>
+              <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
+                <p>
+                  Established in 2011 in Sri Lanka, Sterling BPO is a respected IT-BPM service provider delivering desktop, web, and cloud applications, enterprise solutions, and innovative AI & AR app development to international clients across Australia and the UAE.
+                </p>
+                <p>
+                  In my role as an Associate Software Engineer, I develop and implement scalable software and mobile solutions, collaborating with cross-functional teams.
+                </p>
+                <div className="pt-2">
+                  <p className="text-[var(--foreground)] font-medium mb-2">Key contributions:</p>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>Delivered production-ready mobile web and backend services using modern frameworks.</li>
                     <li>Implemented RESTful APIs and integrated external services to streamline client workflows.</li>
-                    <li>Improved performance, test coverage, and documentation while participating in code reviews and mentoring peers.</li>
+                    <li>Improved performance, test coverage, and documentation.</li>
                   </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Wirity Labs */}
+            <section className="space-y-6">
+              <div className="border-b border-[var(--border)] pb-4 space-y-1">
+                <h2 className="text-2xl text-[var(--foreground)]"><a href="https://wirity.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Wirity Labs ↗</a></h2>
+                <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Associate Software & Data Engineer · 2025 – Present (Part Time)</p>
+              </div>
+              <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
+                <p>
+                  Wirity Labs is a dedicated technology partner focused on designing, developing, and deploying software solutions that translate business challenges into powerful, scalable, and intelligent applications.
+                </p>
+                <p>
+                  During my time here, I worked on software and mobile development, API integration, and data engineering, contributing to the delivery of high-performance scalable applications that support data-driven decision-making.
+                </p>
+              </div>
+            </section>
+
+            {/* Atlas Axillia */}
+            <section className="space-y-6">
+              <div className="border-b border-[var(--border)] pb-4 space-y-1">
+                <h2 className="text-2xl text-[var(--foreground)]"><a href="https://www.atlas.lk" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Atlas Axillia Co. (Pvt) Ltd ↗</a></h2>
+                <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Internship – Production Data Analyst · 2024 – 2025</p>
+              </div>
+              <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
+                <p>
+                  Atlas Axillia, a leading stationery brand under Hemas Holdings PLC, is known for its high-quality learning tools and has been shaping the learning ecosystem in Sri Lanka for over 60 years.
+                </p>
+                <p>
+                  I worked in production data management, gaining hands-on experience in collecting, analyzing, and reporting production data. I contributed to improving data accuracy and efficiency, supporting decision-making in production processes.
+                </p>
+                <div className="pt-2">
+                  <p className="text-[var(--foreground)] font-medium mb-2">Key contributions:</p>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>Developed Production Data Updater software using Node.js and Express.js, improving reporting accuracy.</li>
+                    <li>Conducted API testing with Postman and integrated database functionality with Excel export.</li>
+                    <li>Created interactive Power BI reports for department heads to support data-driven decisions.</li>
+                    <li>Integrated 30-day production data loss into SAP to support OEE processes.</li>
+                    <li>Built Loss Tree analysis using SAP BEx Analyzer to identify and prioritize inefficiencies.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Photos */}
+              <div className="grid grid-cols-2 gap-4 pt-6">
+                {["/about/Atlas1.webp", "/about/Atlas2.webp", "/about/atlas (2).webp", "/about/atlas.webp"].map((src, i) => (
+                  <div key={i} className="relative aspect-video bg-[var(--muted)] border border-[var(--border)] overflow-hidden group">
+                    <Image src={src} fill alt={`Atlas Memory ${i+1}`} className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                   </div>
-                </div>
-              </section>
+                ))}
+              </div>
+            </section>
 
-                <section data-animate="fade-up">
-                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
-                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                  <a
-                    href="https://wirity.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-black hover:underline font-medium"
-                  > Wirity Labs </a>
-                  </h2>
-                  <p className="text-lg text-muted-foreground mt-2">
-                  Associate Software & Data Engineer | 2025 – Present (Part Time)
-                  </p>
-                </div>
-
-                <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
+            {/* Freelance Work */}
+            <section className="space-y-6">
+              <div className="border-b border-[var(--border)] pb-4 space-y-1">
+                <h2 className="text-2xl text-[var(--foreground)]">Freelance Developer & Designer</h2>
+                <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">2019 – Present</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_160px] gap-8">
+                <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
                   <p>
-                  <a 
-                    href="https://wirity.com" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-black hover:underline font-medium"
-                  > Wirity Labs </a> is a dedicated technology partner focused on designing, 
-                  developing, and deploying software solutions that translate business 
-                  challenges into powerful, scalable, and intelligent applications. 
-                  Their offerings span custom software development, AI & ML, mobile 
-                  app development, and Microsoft Power Apps to help organizations 
-                  modernize workflows and drive measurable results.
-                  </p>
-                  <p>
-                  During my time at <a 
-                    href="https://wirity.com" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-black hover:underline font-medium"
-                  > Wirity Labs </a> I worke on <b>software and mobile development, api integration 
-                  and data engineering </b> contributing to the delivery of high-performance, 
-                  scalable applications that support data-driven decision-making.
-                  </p>
-                </div>
-                </section>
-
-            
-              <section data-animate="fade-up">
-                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-700 dark:hover:border-gray-300 transition-colors duration-300">
-                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                    <a href="https://www.atlas.lk" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-black hover:underline font-medium" >Atlas Axillia Co. (Pvt) Ltd </a>
-                  </h2>
-                  <p className="text-lg text-muted-foreground mt-2">
-                    Internship – Production Data Analyst | 2024 – 2025
-                  </p>
-                </div>
-
-                <div className="space-y-4 text-lg leading-relaxed hover-lift transition-all duration-300">
-                  <p>
-                    <a href="https://www.atlas.lk" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-black hover:underline font-medium" >Atlas Axillia Co. (Pvt) Ltd </a>
-                    , a leading stationery brand under Hemas
-                    Holdings PLC, is one of Sri Lanka's most respected
-                    companies. Known for its high-quality learning tools and
-                    innovative products, Atlas has been shaping the learning
-                    ecosystem in Sri Lanka for over 60 years.
+                    I have worked as a freelance designer, creating visual content, graphics, and designs for clients across different industries.
                   </p>
                   <p>
-                    During these couple of months, I worked in production data
-                    management, gaining hands-on experience in collecting,
-                    analyzing, and reporting production data. I contributed to
-                    improving data accuracy and efficiency, supporting
-                    decision-making in production processes. This experience
-                    allowed me to apply my academic knowledge in a professional
-                    setting and strengthened my skills in data analysis,
-                    problem-solving, and technical reporting.
-                  </p>
-
-                  <div className="mt-6">
-                    <h3 className="text-2xl font-semibold mb-4">
-                      Key contributions during my internship:
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        Developed Production Data Updater software using Node.js
-                        and Express.js, improving reporting accuracy.
-                      </li>
-                      <li>
-                        Conducted API testing with Postman and integrated
-                        database functionality with Excel export.
-                      </li>
-                      <li>
-                        Created interactive Power BI reports for department
-                        heads to support data-driven decisions.
-                      </li>
-                      <li>
-                        Integrated 30-day production data loss into SAP to
-                        support OEE (Overall Equipment Effectiveness) processes.
-                      </li>
-                      <li>
-                        Built Loss Tree analysis using SAP BEx Analyzer to
-                        identify and prioritize inefficiencies.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Memories Grid */}
-                <div className="mt-10">
-                  <h3 className="text-2xl font-semibold mb-6 hover-underline-effect">
-                    Memories from Atlas Axillia
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="relative h-64 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/Atlas1.webp"
-                        alt="Atlas Axillia Team"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    <div className="relative h-64 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/Atlas2.webp"
-                        alt="Working on production data"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    <div className="relative h-64 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/atlas (2).webp"
-                        alt="Power BI Dashboard"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    <div className="relative h-64 rounded-lg overflow-hidden group">
-                      <img
-                        src="/about/atlas.webp"
-                        alt="Data Analysis Work"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section data-animate="fade-up">
-                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-800 dark:hover:border-gray-300 transition-colors duration-300">
-                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                    Freelance Work
-                  </h2>
-                  <p className="text-lg text-muted-foreground mt-2">
-                    2019 - Present
+                    Currently, I work as a freelance developer on <a href="https://www.freelancer.com/u/imeshadilshani03" target="_blank" rel="noopener noreferrer" className="text-[var(--foreground)] underline underline-offset-2 hover:opacity-70">Freelancer.com</a>, building web and software solutions for clients. I focus on developing data-driven applications, interactive dashboards, and AI-based tools.
                   </p>
                 </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                  {/* Text Content - Left Side (2 columns) */}
-                  <div className="lg:col-span-2 text-lg leading-relaxed space-y-4 hover-lift transition-all duration-300">
-                    <p>
-                      In the past lives, I worked as a freelance designer,
-                      creating visual content, graphics, and designs for clients
-                      across different industries. This experience helped me
-                      develop creativity, client communication skills, and the
-                      ability to deliver projects under deadlines.
-                    </p>
-                    <p>
-                      Currently, I work as a freelance developer on{" "}
-                      <a
-                        href="https://www.freelancer.com/u/imeshadilshani03"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-black dark:text-white hover:underline font-medium hover-highlight"
-                      >
-                        Freelancer.com
-                      </a>
-                      , building web and software solutions for clients. I focus
-                      on developing data-driven applications, interactive
-                      dashboards, and AI-based tools. Freelancing has
-                      strengthened my problem-solving skills, project management
-                      abilities, and adaptability, while allowing me to work
-                      with diverse clients and real-world projects.
-                    </p>
-                  </div>
-
-                  {/* Logo - Right Side (1 column) */}
-                  <div className="lg:col-span-1 flex justify-center lg:justify-end">
-                    <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center border-2 border-border hover:border-gray-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/10">
-                      <img
-                        src="/about/freelancer.webp"
-                        alt="Freelancer.com Logo"
-                        className="max-w-full max-h-full object-contain p-4 hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                  </div>
+                <div className="bg-[var(--card)] border border-[var(--border)] flex items-center justify-center p-6 group">
+                  <Image src="/about/freelancer.webp" width={100} height={100} alt="Freelancer" className="object-contain grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
-              </section>
+              </div>
+            </section>
 
-              <section data-animate="fade-up">
-                <div className="border-l-4 border-black dark:border-gray-400 pl-4 mb-6 hover:border-gray-800 dark:hover:border-gray-300 transition-colors duration-300">
-                  <h2 className="text-3xl font-bold hover-text-glow transition-all duration-300">
-                    Mathematics Education Support
-                  </h2>
-                  <p className="text-lg text-muted-foreground mt-2">
-                    Online & In-Person | 2025 – Present
-                  </p>
-                </div>
+            {/* Math Education Support */}
+            <section className="space-y-6">
+              <div className="border-b border-[var(--border)] pb-4 space-y-1">
+                <h2 className="text-2xl text-[var(--foreground)]">Mathematics Education Support</h2>
+                <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Online & In-Person · 2025 – Present</p>
+              </div>
+              <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
+                <p>
+                  I run Mathematics tuition classes for students from grade 6 to 11, helping them grasp complex concepts through practical examples and creative problem-solving techniques.
+                </p>
+              </div>
+            </section>
 
-                <div className="text-lg leading-relaxed hover-lift transition-all duration-300">
-                  <p>
-                    I run Mathematics tuition classes for students from grade 6
-                    to 11, helping them grasp complex concepts through practical
-                    examples and creative problem-solving techniques. This
-                    experience has strengthened my communication skills,
-                    patience, and ability to simplify challenging topics, making
-                    learning engaging and enjoyable for my students.
-                  </p>
-                </div>
-              </section>
-            </div>
           </div>
         </div>
       </div>

@@ -38,13 +38,7 @@ export function AnimatedText({
   };
 
   return (
-    <Component
-      className={cn(variantClasses[variant], className)}
-      style={{
-        animationDelay: `${delay}ms`,
-        opacity: delay > 0 ? 0 : undefined,
-      }}
-    >
+    <Component className={cn(className)}>
       {children}
     </Component>
   );
