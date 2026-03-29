@@ -3,6 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  output: 'export',
   images: {
     // For static export, images must be unoptimized
     // Consider using a CDN like Cloudinary or imgix for optimization
