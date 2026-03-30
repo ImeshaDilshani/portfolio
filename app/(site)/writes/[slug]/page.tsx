@@ -9,7 +9,25 @@ import { urlFor } from "@/sanity/lib/client";
 import { format } from "date-fns";
 import Image from "next/image";
 
-// Components for rendering images within Portable Text
+export async function generateStaticParams() {
+  try {
+    const posts = await getPosts();
+    if (!posts || !Array.isArray(posts)) return [];
+    
+    return posts
+      .filter((post: any) => post?.slug?.current)
+      .map((post: any) => ({
+        slug: post.slug.current,
+      }));
+  } catch (error) {
+    console.error("Error generating static params for blog posts:", error);
+    return [];
+  }
+}
+
+export const dynamicParams = false;
+export const dynamic = 'force-static';
+
 const PortableTextComponents = {
   types: {
     image: ({ value }: any) => {
@@ -39,12 +57,7 @@ const PortableTextComponents = {
   },
 };
 
-export async function generateStaticParams() {
-  const posts = await getPosts();
-  return posts.map((post: any) => ({
-    slug: post.slug?.current,
-  }));
-}
+// Components for rendering images within Portable Text
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
