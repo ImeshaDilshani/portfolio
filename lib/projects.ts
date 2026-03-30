@@ -27,7 +27,7 @@ export const dataProjects: ProjectMeta[] = [
     title: "Customer-Segmentation (Instacart)",
     description:
       "A clustering-driven solution to identify customer segments for targeted marketing.",
-    image: "/j-1.webp",
+    image: "",
     tags: ["Python", "Clustering",],
     links: [
       { label: "Notebook", href: "https://github.com/ImeshaDilshani/Data-Storm-5.0-Customer-Segmentation-Team-RiverBorn/blob/main/Semi%20Final%20Solution%20-%20Team%20%20RiverBorn.ipynb" },
@@ -40,7 +40,7 @@ export const dataProjects: ProjectMeta[] = [
     title: "Customer Churn Prediction",
     description:
       "This project focuses on analyzing and predicting customer churn in a telecommunications company. This project focuses on analyzing and predicting customer churn in a telecommunications company.  ",
-    image: "/j-1.webp",
+    image: "",
     tags: ["Python", "Clustering", "EDA",],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction" },
@@ -52,7 +52,7 @@ export const dataProjects: ProjectMeta[] = [
     title: "Content Base Movie Recommender System",
     description:
       "The project leverages metadata from movies to suggest similar movies based on their content. ",
-    image: "/j-1.webp",
+    image: "",
     tags: ["Python"],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System" },
@@ -75,7 +75,7 @@ export const dataProjects: ProjectMeta[] = [
     id: "flower-recognition",
     title: "Flower Recognition",
     description: "This project implements a Convolutional Neural Network (CNN) using TensorFlow and Keras to classify images of flowers into five distinct categories: daisy, dandelion, rose, sunflower, and tulip.",
-    image: "/j-2.webp",
+    image: "",
     tags: ["CNN","TensorFlow","Keras"],
     links: [
       { label: "Notebook", href: "https://github.com/ImeshaDilshani/flower-recognition/blob/main/flower-recognition-system.ipynb" },
@@ -87,7 +87,7 @@ export const dataProjects: ProjectMeta[] = [
     id: "Toy Sale Visualization with Microsoft Power BI",
     title: "Toy Sale Visualization with Microsoft Power BI",
     description: "The project includes data cleaning, transformation, and visualization to provide insights into toy sales trends.",
-    image: "/j-2.webp",
+    image: "",
     tags: ["Power BI", "Data Visualization"],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/PowerBI-Toy-Sales-Visualization" },
@@ -98,7 +98,7 @@ export const dataProjects: ProjectMeta[] = [
     id: "",
     title: "Spam Message Text Classification using Streamlit",
     description: "This application performs spam message text classification using a machine learning model. Users can input a text message, and the application predicts whether the message is spam or not.",
-    image: "/j-2.webp",
+    image: "",
     tags: ["Python", "Machine Learning", "Text Classification"],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/spam-message-text-classification" },
@@ -140,7 +140,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "WOODWORK LK",
     description:
       "Statc web site for furniture ",
-    image: "/c-2.webp",
+    image: "",
     tags: ["Flutter", "Mobile"],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/woodwork-lk" },
@@ -153,7 +153,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "Flutter Emojies",
     description:
       "Flutter app for emojies ",
-    image: "/c-2.webp",
+    image: "",
     tags: ["Flutter", "Mobile"],
     links: [
       { label: "GitHub", href: "https://github.com/ImeshaDilshani/flutter_emojies" },
@@ -165,7 +165,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "Everytuesdays Blogging",
     description:
       "Blogging Platform built with react for seamless content creation and sharing.",
-    image: "/c-2.webp",
+    image: "",
     tags: ["React", "JavaScript"],
     links: [
       { label: "Live Site", href: "https://everytuesdays.com/" },
@@ -177,7 +177,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "Portfolio Website for Imesha Dilshani",
     description:
       "A responsive portfolio website built with React and TypeScript.",
-    image: "/c-2.webp",
+    image: "",
     tags: ["React", "TypeScript"],
     links: [
       { label: "Live Site", href: "https://imesha.dev/" },
@@ -190,7 +190,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "ClassLinka",
     description:
       "ClassLinka connects the island’s elite educators with students who want to excel. ",
-    image: "/c-2.webp",
+    image: "",
     tags: ["Mobile", "React Native", "Laravel"],
     links: [
       { label: "Live Site", href: "https://classlinka.pages.dev/" }
@@ -202,7 +202,7 @@ export const codeProjects: ProjectMeta[] = [
     title: "University Course Management System",
     description:
       "A web-based application for managing university courses, schedules, and student enrollments.",
-    image: "/c-2.webp",
+    image: "",
     tags: ["Web", "Full Stack", "JavaScript"],
     links: [
       { label: "GitHub Frontend", href: "https://github.com/ImeshaDilshani/ucms-frontend" },
