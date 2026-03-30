@@ -63,11 +63,15 @@ export default function DataPortfolioPage() {
           {/* Main Content Area */}
           <div className="space-y-10">
             {/* Filter */}
-            <div className="border border-[var(--border)] p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-2 border-b border-[var(--border)]">
+              <div className="flex flex-wrap gap-x-8 gap-y-4">
                 <button
                   onClick={() => setSelectedTag(null)}
-                  className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] uppercase border border-[var(--border)] transition-colors ${selectedTag === null ? "bg-[var(--foreground)] text-[var(--background)]" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"}`}
+                  className={`text-[10px] font-bold tracking-[0.3em] uppercase transition-all relative py-1 ${
+                    selectedTag === null 
+                      ? "text-[var(--foreground)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[var(--foreground)]" 
+                      : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                  }`}
                 >
                   ALL
                 </button>
@@ -75,47 +79,97 @@ export default function DataPortfolioPage() {
                   <button
                     key={tag}
                     onClick={() => setSelectedTag(tag)}
-                    className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] uppercase border border-[var(--border)] transition-colors ${selectedTag === tag ? "bg-[var(--foreground)] text-[var(--background)]" : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"}`}
+                    className={`text-[10px] font-bold tracking-[0.3em] uppercase transition-all relative py-1 ${
+                      selectedTag === tag 
+                        ? "text-[var(--foreground)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[var(--foreground)]" 
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                    }`}
                   >
                     {tag}
                   </button>
                 ))}
               </div>
-              <p className="text-[10px] font-bold tracking-[0.2em] text-[var(--muted-foreground)] uppercase">
-                {filtered.length} PROJECT{filtered.length !== 1 ? "S" : ""}
+              <p className="text-[9px] font-medium tracking-[0.2em] text-[var(--muted-foreground)] uppercase">
+                {filtered.length} / {dataProjects.length} PROJECTS
               </p>
             </div>
 
-            {/* List */}
-            <div className="space-y-0 border border-[var(--border)]">
-              {filtered.map((project, i) => (
-                <div key={project.id} className="grid grid-cols-1 md:grid-cols-[200px_1fr] border-b border-[var(--border)] last:border-0 group bg-[var(--card)] hover:bg-[var(--muted)] transition-colors">
-                  <div className="relative h-48 md:h-full w-full border-b md:border-b-0 md:border-r border-[var(--border)] bg-[var(--muted)] overflow-hidden">
+            {/* Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              {filtered.map((project, idx) => (
+                <div 
+                  key={project.id} 
+                  className="group relative flex flex-col space-y-4 border border-[var(--border)] p-4 bg-[var(--card)] hover:border-[var(--foreground)] transition-all duration-500"
+                >
+                  {/* Image Container */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[var(--muted)] border border-[var(--border)] group-hover:border-[var(--foreground)] transition-colors duration-500">
                     {project.image ? (
-                      <Image src={project.image} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <Image 
+                        src={project.image} 
+                        alt={project.title} 
+                        fill 
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
+                      />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-[10px] uppercase tracking-widest text-[var(--muted-foreground)]">No Image</div>
+                      <div className="w-full h-full flex items-center justify-center text-[10px] uppercase tracking-widest text-[var(--muted-foreground)]">
+                        No Preview Available
+                      </div>
                     )}
-                  </div>
-                  <div className="p-6 md:p-10 flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--muted-foreground)]">Data Project • {project.tags?.[0]}</p>
-                      <h2 className="text-2xl md:text-3xl font-medium text-[var(--foreground)] leading-tight">{project.title}</h2>
-                      <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-2xl">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {project.tags?.map(tag => (
-                          <span key={tag} className="text-[10px] tracking-widest text-[var(--muted-foreground)] uppercase border border-[var(--border)] px-1.5 py-0.5">{tag}</span>
+                    
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-4 p-6 text-center">
+                      <p className="text-white text-[10px] font-bold tracking-[0.3em] uppercase mb-2">View Analysis</p>
+                      <div className="flex flex-wrap justify-center gap-3">
+                        {project.links?.map(l => (
+                          <a 
+                            key={l.href} 
+                            href={l.href} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="bg-white text-black text-[9px] font-bold tracking-widest uppercase px-5 py-2 hover:bg-black hover:text-white border border-white transition-all duration-300"
+                          >
+                            {l.label}
+                          </a>
                         ))}
                       </div>
                     </div>
-                    <div className="mt-12 pt-6 border-t border-[var(--border)] flex gap-6">
-                      {project.links?.map(l => (
-                        <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--foreground)] hover:opacity-70 flex items-center gap-1 w-fit">
-                          {l.label.toUpperCase()} ↗
-                        </a>
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-3 pt-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[var(--muted-foreground)]">
+                        {project.tags?.[0] || 'Data Project'}
+                      </p>
+                      {project.year && (
+                        <p className="text-[10px] font-bold tracking-[0.2em] text-[var(--muted-foreground)] opacity-50">
+                          {project.year}
+                        </p>
+                      )}
+                    </div>
+                    
+                    <h2 className="text-xl font-medium text-[var(--foreground)] group-hover:underline underline-offset-4 decoration-1">
+                      {project.title}
+                    </h2>
+                    
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {project.tags?.slice(1).map(tag => (
+                        <span 
+                          key={tag} 
+                          className="text-[9px] tracking-widest text-[var(--muted-foreground)] uppercase border border-[var(--border)] px-2 py-0.5"
+                        >
+                          {tag}
+                        </span>
                       ))}
                     </div>
                   </div>
+
+                  {/* Bottom Border Accent */}
+                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--border)] group-hover:bg-[var(--foreground)] transition-colors duration-500" />
                 </div>
               ))}
             </div>
