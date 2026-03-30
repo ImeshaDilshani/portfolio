@@ -36,6 +36,30 @@ export const dataProjects: ProjectMeta[] = [
     year: 2022,
   },
   {
+    id: "customer-churn-prediction",
+    title: "Customer Churn Prediction",
+    description:
+      "This project focuses on analyzing and predicting customer churn in a telecommunications company. This project focuses on analyzing and predicting customer churn in a telecommunications company.  ",
+    image: "/j-1.webp",
+    tags: ["Python", "Clustering", "EDA", "Notebook"],
+    links: [
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/Customer-Churn-Analysis-Churn-Prediction" },
+    ],
+    year: 2022,
+  },
+  {
+    id: "content-base-movie-recommender-system",
+    title: "Content Base Movie Recommender System",
+    description:
+      "The project leverages metadata from movies to suggest similar movies based on their content. ",
+    image: "/j-1.webp",
+    tags: ["Python", "NLTK", "scikit-learn", "NumPy"],
+    links: [
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/CineMatch-Intelligent-Movie-Recommender-System" },
+    ],
+    year: 2022,
+  },
+  {
     id: "sign-language-yolo",
     title: "Sign Language Detection (YOLO-v5)",
     description: "Computer vision pipeline to detect sign language gestures with YOLO-v5.",
@@ -47,6 +71,43 @@ export const dataProjects: ProjectMeta[] = [
     ],
     year: 2024,
   },
+  {
+    id: "flower-recognition",
+    title: "Flower Recognition",
+    description: "This project implements a Convolutional Neural Network (CNN) using TensorFlow and Keras to classify images of flowers into five distinct categories: daisy, dandelion, rose, sunflower, and tulip.",
+    image: "/j-2.webp",
+    tags: ["CNN", "Data Augmentation","TensorFlow","Keras","Notebook"],
+    links: [
+      { label: "Notebook", href: "https://github.com/ImeshaDilshani/flower-recognition/blob/main/flower-recognition-system.ipynb" },
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/flower-recognition" },
+    ],
+    year: 2023,
+  },
+  {
+    id: "Toy Sale Visualization with Microsoft Power BI",
+    title: "Toy Sale Visualization with Microsoft Power BI",
+    description: "The project includes data cleaning, transformation, and visualization to provide insights into toy sales trends.",
+    image: "/j-2.webp",
+    tags: ["Power BI", "Data Visualization"],
+    links: [
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/PowerBI-Toy-Sales-Visualization" },
+    ],
+    year: 2023,
+  },
+  {
+    id: "",
+    title: "Spam Message Text Classification using Streamlit",
+    description: "This application performs spam message text classification using a machine learning model. Users can input a text message, and the application predicts whether the message is spam or not.",
+    image: "/j-2.webp",
+    tags: ["Python", "Streamlit", "Machine Learning", "Text Classification"],
+    links: [
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/spam-message-text-classification" },
+    ],
+    year: 2023,
+  },
+  
+  
+  
 ];
 
 export const codeProjects: ProjectMeta[] = [
@@ -83,6 +144,18 @@ export const codeProjects: ProjectMeta[] = [
     tags: ["Flutter", "Mobile", "ML"],
     links: [
       { label: "GitHub", href: "https://github.com/FishSnap-2023/Fishsnap-mobile-app" },
+    ],
+    year: 2023,
+  },
+  {
+    id: "flutter-emojies",
+    title: "Flutter Emojies",
+    description:
+      "Flutter app for emojies ",
+    image: "/c-2.webp",
+    tags: ["Flutter", "Mobile"],
+    links: [
+      { label: "GitHub", href: "https://github.com/ImeshaDilshani/flutter_emojies" },
     ],
     year: 2023,
   },
