@@ -12,7 +12,7 @@ export async function getPosts() {
     "categories": categories[]->{"title": title},
     "author": author->{name, image},
     body
-  }`)
+  }`, {}, { next: { revalidate: 60 } })
 }
 
 export async function getPost(slug: string) {
@@ -28,5 +28,5 @@ export async function getPost(slug: string) {
     "categories": categories[]->{"title": title},
     "author": author->{name, image},
     body
-  }`, { slug })
+  }`, { slug }, { next: { revalidate: 60 } })
 }
