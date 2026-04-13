@@ -7,7 +7,7 @@ const nextConfig = {
     // For static export, images must be unoptimized
     // Consider using a CDN like Cloudinary or imgix for optimization
     unoptimized: true,
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -16,6 +16,6 @@ const nextConfig = {
   compress: true,
   // Optimize production build
   poweredByHeader: false,
-}
+};
 
-export default nextConfig
+export default nextConfig;
