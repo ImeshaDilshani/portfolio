@@ -2,6 +2,9 @@ import Link from "next/link";
 import { getPosts } from "@/sanity/lib/queries";
 import { format } from "date-fns";
 
+export const runtime = 'edge';
+export const revalidate = 60; // revalidate every 60 seconds
+
 export default async function WritesPage() {
   const posts = await getPosts();
 
