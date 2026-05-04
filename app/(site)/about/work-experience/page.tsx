@@ -61,7 +61,7 @@ export default function WorkExperiencePage() {
             {/* Sterling BPO */}
             <section className="space-y-6">
               <div className="border-b border-[var(--border)] pb-4 space-y-1">
-                <h2 className="text-2xl text-[var(--foreground)]"><a href="http://www.sterlingbpo.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Sterling BPO Solutions (Pvt.) Ltd ↗</a></h2>
+                <h2 className="text-2xl text-[var(--foreground)]"><a href="https://sterlingbpo.com.au/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Sterling BPO Solutions (Pvt.) Ltd ↗</a></h2>
                 <p className="text-sm font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Associate Software Engineer · 2025 – Present</p>
               </div>
               <div className="space-y-4 text-[var(--muted-foreground)] leading-relaxed">
