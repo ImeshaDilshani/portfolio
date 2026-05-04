@@ -73,17 +73,9 @@ export default async function WritesPage() {
             ))
           ) : (
             <div className="px-8 py-12 text-center text-[var(--muted-foreground)]">
-              No posts found. Add some in Sanity Studio!
+              More articles are on the way. Subscribe via the footer to get notified.
             </div>
           )}
-        </div>
-
-        {/* Coming soon */}
-        <div className="mt-16 border border-dashed border-[var(--border)] px-8 py-12 text-center space-y-3">
-          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Coming Soon</p>
-          <p className="text-[var(--muted-foreground)] text-sm max-w-md mx-auto">
-            More articles are on the way. Subscribe via the footer to get notified.
-          </p>
         </div>
       </section>
     </main>
