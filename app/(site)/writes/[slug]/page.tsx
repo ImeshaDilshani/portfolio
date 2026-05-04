@@ -9,24 +9,9 @@ import { urlFor } from "@/sanity/lib/client";
 import { format } from "date-fns";
 import Image from "next/image";
 
-export async function generateStaticParams() {
-  try {
-    const posts = await getPosts();
-    if (!posts || !Array.isArray(posts)) return [];
-    
-    return posts
-      .filter((post: any) => post?.slug?.current)
-      .map((post: any) => ({
-        slug: post.slug.current,
-      }));
-  } catch (error) {
-    console.error("Error generating static params for blog posts:", error);
-    return [];
-  }
-}
+export const runtime = 'edge';
+export const revalidate = 60;
 
-export const dynamicParams = false;
-export const dynamic = 'force-static';
 
 const PortableTextComponents = {
   types: {
