@@ -25,6 +25,7 @@ export async function generateStaticParams() {
   }
 }
 
+export const runtime = 'edge';
 export const dynamicParams = false;
 export const dynamic = 'force-static';
 
