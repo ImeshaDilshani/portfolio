@@ -2,32 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const projects = [
-  {
-    label: "TECH",
-    title: "Tech Stack & Tools",
-    desc: "Every project starts with the right tools. Here's a look at the languages, frameworks, and platforms I use to build things that actually work.",
-    tags: ["Full Stack Engineering", "Data Engineering", "Data Science", "Mobile Dev", "AI"],
-    img: "/PL1.webp",
-    href: "/myworks/techstack/",
-  },
-  {
-    label: "COMMUNITY",
-    title: "Community Work & Collaboration",
-    desc: "Learning means nothing if it stays with you. I share what I know, support who I can, and stay active in spaces where tech people grow together.",
-    tags: ["Community", "Mentoring", "Tech"],
-    img: "/CW1.webp",
-    href: "/myworks/community",
-  },
-  {
-    label: "JOURNALISM",
-    title: "Journalism & Blog",
-    desc: "Writing is how I think out loud. I cover data science, machine learning, and life lessons — keeping it simple, honest, and worth your time.",
-    tags: ["Writing", "Blogging", "AI"],
-    img: "/J1.webp",
-    href: "/writes/",
-  },
-];
+
 
 export default function HomePage() {
   return (
@@ -39,12 +14,18 @@ export default function HomePage() {
             {/* Left */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                  Software &amp; Data Engineer · Sri Lanka
-                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                  <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    Software & Data Engineer · Sri Lanka
+                  </p>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 border border-[var(--border)] bg-[var(--background)] text-[10px] font-bold tracking-widest uppercase text-[var(--foreground)]">
+                    <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Available for Freelance Projects
+                  </div>
+                </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-[var(--foreground)] font-light tracking-tight">
-                  Building intelligent software and data systems that solve real-world problems.
+                  I'm helping business owners to scale revenue through software and data solutions.
                 </h1>
               </div>
 
@@ -62,16 +43,15 @@ export default function HomePage() {
                  </div>
               </div>
 
-              <p className="max-w-xl text-[var(--muted-foreground)] leading-relaxed text-base">
-                Every project is an opportunity to evolve. I’m a developer who actually enjoys the
-                "messy" parts of tech, like untangling complex data or building systems that need
-                to scale. I spend my time with software engineering and data
-                science, creating clean, intelligent tools that solve real-world problems without the extra fluff.
-              </p>
+              <div className="space-y-4">
+                <p className="max-w-xl text-[var(--muted-foreground)] leading-relaxed text-base">
+                  I build clean, fast web and mobile apps for startups and businesses across <strong className="text-[var(--foreground)] font-medium">Sri Lanka, the US, UK, and Australia</strong>. I turn complex, tangled problems into clean, maintainable systems that help scale your revenue — and I actually enjoy doing it.
+                </p>
+              </div>
 
               {/* Role tags */}
               <div className="flex flex-wrap gap-2">
-                {["Data Scientist", "Data Engineer", "Software Engineer", "Solo Product Builder"].map((role) => (
+                {["React", "React Native", "Python", "Data Engineering", "AI Integration"].map((role) => (
                   <span
                     key={role}
                     className="px-3 py-1 text-xs font-medium tracking-wide border border-[var(--border)] text-[var(--muted-foreground)]"
@@ -81,19 +61,21 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-4 pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--primary-foreground)] text-sm font-medium tracking-wide uppercase transition-opacity hover:opacity-80"
-                >
-                  Let's Talk →
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--border)] text-[var(--foreground)] text-sm font-medium tracking-wide uppercase transition-colors hover:bg-[var(--muted)]"
-                >
-                  About Me
-                </Link>
+              <div className="space-y-4 pt-2">
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--primary-foreground)] text-sm font-medium tracking-wide uppercase transition-opacity hover:opacity-80"
+                  >
+                    Book a Free Call →
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--border)] text-[var(--foreground)] text-sm font-medium tracking-wide uppercase transition-colors hover:bg-[var(--muted)]"
+                  >
+                    About Me
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -121,71 +103,113 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-[var(--border)] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-12 md:gap-20">
-            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] pt-2">
-              My Life Motto
-            </p>
-            
-            <div className="space-y-12 md:space-y-16">
-              {/* Motto Headline */}
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-[var(--foreground)] leading-[1.1] tracking-tight text-balance">
-                Small Steps. <span className="text-[var(--muted-foreground)]">Big System With</span> Continuous Improvement.
-              </h2>
-
-              {/* Descriptions Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-[var(--border)] pt-12">
-                {[
-                  { title: "Small Steps.", desc: "Because momentum starts in the tiniest actions." },
-                  { title: "Big System.", desc: "Frameworks that endure and scale independently." },
-                  { title: "Continuous Improvement.", desc: "To iterate, adapt, and refine every single day." },
-                ].map((item, i) => (
-                  <div key={i} className="space-y-2">
-                    <h3 className="text-xs font-bold tracking-widest uppercase text-[var(--foreground)]">{item.title}</h3>
-                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
+      {/* ── MOTTO (COMPACT) ─────────────────────────────── */}
+      <section className="border-b border-[var(--border)] bg-[var(--muted)]/20">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 md:py-12">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <span className="flex h-2 w-2 rounded-full bg-[var(--foreground)]"></span>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                My Life Motto
+              </p>
             </div>
+            <p className="text-lg md:text-xl font-light text-[var(--foreground)] tracking-tight text-balance md:text-right max-w-2xl">
+              Small Steps. <span className="text-[var(--muted-foreground)]">Big System With</span> Continuous Improvement.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── WHAT I DO ───────────────────────────────────── */}
+      {/* ── METRICS ─────────────────────────────────────── */}
       <section className="border-b border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
-          <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-10">
-            What I Do
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-[var(--border)] border-l border-r border-[var(--border)]">
+            {[
+              { value: "20+", label: "Happy Clients" },
+              { value: "20+", label: "Completed Projects" },
+              { value: "4+", label: "Years Experience" },
+              { value: "100%", label: "Satisfaction Rate" },
+            ].map((metric, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-8 text-center group hover:bg-[var(--muted)]/20 transition-colors">
+                <span className="text-4xl md:text-5xl font-light text-[var(--foreground)] mb-2 group-hover:scale-110 transition-transform duration-500">
+                  {metric.value}
+                </span>
+                <span className="text-xs font-bold tracking-widest uppercase text-[var(--muted-foreground)]">
+                  {metric.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES ───────────────────────────────────── */}
+      <section id="services" className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-4">
+                Services
+              </p>
+              <h2 className="text-3xl md:text-4xl text-[var(--foreground)] font-light tracking-tight">
+                How I Help Businesses Grow
+              </h2>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--primary-foreground)] text-sm font-medium tracking-wide uppercase transition-opacity hover:opacity-80"
+            >
+              Book a Strategy Call →
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-[var(--border)]">
             {[
               {
-                title: "Data Engineering",
-                desc: "Building robust pipelines, ETL workflows and data infrastructure that scale.",
+                title: "Web & Mobile Apps",
+                desc: "Fast, reliable, and beautifully designed applications tailored to engage your users and drive sales.",
+                features: ["Custom Cross-Platform Solutions", "High Performance & SEO", "Secure & Scalable"],
+                price: "Custom Pricing",
+                href: "/services/web-and-mobile-apps",
               },
               {
-                title: "Data Science & AI",
-                desc: "NLP research, predictive modelling and ML systems grounded in real data.",
+                title: "Data Engineering & Automation",
+                desc: "Stop wasting hours on manual work. I build custom pipelines to automate your operations and save you money.",
+                features: ["ETL Data Pipelines", "Business Dashboards", "API Integrations"],
+                price: "Tailored Solutions",
+                href: "/services/data-engineering",
               },
               {
-                title: "Full-Stack Dev",
-                desc: "End-to-end web and mobile applications with clean architecture.",
-              },
-              {
-                title: "Process Automation",
-                desc: "Scripting, API integrations and cloud tooling to eliminate repetitive work.",
+                title: "AI & ML Integration",
+                desc: "Leverage intelligent models to personalize user experiences, predict trends, and outpace your competitors.",
+                features: ["Predictive Modeling", "NLP & Chatbots", "Custom AI Solutions"],
+                price: "Request a Quote",
+                href: "/services/ai-ml-integration",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="p-8 border-b sm:border-b-0 sm:border-r border-[var(--border)] last:border-0 space-y-3"
+                className="p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[var(--border)] last:border-0 flex flex-col h-full group hover:bg-[var(--muted)]/30 transition-colors"
               >
-                <span className="text-xs font-medium tracking-widest text-[var(--muted-foreground)] uppercase">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="text-base font-semibold text-[var(--foreground)]">{item.title}</h3>
-                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{item.desc}</p>
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-xs font-medium tracking-widest text-[var(--muted-foreground)] uppercase">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-xs font-medium text-[var(--foreground)] bg-[var(--muted)] border border-[var(--border)] px-3 py-1.5 rounded-sm">{item.price}</span>
+                </div>
+                
+                <h3 className="text-xl font-medium text-[var(--foreground)] mb-4">{item.title}</h3>
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-8 flex-grow">{item.desc}</p>
+                
+                <ul className="space-y-3 pt-6 border-t border-[var(--border)] mb-8">
+                  {item.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-[var(--foreground)]">
+                      <span className="text-[var(--muted-foreground)]">→</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={item.href} className="mt-auto inline-flex items-center gap-1 text-sm font-bold text-[var(--foreground)] hover:opacity-70 transition-opacity uppercase tracking-widest">
+                  Learn More ↗
+                </Link>
               </div>
             ))}
           </div>
@@ -203,24 +227,16 @@ export default function HomePage() {
             <div className="space-y-10 max-w-2xl">
 
               {/* Work */}
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <p className="text-[var(--foreground)] leading-relaxed">
-                  Right now I'm an <strong>Associate Software Engineer</strong> at
-                  <a href="https://sterlingbpo.com.au/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-4 hover:opacity-70 transition-opacity"
-                  > Sterling BPO Solution
-                  </a>,
-                  working on software and mobile app development. Alongside that, I do part-time work as an <strong>Associate Data & Software Engineer</strong> at
-                  <a href="https://www.wirity.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-4 hover:opacity-70 transition-opacity"
-                  > Wirity Labs</a> — covering software, data engineering, and mobile apps.
+                  I'm a software and data engineer based in Sri Lanka with hands-on experience building full-stack web apps, React Native mobile apps, and data engineering systems. I've worked with startups, SMEs, and enterprise teams — delivering clean, scalable solutions on time.
+                </p>
+                <p className="text-[var(--foreground)] leading-relaxed">
+                  I work well with clients across time zones (US, UK, AU) and with local Sri Lankan businesses who need a developer who understands both the technology and the local context.
                 </p>
                 <p className="text-[var(--muted-foreground)] leading-relaxed text-sm">
-                  Before this, I interned at Atlas Axillia as a Production Data Analyst and graduated with a <strong>BSc (Hons) in Computer Science</strong>, specialising in Data Science, from the University of Kelaniya in 2025. I'm Slowly pulling back from social media to make more room for real things.</p>
+                  Currently working as an Associate Software Engineer at Sterling BPO Solutions and part-time at Wirity Labs, while taking on select freelance projects.
+                </p>
               </div>
               <Link
                 href="/about"
@@ -234,63 +250,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SELECTED WORK ───────────────────────────────── */}
-
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
-        <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)] mb-12">
-          MY CANVAS
-        </p>
-        <div className="space-y-0 border border-[var(--border)]">
-
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
-            >
-              {/* Image */}
-              <div className={`relative aspect-[4/3] overflow-hidden bg-[var(--muted)] ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Info */}
-              <div className={`p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 border-[var(--border)] ${i % 2 === 1 ? "md:order-1 md:border-r" : "md:border-l"}`}>
-                <div className="space-y-4">
-                  <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                    {project.label}
-                  </span>
-                  <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{project.title}</h2>
-                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
-                    {project.desc}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <Link
-                  href={project.href}
-                  className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
-                >
-                  View details ↗
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ── CONNECT ─────────────────────────────────────── */}
       <section>
@@ -307,6 +266,9 @@ export default function HomePage() {
                 <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">LinkedIn ↗</a>
                 <a href="https://github.com/ImeshaDilshani" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">GitHub ↗</a>
                 <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">Twitter ↗</a>
+                <a href="https://beacons.ai/imesha.co" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">Beacons ↗</a>
+                <a href="https://www.fiverr.com/s/yvK4mAV" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[#1dbf73] transition-colors underline underline-offset-2">Fiverr ↗</a>
+                <a href="https://www.freelancer.com/u/imeshadilshani03" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[#29b2fe] transition-colors underline underline-offset-2">Freelancer ↗</a>
                 <Link href="/contact" className="text-[var(--foreground)] hover:opacity-70 transition-opacity underline underline-offset-2">Send a message →</Link>
               </div>
             </div>
