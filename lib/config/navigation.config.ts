@@ -14,19 +14,10 @@ export interface NavItem {
 export const NAVIGATION_CONFIG = {
   mainNav: [
     { href: "/", label: "Home", description: "Welcome to my portfolio" },
-    { href: "/#services", label: "Services", description: "What I offer" },
+    { href: "/services", label: "Services", description: "What I offer" },
     { href: "/myworks", label: "Work", description: "My work and projects" },
     { href: "/about", label: "About", description: "Learn more about me" },
-    { 
-      href: "#", 
-      label: "Learn", 
-      description: "Learning resources",
-      children: [
-        { href: "/writes", label: "Articles I Wrote", description: "My writings and thoughts" },
-        { href: "/reads", label: "Books I Read", description: "Books and articles" },
-        { href: "/listening", label: "Podcasts I Listen", description: "Podcasts and audio" },
-      ]
-    },
+    { href: "/library", label: "Library", description: "My articles, reading lists, and podcasts" },
     { href: "/creative-lab", label: "Creative Lab", description: "Creative projects and experiments" },
   ] as const satisfies readonly NavItem[],
   
