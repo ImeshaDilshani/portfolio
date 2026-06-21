@@ -9,6 +9,8 @@ export default function ContactPage() {
     fullName: "",
     email: "",
     phone: "",
+    projectType: "",
+    budget: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -28,6 +30,8 @@ export default function ContactPage() {
           name: formData.fullName,
           email: formData.email,
           phone: formData.phone,
+          projectType: formData.projectType,
+          budget: formData.budget,
           message: formData.message,
           subject: `New Contact from ${formData.fullName}`,
         }),
@@ -36,7 +40,7 @@ export default function ContactPage() {
       const result = await response.json();
       if (result.success) {
         setStatus("success");
-        setFormData({ fullName: "", email: "", phone: "", message: "" });
+        setFormData({ fullName: "", email: "", phone: "", projectType: "", budget: "", message: "" });
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         throw new Error(result.message || "Something went wrong");
@@ -48,7 +52,7 @@ export default function ContactPage() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -157,6 +161,50 @@ export default function ContactPage() {
                   disabled={status === "loading"}
                   className="w-full px-4 py-3 text-sm border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] outline-none focus:border-[var(--foreground)] transition-colors disabled:opacity-50"
                 />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="space-y-1.5">
+                  <label htmlFor="projectType" className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    Project Type
+                  </label>
+                  <select
+                    id="projectType"
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    disabled={status === "loading"}
+                    className="w-full px-4 py-3 text-sm border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] outline-none focus:border-[var(--foreground)] transition-colors disabled:opacity-50"
+                  >
+                    <option value="" disabled>Select...</option>
+                    <option value="Web App">Web App Development</option>
+                    <option value="Mobile App">Mobile App Development</option>
+                    <option value="Data Eng">Data Engineering / ETL</option>
+                    <option value="AI ML">AI / ML Integration</option>
+                    <option value="Automation">Process Automation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label htmlFor="budget" className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                    Budget Range
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    disabled={status === "loading"}
+                    className="w-full px-4 py-3 text-sm border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] outline-none focus:border-[var(--foreground)] transition-colors disabled:opacity-50"
+                  >
+                    <option value="" disabled>Select...</option>
+                    <option value="Under $500">Under $500</option>
+                    <option value="$500 - $1,000">$500 - $1,000</option>
+                    <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                    <option value="$3,000+">$3,000+</option>
+                  </select>
+                </div>
               </div>
 
               <div className="space-y-1.5">
