@@ -20,13 +20,13 @@ const techStack = [
     category: "Programming Languages",
     icon: <Code2 className="w-5 h-5" />,
     description: "The foundations of my logic and system building.",
-    technologies: ["Python", "JavaScript", "TypeScript", "R", "SQL", "Java", "C"],
+    technologies: ["Python","PHP", "JavaScript","C#", "TypeScript", "R", "SQL", "Java", "C"],
   },
   {
     category: "Full Stack Engineering",
     icon: <Layers className="w-5 h-5" />,
     description: "Building scalable, end-to-end web architectures.",
-    technologies: ["Next.js", "React", "Node.js", "Express", "Django", "Spring Boot", "Tailwind CSS"],
+    technologies: ["Laravel", ".NET", "Next.js", "React", "Node.js", "Express", "Django", "Spring Boot", "Tailwind CSS"],
   },
   {
     category: "Data Science & AI",

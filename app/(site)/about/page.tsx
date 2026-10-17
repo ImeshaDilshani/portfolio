@@ -1,32 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
-  {
-    label: "TECH",
-    title: "Tech Stack & Tools",
-    desc: "Every project starts with the right tools. Here's a look at the languages, frameworks, and platforms I use to build things that actually work.",
-    tags: ["Full Stack Engineering", "Data Engineering", "Data Science", "Mobile Dev", "AI"],
-    img: "/PL1.webp",
-    href: "/myworks/techstack/",
-  },
-  {
-    label: "COMMUNITY",
-    title: "Community Work & Collaboration",
-    desc: "Learning means nothing if it stays with you. I share what I know, support who I can, and stay active in spaces where tech people grow together.",
-    tags: ["Community", "Mentoring", "Tech"],
-    img: "/CW1.webp",
-    href: "/myworks/community",
-  },
-  {
-    label: "JOURNALISM",
-    title: "Journalism & Blog",
-    desc: "Writing is how I think out loud. I cover data science, machine learning, and life lessons — keeping it simple, honest, and worth your time.",
-    tags: ["Writing", "Blogging", "AI"],
-    img: "/J1.webp",
-    href: "/writes/",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -145,59 +119,6 @@ export default function AboutPage() {
               </div>
             </section>
 
-            {/* MY CANVAS */}
-            <section className="space-y-6">
-              <h2 className="text-2xl text-[var(--foreground)] border-b border-[var(--border)] pb-4">My Canvas</h2>
-              <div className="space-y-0 border border-[var(--border)]">
-                {projects.map((project, i) => (
-                  <div
-                    key={i}
-                    className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--border)] last:border-b-0 group"
-                  >
-                    {/* Image */}
-                    <div className={`relative aspect-[4/3] overflow-hidden bg-[var(--muted)] ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                      <Image
-                        src={project.img}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    {/* Info */}
-                    <div className={`p-8 md:p-12 flex flex-col justify-between border-t md:border-t-0 border-[var(--border)] ${i % 2 === 1 ? "md:order-1 md:border-r" : "md:border-l"}`}>
-                      <div className="space-y-4">
-                        <span className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
-                          {project.label}
-                        </span>
-                        <h2 className="text-2xl md:text-3xl text-[var(--foreground)]">{project.title}</h2>
-                        <p className="text-sm text-[var(--muted-foreground)] leading-relaxed max-w-sm">
-                          {project.desc}
-                        </p>
-                        <div className="flex flex-wrap gap-2 pt-2">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2.5 py-0.5 text-xs border border-[var(--border)] text-[var(--muted-foreground)]"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <Link
-                        href={project.href}
-                        className="inline-flex items-center gap-1 mt-8 text-sm font-medium text-[var(--foreground)] hover:opacity-60 transition-opacity"
-                      >
-                        View details ↗
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
         </div>
       </div>

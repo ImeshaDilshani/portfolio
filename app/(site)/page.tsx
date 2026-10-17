@@ -1,8 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
-
+const canvasItems = [
+  {
+    index: "01",
+    label: "TECH",
+    title: "Tech Stack & Tools",
+    category: "Architecture & Stack",
+    desc: "A hands-on breakdown of languages, frameworks, and cloud infrastructure I use to build robust, scalable applications.",
+    tags: ["Full Stack", "Data Engineering", "Machine Learning", "Mobile Dev", "AI Systems"],
+    img: "/PL1.webp",
+    href: "/myworks/techstack/",
+    cta: "Explore Tech Stack",
+  },
+  {
+    index: "02",
+    label: "COMMUNITY",
+    title: "Community & Collaboration",
+    category: "Mentorship & Impact",
+    desc: "Sharing knowledge, mentoring aspiring developers, and contributing to communities where tech minds grow together.",
+    tags: ["Tech Mentoring", "Open Source", "Workshops", "Dev Communities"],
+    img: "/CW1.webp",
+    href: "/myworks/community",
+    cta: "View Community",
+  },
+  {
+    index: "03",
+    label: "JOURNALISM",
+    title: "Journalism & Tech Writing",
+    category: "Articles & Reflections",
+    desc: "Thinking out loud about data science, AI engineering, problem solving, and lessons learned along the journey.",
+    tags: ["Data Science", "AI Research", "Tech Essays", "Case Studies"],
+    img: "/J1.webp",
+    href: "/writes/",
+    cta: "Read Essays",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -211,6 +244,107 @@ export default function HomePage() {
                   Learn More ↗
                 </Link>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MY CANVAS (EDITORIAL GALLERY) ────────────────── */}
+      <section id="canvas" className="border-b border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-block w-2 h-2 rounded-full bg-[var(--foreground)]" />
+                <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">
+                  My Canvas · Pillars & Explorations
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-4xl text-[var(--foreground)] font-light tracking-tight">
+                Engineering, Community & Insights
+              </h2>
+            </div>
+            <p className="text-sm text-[var(--muted-foreground)] max-w-md md:text-right leading-relaxed">
+              Beyond commercial software: exploring core tools, cultivating developer communities, and documenting engineering reflections.
+            </p>
+          </div>
+
+          {/* Editorial Studio Cards Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 border border-[var(--border)] divide-y lg:divide-y-0 lg:divide-x divide-[var(--border)] bg-[var(--background)]">
+            {canvasItems.map((item) => (
+              <Link
+                key={item.index}
+                href={item.href}
+                className="group flex flex-col justify-between p-6 md:p-8 hover:bg-[var(--muted)]/20 transition-all duration-300 relative"
+              >
+                <div>
+                  {/* Top Header: Index & Category */}
+                  <div className="flex items-center justify-between pb-6 border-b border-[var(--border)] text-xs font-mono uppercase tracking-widest">
+                    <span className="text-[var(--muted-foreground)] group-hover:text-[var(--foreground)] transition-colors">
+                      {item.index} // {item.label}
+                    </span>
+                    <span className="text-[10px] px-2 py-0.5 border border-[var(--border)] text-[var(--muted-foreground)] bg-[var(--background)] group-hover:border-[var(--foreground)] group-hover:text-[var(--foreground)] transition-colors">
+                      {item.category}
+                    </span>
+                  </div>
+
+                  {/* Editorial Image Gallery Frame with Hover Reveal */}
+                  <div className="relative aspect-[16/10] overflow-hidden my-6 border border-[var(--border)] bg-[var(--muted)]">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+                    
+                    {/* Floating pill on bottom corner */}
+                    <div className="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+                      <span className="px-2 py-1 text-[9px] font-mono uppercase tracking-widest bg-[var(--foreground)] text-[var(--background)] shadow-sm">
+                        VIEW CANVAS ↗
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl md:text-2xl font-light text-[var(--foreground)] tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tags & Action CTA */}
+                <div className="pt-8 mt-6 border-t border-[var(--border)] space-y-4">
+                  {/* Slide-in / Hover interactive tags */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 text-[11px] font-medium tracking-wide border border-[var(--border)] text-[var(--muted-foreground)] bg-[var(--background)] group-hover:border-[var(--foreground)]/40 group-hover:text-[var(--foreground)] transition-colors duration-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Link */}
+                  <div className="flex items-center justify-between pt-2">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[var(--foreground)] group-hover:opacity-75 transition-opacity">
+                      {item.cta}
+                    </span>
+                    <span className="text-sm font-bold text-[var(--foreground)] transform group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-300">
+                      ↗
+                    </span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
