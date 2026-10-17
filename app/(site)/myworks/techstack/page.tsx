@@ -26,13 +26,13 @@ const techStack = [
     category: "Full Stack Engineering",
     icon: <Layers className="w-5 h-5" />,
     description: "Building scalable, end-to-end web architectures.",
-    technologies: ["Laravel", ".NET", "Next.js", "React", "Node.js", "Express", "Django", "Spring Boot", "Tailwind CSS"],
+    technologies: ["Laravel", ".NET", "Next.js", "React", "Node.js", "Express", "Django", "Tailwind CSS"],
   },
   {
     category: "Data Science & AI",
     icon: <Brain className="w-5 h-5" />,
     description: "Deep learning, NLP research, and predictive modelling.",
-    technologies: ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "Keras"],
+    technologies: ["TensorFlow", "PyTorch", "scikit-learn"],
   },
   {
     category: "Mobile Dev",
@@ -44,7 +44,7 @@ const techStack = [
     category: "Databases",
     icon: <Database className="w-5 h-5" />,
     description: "Managing and optimizing large-scale data storage.",
-    technologies: ["PostgreSQL", "MongoDB", "MySQL", "Supabase", "Firebase"],
+    technologies: ["PostgreSQL","MySQL", "Supabase", "Firebase"],
   },
   {
     category: "Cloud & DevOps",

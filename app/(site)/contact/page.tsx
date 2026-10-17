@@ -68,7 +68,7 @@ export default function ContactPage() {
             <div className="space-y-4 max-w-2xl">
               <h1 className="text-4xl md:text-5xl text-[var(--foreground)]">Let's Talk</h1>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
-                Open to projects, collaborations, and good conversations. Whether you want to build something together or just say hello — I'd love to hear from you.
+                Open to projects, collaborations, and good conversations. Whether you want to build something together or just say hello  I'd love to hear from you.
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-[var(--border)]">
 
-          {/* Left — info */}
+          {/* Left  info */}
           <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[var(--border)] space-y-8">
             <div className="space-y-2">
               <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Email</p>
@@ -93,8 +93,6 @@ export default function ContactPage() {
               <div className="flex flex-col gap-1.5 text-sm">
                 <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">LinkedIn ↗</a>
                 <a href="https://github.com/ImeshaDilshani" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">GitHub ↗</a>
-                <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">Twitter / X ↗</a>
-                <a href="https://www.freelancer.com/u/imeshadilshani03" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">Freelancer.com ↗</a>
               </div>
             </div>
 
@@ -110,7 +108,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right  form */}
           <div className="p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="space-y-1.5">

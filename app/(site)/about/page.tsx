@@ -77,12 +77,12 @@ export default function AboutPage() {
                   {
                     name: "InTech College, Gampaha",
                     period: "Graphic Design & Advertising · 2020–2021",
-                    body: "Solid foundation in design principles, visual communication, and creative thinking — skills that carry into every product and interface I build today.",
+                    body: "Solid foundation in design principles, visual communication, and creative thinking  skills that carry into every product and interface I build today.",
                     img: "/about/intech.webp",
                   },
                   {
                     name: "President's College, Minuwangoda",
-                    period: "Advanced Level — Mathematics Stream · 2016–2019",
+                    period: "Advanced Level  Mathematics Stream · 2016–2019",
                     body: "Mathematics, Physics, Chemistry. Built strong analytical and problem-solving foundations that underpin everything data-related I do.",
                     img: "/about/president.webp",
                   },

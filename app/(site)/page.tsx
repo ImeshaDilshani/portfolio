@@ -64,21 +64,21 @@ export default function HomePage() {
 
               {/* Mobile Photo: Visible on mobile/tablet, hidden on desktop */}
               <div className="lg:hidden relative group max-w-[400px]">
-                 <div className="relative border border-[var(--border)] p-1 bg-[var(--background)] z-10">
-                    <Image
-                      src="/imesha.webp"
-                      alt="Imesha Dilshani"
-                      width={400}
-                      height={500}
-                      className="w-full h-auto object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                      priority
-                    />
-                 </div>
+                <div className="relative border border-[var(--border)] p-1 bg-[var(--background)] z-10">
+                  <Image
+                    src="/imesha.webp"
+                    alt="Imesha Dilshani"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                    priority
+                  />
+                </div>
               </div>
 
               <div className="space-y-4">
                 <p className="max-w-xl text-[var(--muted-foreground)] leading-relaxed text-base">
-                  I build clean, fast web and mobile apps for startups and businesses across <strong className="text-[var(--foreground)] font-medium">Sri Lanka, the US, UK, and Australia</strong>. I turn complex, tangled problems into clean, maintainable systems that help scale your revenue — and I actually enjoy doing it.
+                  I build clean, fast web and mobile apps for startups and businesses across <strong className="text-[var(--foreground)] font-medium">Sri Lanka, the US, UK, and Australia</strong>. I turn complex, tangled problems into clean, maintainable systems that help scale your revenue  and I actually enjoy doing it.
                 </p>
               </div>
 
@@ -195,7 +195,7 @@ export default function HomePage() {
               Book a Strategy Call →
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-[var(--border)]">
             {[
               {
@@ -228,10 +228,10 @@ export default function HomePage() {
                   <span className="text-xs font-medium tracking-widest text-[var(--muted-foreground)] uppercase">{String(i + 1).padStart(2, "0")}</span>
                   <span className="text-xs font-medium text-[var(--foreground)] bg-[var(--muted)] border border-[var(--border)] px-3 py-1.5 rounded-sm">{item.price}</span>
                 </div>
-                
+
                 <h3 className="text-xl font-medium text-[var(--foreground)] mb-4">{item.title}</h3>
                 <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-8 flex-grow">{item.desc}</p>
-                
+
                 <ul className="space-y-3 pt-6 border-t border-[var(--border)] mb-8">
                   {item.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-[var(--foreground)]">
@@ -300,7 +300,7 @@ export default function HomePage() {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
-                    
+
                     {/* Floating pill on bottom corner */}
                     <div className="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
                       <span className="px-2 py-1 text-[9px] font-mono uppercase tracking-widest bg-[var(--foreground)] text-[var(--background)] shadow-sm">
@@ -363,7 +363,7 @@ export default function HomePage() {
               {/* Work */}
               <div className="space-y-4">
                 <p className="text-[var(--foreground)] leading-relaxed">
-                  I'm a software and data engineer based in Sri Lanka with hands-on experience building full-stack web apps, React Native mobile apps, and data engineering systems. I've worked with startups, SMEs, and enterprise teams — delivering clean, scalable solutions on time.
+                  I'm a software and data engineer based in Sri Lanka with hands-on experience building full-stack web apps, React Native mobile apps, and data engineering systems. I've worked with startups, SMEs, and enterprise teams  delivering clean, scalable solutions on time.
                 </p>
                 <p className="text-[var(--foreground)] leading-relaxed">
                   I work well with clients across time zones (US, UK, AU) and with local Sri Lankan businesses who need a developer who understands both the technology and the local context.
@@ -399,10 +399,6 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-6 text-sm">
                 <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">LinkedIn ↗</a>
                 <a href="https://github.com/ImeshaDilshani" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">GitHub ↗</a>
-                <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">Twitter ↗</a>
-                <a href="https://beacons.ai/imesha.co" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors underline underline-offset-2">Beacons ↗</a>
-                <a href="https://www.fiverr.com/s/yvK4mAV" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[#1dbf73] transition-colors underline underline-offset-2">Fiverr ↗</a>
-                <a href="https://www.freelancer.com/u/imeshadilshani03" target="_blank" rel="noopener noreferrer" className="text-[var(--muted-foreground)] hover:text-[#29b2fe] transition-colors underline underline-offset-2">Freelancer ↗</a>
                 <Link href="/contact" className="text-[var(--foreground)] hover:opacity-70 transition-opacity underline underline-offset-2">Send a message →</Link>
               </div>
             </div>
