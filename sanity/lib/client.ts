@@ -19,3 +19,15 @@ export function urlFor(source: any) {
   }
   return builder.image(source)
 }
+
+export function urlForImage(source: any, fallback: string = '/about-bg.webp'): string {
+  if (!source) return fallback
+  if (typeof source === 'string') return source
+  try {
+    const url = builder.image(source).url()
+    return url || fallback
+  } catch {
+    return fallback
+  }
+}
+

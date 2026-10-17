@@ -37,7 +37,7 @@ export default function CommunityPage() {
 
         <div className="space-y-0 border border-[var(--border)]">
 
-          {/* Row 1 — 1 large left + 2 stacked right */}
+          {/* Row 1  1 large left + 2 stacked right */}
           <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] border-b border-[var(--border)]">
             <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)] border-r border-[var(--border)] group">
               <Image src={memories[0]} alt="Memory 1" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -52,7 +52,7 @@ export default function CommunityPage() {
             </div>
           </div>
 
-          {/* Row 2 — 3 equal columns */}
+          {/* Row 2  3 equal columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 border-b border-[var(--border)]">
             {[memories[3], memories[4], memories[5]].map((src, i) => (
               <div key={i} className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)] border-r border-[var(--border)] last:border-r-0 group">
@@ -61,7 +61,7 @@ export default function CommunityPage() {
             ))}
           </div>
 
-          {/* Row 3 — 2 stacked left + 1 large right */}
+          {/* Row 3  2 stacked left + 1 large right */}
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] border-b border-[var(--border)]">
             <div className="grid grid-rows-2 border-r border-[var(--border)]">
               <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)] border-b border-[var(--border)] group">
@@ -76,7 +76,7 @@ export default function CommunityPage() {
             </div>
           </div>
 
-          {/* Row 4 — 1 large + 2 side-by-side */}
+          {/* Row 4  1 large + 2 side-by-side */}
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="relative aspect-[4/3] overflow-hidden bg-[var(--muted)] border-r border-[var(--border)] group">
               <Image src={memories[9]} alt="Memory 10" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />

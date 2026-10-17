@@ -61,7 +61,6 @@ export function Footer() {
               </p>
             </div>
             <div className="flex gap-4 text-xs text-[var(--muted-foreground)]">
-              <a href="https://x.com/ImeshaDilshani3" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">Twitter ↗</a>
               <a href="https://www.linkedin.com/in/imesha-dilshani-61862422b" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">LinkedIn ↗</a>
               <a href="https://github.com/ImeshaDilshani" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--foreground)] transition-colors">GitHub ↗</a>
             </div>

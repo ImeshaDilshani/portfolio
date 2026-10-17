@@ -2,8 +2,8 @@
 @import "tw-animate-css";
 
 :root {
-  /* Founder Portfolio Theme - Minimal Off-White & High Contrast */
-  --background: #f7f6f2;
+  /* Founder Portfolio Theme - Minimal Clean White & High Contrast */
+  --background: #ffffff;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
@@ -11,16 +11,16 @@
   --popover-foreground: #1a1a1a;
   --primary: #1a1a1a;
   --primary-foreground: #ffffff;
-  --secondary: #e8e6e1;
+  --secondary: #f4f4f5;
   --secondary-foreground: #1a1a1a;
-  --muted: #e8e6e1;
+  --muted: #f4f4f5;
   --muted-foreground: #666666;
   --accent: #1a1a1a;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e2e0da;
-  --input: #e2e0da;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
   --ring: #1a1a1a;
   --chart-1: #1a1a1a;
   --chart-2: #404040;
@@ -28,13 +28,13 @@
   --chart-4: #737373;
   --chart-5: #a3a3a3;
   --radius: 0rem;
-  --sidebar: #f7f6f2;
+  --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
   --sidebar-primary: #1a1a1a;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e8e6e1;
+  --sidebar-accent: #f4f4f5;
   --sidebar-accent-foreground: #1a1a1a;
-  --sidebar-border: #e2e0da;
+  --sidebar-border: #e5e5e5;
   --sidebar-ring: #1a1a1a;
 }
 

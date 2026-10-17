@@ -18,7 +18,6 @@ export const NAVIGATION_CONFIG = {
     { href: "/myworks", label: "Work", description: "My work and projects" },
     { href: "/about", label: "About", description: "Learn more about me" },
     { href: "/library", label: "Library", description: "My articles, reading lists, and podcasts" },
-    { href: "/creative-lab", label: "Creative Lab", description: "Creative projects and experiments" },
   ] as const satisfies readonly NavItem[],
   
   cta: {

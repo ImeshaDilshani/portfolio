@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Reads | Imesha Dilshani",
+  description: "Books that shaped my thinking across personal development, productivity, psychology, and technology. Constantly updated on Goodreads.",
+};
 
 const books = [
   {
@@ -48,6 +54,16 @@ export default function ReadsPage() {
               <p className="text-[var(--muted-foreground)] leading-relaxed">
                 I believe in continuous learning through reading. This collection features an eclectic set of books on personal development, productivity, psychology, and more.
               </p>
+              <div className="pt-2">
+                <a
+                  href="https://www.goodreads.com/user/show/201873711-imesha-dilshani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-[var(--foreground)] border border-[var(--border)] px-4 py-2.5 hover:bg-[var(--muted)] transition-colors"
+                >
+                  Follow my live reading list on Goodreads ↗
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -72,6 +88,25 @@ export default function ReadsPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Goodreads Live Banner */}
+        <div className="mt-12 border border-[var(--border)] p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-[var(--card)]">
+          <div className="space-y-1">
+            <p className="text-xs font-medium tracking-widest uppercase text-[var(--muted-foreground)]">Always Updated</p>
+            <h2 className="text-lg font-medium text-[var(--foreground)]">Live Reading Log & Current Reads</h2>
+            <p className="text-sm text-[var(--muted-foreground)] max-w-xl">
+              I continuously track my reading progress, book reviews, and current reads directly on Goodreads.
+            </p>
+          </div>
+          <a
+            href="https://www.goodreads.com/user/show/201873711-imesha-dilshani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--foreground)] text-[var(--background)] text-xs font-medium tracking-widest uppercase hover:opacity-85 transition-opacity whitespace-nowrap"
+          >
+            Visit Goodreads Profile ↗
+          </a>
         </div>
       </section>
     </main>

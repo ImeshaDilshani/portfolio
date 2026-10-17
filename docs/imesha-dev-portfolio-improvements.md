@@ -1,4 +1,4 @@
-# imesha.dev — Portfolio Improvement Guide
+# imesha.dev  Portfolio Improvement Guide
 **Goal:** Attract US, UK, Australian & Sri Lankan freelance clients  
 **Prepared for:** Imesha Dilshani | imesha.dev
 
@@ -19,8 +19,8 @@ The site reads like a **personal blog + hobby showcase + portfolio** all mixed t
 
 ## 🚨 What Needs to Change
 
-### 1. Too Many Hats — Clients Get Confused
-Stock photography, book writing, a reading list, math classes — these have no place on a freelancing portfolio. They signal that software development isn't your primary focus.
+### 1. Too Many Hats  Clients Get Confused
+Stock photography, book writing, a reading list, math classes  these have no place on a freelancing portfolio. They signal that software development isn't your primary focus.
 
 **Fix:** Move all personal hobby content to a separate `/personal` page or remove it from the main portfolio entirely. Keep the main site 100% professional.
 
@@ -42,7 +42,7 @@ Listing three job titles at once ("Data Engineer, Software Engineer, Data Scient
 
 **Fix:** Replace with a single benefit-focused headline. Example:
 
-> *"I build fast, clean web apps and data systems for startups and local businesses — from Sri Lanka to the world."*
+> *"I build fast, clean web apps and data systems for startups and local businesses  from Sri Lanka to the world."*
 
 Or a shorter version:
 > *"Full-Stack & Data Engineer. I turn messy problems into clean, working software."*
@@ -61,7 +61,7 @@ A client cannot tell what you actually offer. Web development? Mobile apps? Data
 | Data Engineering | ETL pipelines, dashboards, database design, automation | $250 |
 | AI / ML Integration | Python, data science, model integration into existing apps | $400 |
 
-*(Adjust pricing to your comfort — even a "Starting from" range removes friction)*
+*(Adjust pricing to your comfort  even a "Starting from" range removes friction)*
 
 ---
 
@@ -79,7 +79,7 @@ No client testimonials, no project results with numbers, no case studies. For US
 The current bio line *"I enjoy the messy parts of tech"* sounds cool to developers but reads as a red flag to clients, who want reliability and clean outcomes.
 
 **Fix:** Reframe around outcomes and dependability. Example:
-> *"I turn complex, tangled problems into clean, maintainable systems — and I actually enjoy doing it."*
+> *"I turn complex, tangled problems into clean, maintainable systems  and I actually enjoy doing it."*
 
 ---
 
@@ -89,7 +89,7 @@ The current bio line *"I enjoy the messy parts of tech"* sounds cool to develope
 
 **A. "Working Across Time Zones" blurb**
 A short paragraph reassuring international clients about your communication style. Example:
-> *"Based in Sri Lanka (UTC+5:30), I work asynchronously across US, UK, and Australian time zones. You'll get daily updates, fast responses, and clean deliverables — without micromanaging."*
+> *"Based in Sri Lanka (UTC+5:30), I work asynchronously across US, UK, and Australian time zones. You'll get daily updates, fast responses, and clean deliverables  without micromanaging."*
 
 **B. Case Study Cards (2–3 projects)**
 Each card should follow this format:
@@ -142,13 +142,13 @@ Remove: Reads, personal sections from main nav.
 Pull in your latest YouTube video and Medium post as a preview section. This builds authority and shows you're active in the tech community.
 
 **C. Add a "Currently Available" / "Booked Until" Status Badge**
-A small badge in the hero like `🟢 Available for projects — June 2026` creates urgency and transparency.
+A small badge in the hero like `🟢 Available for projects  June 2026` creates urgency and transparency.
 
 **D. Add a Simple Contact Form**
 With fields: Name, Email, Project Type (dropdown), Brief Description, Budget Range. Makes it very easy for clients to reach out without writing a full email.
 
 **E. Footer with All Links**
-Make sure the footer includes: email (work@imesha.dev), LinkedIn, GitHub, YouTube, Fiverr link, and location (Sri Lanka — Available Worldwide).
+Make sure the footer includes: email (work@imesha.dev), LinkedIn, GitHub, YouTube, Fiverr link, and location (Sri Lanka  Available Worldwide).
 
 ---
 
@@ -188,7 +188,7 @@ Make sure the footer includes: email (work@imesha.dev), LinkedIn, GitHub, YouTub
 **Suggested:**
 ```
 Imesha Dilshani
-Full-Stack & Data Engineer — Sri Lanka
+Full-Stack & Data Engineer  Sri Lanka
 
 I build clean, fast web and mobile apps for startups and businesses
 across Sri Lanka, the US, UK, and Australia.
@@ -204,7 +204,7 @@ React · React Native · Python · Data Engineering · AI Integration
 ## 📝 Suggested About Section Rewrite
 
 **Suggested:**
-> I'm a software and data engineer based in Sri Lanka with hands-on experience building full-stack web apps, React Native mobile apps, and data engineering systems. I've worked with startups, SMEs, and enterprise teams — delivering clean, scalable solutions on time.  
+> I'm a software and data engineer based in Sri Lanka with hands-on experience building full-stack web apps, React Native mobile apps, and data engineering systems. I've worked with startups, SMEs, and enterprise teams  delivering clean, scalable solutions on time.  
 >  
 > I work well with clients across time zones (US, UK, AU) and with local Sri Lankan businesses who need a developer who understands both the technology and the local context.  
 >  
